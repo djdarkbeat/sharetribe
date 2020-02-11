@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: CustomLandingPage::ExampleData
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "CustomLandingPage::ExampleData";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (E)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../CustomLandingPage.html" title="CustomLandingPage (module)">CustomLandingPage</a></span></span>
+     &raquo; 
+    <span class="title">ExampleData</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: CustomLandingPage::ExampleData
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/services/custom_landing_page/example_data.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>rubocop:disable Metrics/ModuleLength</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="DATA_STR-constant" class="">DATA_STR =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>TODO Document the expected JSON structure here</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;JSON</span>
+<span class='tstring_content'>{
+  &quot;settings&quot;: {
+    &quot;marketplace_id&quot;: 9999,
+    &quot;locale&quot;: &quot;en&quot;,
+    &quot;sitename&quot;: &quot;example&quot;
+  },
+
+  &quot;page&quot;: {
+    &quot;twitter_handle&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;twitter_handle&quot;},
+    &quot;twitter_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;default_hero_background&quot;},
+    &quot;facebook_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;default_hero_background&quot;},
+    &quot;title&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;page_title&quot;},
+    &quot;description&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;description&quot;},
+    &quot;publisher&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;name&quot;},
+    &quot;copyright&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;name&quot;},
+    &quot;facebook_site_name&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;name&quot;},
+    &quot;google_site_verification&quot;: {&quot;value&quot;: &quot;CHANGEME&quot;}
+  },
+
+  &quot;sections&quot;: [
+    {
+      &quot;id&quot;: &quot;hero&quot;,
+      &quot;kind&quot;: &quot;hero&quot;,
+      &quot;variation&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;search_type&quot;},
+      &quot;title&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;slogan&quot;},
+      &quot;subtitle&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;description&quot;},
+      &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;default_hero_background&quot;},
+      &quot;background_image_variation&quot;: &quot;dark&quot;,
+      &quot;search_button&quot;: {&quot;type&quot;: &quot;translation&quot;, &quot;id&quot;: &quot;search_button&quot;},
+      &quot;search_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;search&quot;},
+      &quot;search_placeholder&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;search_placeholder&quot;},
+      &quot;search_location_with_keyword_placeholder&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;search_location_with_keyword_placeholder&quot;},
+      &quot;signup_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;signup&quot;},
+      &quot;signup_button&quot;: {&quot;type&quot;: &quot;translation&quot;, &quot;id&quot;: &quot;signup_button&quot;},
+      &quot;search_button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+      &quot;search_button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+      &quot;signup_button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+      &quot;signup_button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;}
+    },
+    {
+      &quot;id&quot;: &quot;video&quot;,
+      &quot;kind&quot;: &quot;video&quot;,
+      &quot;variation&quot;: &quot;youtube&quot;,
+      &quot;youtube_video_id&quot;: &quot;UffchBUUIoI&quot;,
+      &quot;width&quot;: &quot;1280&quot;,
+      &quot;height&quot;: &quot;720&quot;,
+      &quot;text&quot;: &quot;Video section can contain one Youtube video. Click to watch!&quot;
+    },
+    {
+      &quot;id&quot;: &quot;single_info_without_background_and_cta&quot;,
+      &quot;kind&quot;: &quot;info&quot;,
+      &quot;variation&quot;: &quot;single_column&quot;,
+      &quot;title&quot;: &quot;Single column info section without background image and call to action button&quot;,
+      &quot;paragraph&quot;: &quot;This is a single column info section without background image and call to action button.&quot;
+    },
+    {
+      &quot;id&quot;: &quot;markdown_support&quot;,
+      &quot;kind&quot;: &quot;info&quot;,
+      &quot;variation&quot;: &quot;single_column&quot;,
+      &quot;title&quot;: &quot;Limited Markdown support&quot;,
+      &quot;paragraph&quot;: &quot;Text paragraphs can contain Markdown markup. Limited subset of Markdown syntax blocks are allowed. Allowed blocks are *italic*, **bold**, ***bold+italic***, ~~strike through~~, _underline_ and [links](https://www.sharetribe.com).  \\nLine breaks and...\\n\\n...new paragraphs are also supported&quot;
+    },
+    {
+      &quot;id&quot;: &quot;single_info_without_cta&quot;,
+      &quot;kind&quot;: &quot;info&quot;,
+      &quot;variation&quot;: &quot;single_column&quot;,
+      &quot;title&quot;: &quot;Single column info section without call to action button&quot;,
+      &quot;paragraph&quot;: &quot;This is a single column info section without background image and call to action button.&quot;,
+      &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;default_hero_background&quot;}
+    },
+    {
+      &quot;id&quot;: &quot;single_info_with_background_and_cta&quot;,
+      &quot;kind&quot;: &quot;info&quot;,
+      &quot;variation&quot;: &quot;single_column&quot;,
+      &quot;title&quot;: &quot;Single column info section with background image and call to action button&quot;,
+      &quot;paragraph&quot;: &quot;This is a single column info section with background image and call to action button.&quot;,
+      &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+      &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+      &quot;button_title&quot;: &quot;Go to sharetribe.com&quot;,
+      &quot;button_path&quot;: {&quot;value&quot;: &quot;https://www.sharetribe.com&quot;},
+      &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;default_hero_background&quot;},
+      &quot;background_image_variation&quot;: &quot;dark&quot;
+    },
+    {
+      &quot;id&quot;: &quot;single_info_with_cta&quot;,
+      &quot;kind&quot;: &quot;info&quot;,
+      &quot;variation&quot;: &quot;single_column&quot;,
+      &quot;title&quot;: &quot;Single column info section with call to action button&quot;,
+      &quot;paragraph&quot;: &quot;This is a single column info section with call to action button.&quot;,
+      &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+      &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+      &quot;button_title&quot;: &quot;Contact us&quot;,
+      &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;contact_us&quot;}
+    },
+    {
+      &quot;id&quot;: &quot;single_info_with_background_color_and_cta&quot;,
+      &quot;kind&quot;: &quot;info&quot;,
+      &quot;variation&quot;: &quot;single_column&quot;,
+      &quot;title&quot;: &quot;Single column info section with background color and call to action button&quot;,
+      &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Nulla vitae elit libero.&quot;,
+      &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+      &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+      &quot;button_title&quot;: &quot;About&quot;,
+      &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot; :&quot;about&quot;},
+      &quot;background_color&quot;: [166, 76, 94]
+    },
+    {
+      &quot;id&quot;: &quot;two_column_info_with_icons_and_buttons&quot;,
+      &quot;kind&quot;: &quot;info&quot;,
+      &quot;variation&quot;: &quot;multi_column&quot;,
+      &quot;title&quot;: &quot;Two column info section with icons and buttons&quot;,
+      &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+      &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+      &quot;icon_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+      &quot;columns&quot;: [
+        {
+          &quot;icon&quot;: &quot;grape&quot;,
+          &quot;title&quot;: &quot;Column 1&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.\\n\\nParagraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;,
+          &quot;button_title&quot;: &quot;Go to sharetribe.com&quot;,
+          &quot;button_path&quot;: {&quot;value&quot;: &quot;https://www.sharetribe.com&quot;}
+        },
+        {
+          &quot;icon&quot;: &quot;watering-can&quot;,
+          &quot;title&quot;: &quot;Column 2&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;,
+          &quot;button_title&quot;: &quot;Go to sharetribe.com&quot;,
+          &quot;button_path&quot;: {&quot;value&quot;: &quot;https://www.sharetribe.com&quot;}
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;two_column_info_without_icons_and_buttons&quot;,
+      &quot;kind&quot;: &quot;info&quot;,
+      &quot;variation&quot;: &quot;multi_column&quot;,
+      &quot;title&quot;: &quot;Two column info section without icons and buttons&quot;,
+      &quot;columns&quot;: [
+        {
+          &quot;title&quot;: &quot;Column 1&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.\\n\\nParagraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;
+        },
+        {
+          &quot;title&quot;: &quot;Column 2&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;three_column_info_with_icons_and_buttons&quot;,
+      &quot;kind&quot;: &quot;info&quot;,
+      &quot;variation&quot;: &quot;multi_column&quot;,
+      &quot;title&quot;: &quot;Three column info with icons and buttons&quot;,
+      &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+      &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+      &quot;icon_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+      &quot;columns&quot;: [
+        {
+          &quot;title&quot;: &quot;Column 1&quot;,
+          &quot;icon&quot;: &quot;quill&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;,
+          &quot;button_title&quot;: &quot;Go to sharetribe.com&quot;,
+          &quot;button_path&quot;: {&quot;value&quot;: &quot;https://www.sharetribe.com&quot;}
+        },
+        {
+          &quot;title&quot;: &quot;Column 2&quot;,
+          &quot;icon&quot;: &quot;piggy-bank&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;,
+          &quot;button_title&quot;: &quot;Go to sharetribe.com&quot;,
+          &quot;button_path&quot;: {&quot;value&quot;: &quot;https://www.sharetribe.com&quot;}
+        },
+        {
+          &quot;title&quot;: &quot;Column 3&quot;,
+          &quot;icon&quot;: &quot;globe-1&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;,
+          &quot;button_title&quot;: &quot;Go to sharetribe.com&quot;,
+          &quot;button_path&quot;: {&quot;value&quot;: &quot;https://www.sharetribe.com&quot;}
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;three_column_info_without_icons_and_buttons&quot;,
+      &quot;kind&quot;: &quot;info&quot;,
+      &quot;variation&quot;: &quot;multi_column&quot;,
+      &quot;title&quot;: &quot;Three column info without icons and buttons&quot;,
+      &quot;columns&quot;: [
+        {
+          &quot;title&quot;: &quot;Column 1&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;
+        },
+        {
+          &quot;title&quot;: &quot;Column 2&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;
+        },
+        {
+          &quot;title&quot;: &quot;Column 3&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;two_column_info_without_icons_and_buttons_with_sigle_button&quot;,
+      &quot;kind&quot;: &quot;info&quot;,
+      &quot;variation&quot;: &quot;multi_column&quot;,
+      &quot;title&quot;: &quot;Two column info section without icons and buttons&quot;,
+      &quot;columns&quot;: [
+        {
+          &quot;title&quot;: &quot;Column 1&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.\\n\\nParagraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;
+        },
+        {
+          &quot;title&quot;: &quot;Column 2&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;
+        }
+      ],
+      &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+      &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+      &quot;button_title&quot;: &quot;Contact us&quot;,
+      &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;contact_us&quot;}
+    },
+    {
+      &quot;id&quot;: &quot;three_column_info_without_icons_and_buttons_with_sigle_button&quot;,
+      &quot;kind&quot;: &quot;info&quot;,
+      &quot;variation&quot;: &quot;multi_column&quot;,
+      &quot;title&quot;: &quot;Three column info without icons and buttons&quot;,
+      &quot;columns&quot;: [
+        {
+          &quot;title&quot;: &quot;Column 1&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;
+        },
+        {
+          &quot;title&quot;: &quot;Column 2&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;
+        },
+        {
+          &quot;title&quot;: &quot;Column 3&quot;,
+          &quot;paragraph&quot;: &quot;Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.&quot;
+        }
+      ],
+      &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+      &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+      &quot;button_title&quot;: &quot;Contact us&quot;,
+      &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;contact_us&quot;}
+    },
+    {
+        &quot;id&quot;: &quot;categories&quot;,
+        &quot;kind&quot;: &quot;categories&quot;,
+        &quot;title&quot;: &quot;Categories section&quot;,
+        &quot;paragraph&quot;: &quot;PLEASE NOTE: This section is NOT ENABLED by default. To enable this section, replace category IDs with real IDs and add the section to the &#39;composition&#39;. Categories section can contain 3 to 7 featured categories. Each category should have a background image.&quot;,
+        &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+        &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+        &quot;button_title&quot;: &quot;All categories&quot;,
+        &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;all_categories&quot;},
+        &quot;category_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+        &quot;categories&quot;: [
+            {
+                &quot;category&quot;: { &quot;type&quot;: &quot;category&quot;, &quot;id&quot;: 99999 },
+                &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;default_hero_background&quot;}
+            },
+            {
+                &quot;category&quot;: { &quot;type&quot;: &quot;category&quot;, &quot;id&quot;: 99999 },
+                &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;default_hero_background&quot;}
+            },
+            {
+                &quot;category&quot;: { &quot;type&quot;: &quot;category&quot;, &quot;id&quot;: 99999 },
+                &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;default_hero_background&quot;}
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: &quot;listings&quot;,
+        &quot;kind&quot;: &quot;listings&quot;,
+        &quot;title&quot;: &quot;Featured listings section&quot;,
+        &quot;paragraph&quot;: &quot;PLEASE NOTE: This section is NOT ENABLED by default. To enable this section, replace listing IDs with real IDs and add the section to the &#39;composition&#39;. This section contains 3 featured listings&quot;,
+        &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+        &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+        &quot;button_title&quot;: &quot;Browse all listings&quot;,
+        &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;search&quot;},
+        &quot;price_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+        &quot;no_listing_image_background_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+        &quot;no_listing_image_text&quot;: {&quot;type&quot;: &quot;translation&quot;, &quot;id&quot;: &quot;no_listing_image&quot;},
+        &quot;author_name_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+        &quot;listings&quot;: [
+            {
+                &quot;listing&quot;: { &quot;type&quot;: &quot;listing&quot;, &quot;id&quot;: 99999 }
+            },
+            {
+                &quot;listing&quot;: { &quot;type&quot;: &quot;listing&quot;, &quot;id&quot;: 99999 }
+            },
+            {
+                &quot;listing&quot;: { &quot;type&quot;: &quot;listing&quot;, &quot;id&quot;: 99999 }
+            }
+        ]
+    },
+    {
+        &quot;id&quot;: &quot;locations&quot;,
+        &quot;kind&quot;: &quot;locations&quot;,
+        &quot;title&quot;: &quot;Locations section&quot;,
+        &quot;paragraph&quot;: &quot;PLEASE NOTE: This section is NOT ENABLED by default. To enable this section add the section to the &#39;composition&#39;. Locations section can contain 3 to 7 featured locations. Each location should have a background image.&quot;,
+        &quot;location_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+        &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+        &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+        &quot;button_title&quot;: &quot;Browse all listings&quot;,
+        &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;search&quot;},
+        &quot;locations&quot;: [
+            {
+                &quot;title&quot;: &quot;About&quot;,
+                &quot;location&quot;: { &quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;about&quot; },
+                &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;default_hero_background&quot;}
+            },
+            {
+                &quot;title&quot;: &quot;Contact Us&quot;,
+                &quot;location&quot;: { &quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;contact_us&quot; },
+                &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;default_hero_background&quot;}
+            },
+            {
+                &quot;location&quot;: &quot;https://bagshare.wordpress.com/&quot;,
+                &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;default_hero_background&quot;}
+            }
+        ]
+    },
+    {
+      &quot;id&quot;: &quot;footer&quot;,
+      &quot;kind&quot;: &quot;footer&quot;,
+      &quot;theme&quot;: &quot;dark&quot;,
+      &quot;social_media_icon_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+      &quot;social_media_icon_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+      &quot;links&quot;: [
+        {&quot;label&quot;: &quot;About&quot;, &quot;href&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;about&quot;}},
+        {&quot;label&quot;: &quot;Contact us&quot;, &quot;href&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;contact_us&quot;}},
+        {&quot;label&quot;: &quot;How to use?&quot;, &quot;href&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;how_to_use&quot;}},
+        {&quot;label&quot;: &quot;Terms&quot;, &quot;href&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;terms&quot;}},
+        {&quot;label&quot;: &quot;Privary&quot;, &quot;href&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;privacy&quot;}},
+        {&quot;label&quot;: &quot;Invite new members&quot;, &quot;href&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;new_invitation&quot;}},
+        {&quot;label&quot;: &quot;Sharetribe&quot;, &quot;href&quot;: {&quot;value&quot;: &quot;https://www.sharetribe.com&quot;}}
+      ],
+      &quot;social&quot;: [
+        {&quot;service&quot;: &quot;facebook&quot;, &quot;url&quot;: &quot;https://www.facebook.com/Sharetribe/&quot;},
+        {&quot;service&quot;: &quot;twitter&quot;, &quot;url&quot;: &quot;https://twitter.com/sharetribe&quot;},
+        {&quot;service&quot;: &quot;instagram&quot;, &quot;url&quot;: &quot;https://www.instagram.com/&quot;},
+        {&quot;service&quot;: &quot;youtube&quot;, &quot;url&quot;: &quot;https://www.youtube.com/channel/UCtefWVq2uu4pHXaIsHlBFnw&quot;},
+        {&quot;service&quot;: &quot;googleplus&quot;, &quot;url&quot;: &quot;https://plus.google.com/114869130265262677354/&quot;},
+        {&quot;service&quot;: &quot;linkedin&quot;, &quot;url&quot;: &quot;https://www.linkedin.com/company/2626583&quot;},
+        {&quot;service&quot;: &quot;pinterest&quot;, &quot;url&quot;: &quot;https://www.pinterest.com/&quot;},
+        {&quot;service&quot;: &quot;soundcloud&quot;, &quot;url&quot;: &quot;https://soundcloud.com/&quot;}
+      ],
+      &quot;copyright&quot;: &quot;Copyright Marketplace Ltd 2016&quot;
+    }
+  ],
+
+  &quot;composition&quot;: [
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;hero&quot;}},
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;markdown_support&quot;}},
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;single_info_without_background_and_cta&quot;}},
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;single_info_without_cta&quot;}},
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;single_info_with_cta&quot;}},
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;single_info_with_background_and_cta&quot;}},
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;single_info_with_background_color_and_cta&quot;}},
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;two_column_info_with_icons_and_buttons&quot;}},
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;two_column_info_without_icons_and_buttons&quot;}},
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;three_column_info_with_icons_and_buttons&quot;}},
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;three_column_info_without_icons_and_buttons&quot;}},
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;video&quot;}},
+    { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;footer&quot;}}
+  ],
+
+  &quot;assets&quot;: [
+    { &quot;id&quot;: &quot;default_hero_background&quot;, &quot;src&quot;: &quot;default_hero_background.jpg&quot;, &quot;content_type&quot;: &quot;image/jpeg&quot; }
+  ]
+}
+</span><span class='heredoc_end'>JSON</span></pre></dd>
+      
+        <dt id="TEMPLATE_STR-constant" class="">TEMPLATE_STR =
+          
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;JSON</span>
+<span class='tstring_content'>{
+    &quot;settings&quot;: {
+        &quot;marketplace_id&quot;: 1234,
+        &quot;locale&quot;: &quot;en&quot;,
+        &quot;sitename&quot;: &quot;example-com&quot;
+    },
+    &quot;page&quot;: {
+      &quot;twitter_handle&quot;: {&quot;value&quot;: &quot;@CHANGEME&quot;},
+      &quot;twitter_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;hero_background_image&quot;},
+      &quot;facebook_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;hero_background_image&quot;},
+      &quot;title&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;page_title&quot;},
+      &quot;description&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;description&quot;},
+      &quot;publisher&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;name&quot;},
+      &quot;copyright&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;name&quot;},
+      &quot;facebook_site_name&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;name&quot;},
+      &quot;google_site_verification&quot;: {&quot;value&quot;: &quot;CHANGEME&quot;}
+    },
+    &quot;sections&quot;: [
+        {
+            &quot;id&quot;: &quot;hero&quot;,
+            &quot;kind&quot;: &quot;hero&quot;,
+            &quot;variation&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;search_type&quot;},
+            &quot;title&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;slogan&quot;},
+            &quot;subtitle&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;description&quot;},
+            &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;hero_background_image&quot;},
+            &quot;background_image_variation&quot;: &quot;dark&quot;,
+            &quot;search_button&quot;: {&quot;type&quot;: &quot;translation&quot;, &quot;id&quot;: &quot;search_button&quot;},
+            &quot;search_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;search&quot;},
+            &quot;search_placeholder&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;search_placeholder&quot;},
+            &quot;search_location_with_keyword_placeholder&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;search_location_with_keyword_placeholder&quot;},
+            &quot;signup_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;signup&quot;},
+            &quot;signup_button&quot;: {&quot;type&quot;: &quot;translation&quot;, &quot;id&quot;: &quot;signup_button&quot;},
+            &quot;search_button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;search_button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+            &quot;signup_button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;signup_button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;}
+        },
+        {
+            &quot;id&quot;: &quot;info-1-column&quot;,
+            &quot;kind&quot;: &quot;info&quot;,
+            &quot;variation&quot;: &quot;single_column&quot;,
+            &quot;title&quot;: &quot;Section title goes here&quot;,
+            &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;info_background_image&quot;},
+            &quot;paragraph&quot;: &quot;Section text goes here&quot;,
+            &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+            &quot;button_title&quot;: &quot;Button title&quot;,
+            &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;about&quot;}
+        },
+        {
+            &quot;id&quot;: &quot;info-2-columns&quot;,
+            &quot;kind&quot;: &quot;info&quot;,
+            &quot;variation&quot;: &quot;multi_column&quot;,
+            &quot;title&quot;: &quot;Section title goes here&quot;,
+            &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+            &quot;icon_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;columns&quot;: [
+                {
+                    &quot;icon&quot;: &quot;piggy-bank&quot;,
+                    &quot;title&quot;: &quot;Column title goes here&quot;,
+                    &quot;paragraph&quot;: &quot;Column text goes here&quot;,
+                    &quot;button_title&quot;: &quot;Button title&quot;,
+                    &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;about&quot;}
+                },
+                {
+                    &quot;icon&quot;: &quot;piggy-bank&quot;,
+                    &quot;title&quot;: &quot;Column title goes here&quot;,
+                    &quot;paragraph&quot;: &quot;Column text goes here&quot;,
+                    &quot;button_title&quot;: &quot;Button title&quot;,
+                    &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;about&quot;}
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;info-3-columns&quot;,
+            &quot;kind&quot;: &quot;info&quot;,
+            &quot;variation&quot;: &quot;multi_column&quot;,
+            &quot;title&quot;: &quot;Section title goes here&quot;,
+            &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+            &quot;icon_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;columns&quot;: [
+                {
+                    &quot;icon&quot;: &quot;piggy-bank&quot;,
+                    &quot;title&quot;: &quot;Column title goes here&quot;,
+                    &quot;paragraph&quot;: &quot;Column text goes here&quot;,
+                    &quot;button_title&quot;: &quot;Button title&quot;,
+                    &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;about&quot;}
+                },
+                {
+                    &quot;icon&quot;: &quot;piggy-bank&quot;,
+                    &quot;title&quot;: &quot;Column title goes here&quot;,
+                    &quot;paragraph&quot;: &quot;Column text goes here&quot;,
+                    &quot;button_title&quot;: &quot;Button title&quot;,
+                    &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;about&quot;}
+                },
+                {
+                    &quot;icon&quot;: &quot;piggy-bank&quot;,
+                    &quot;title&quot;: &quot;Column title goes here&quot;,
+                    &quot;paragraph&quot;: &quot;Column text goes here&quot;,
+                    &quot;button_title&quot;: &quot;Button title&quot;,
+                    &quot;button_path&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;about&quot;}
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;categories&quot;,
+            &quot;kind&quot;: &quot;categories&quot;,
+            &quot;title&quot;: &quot;Section title goes here&quot;,
+            &quot;paragraph&quot;: &quot;Section paragraph goes here&quot;,
+            &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+            &quot;button_title&quot;: &quot;Section link&quot;,
+            &quot;button_path&quot;: {&quot;value&quot;: &quot;https://google.com&quot;},
+            &quot;category_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;categories&quot;: [
+                {
+                    &quot;category&quot;: { &quot;type&quot;: &quot;category&quot;, &quot;id&quot;: 1 },
+                    &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;category1_background_image&quot;}
+                },
+                {
+                    &quot;category&quot;: { &quot;type&quot;: &quot;category&quot;, &quot;id&quot;: 2 },
+                    &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;category2_background_image&quot;}
+                },
+                {
+                    &quot;category&quot;: { &quot;type&quot;: &quot;category&quot;, &quot;id&quot;: 3 },
+                    &quot;background_image&quot;: {&quot;type&quot;: &quot;assets&quot;, &quot;id&quot;: &quot;category3_background_image&quot;}
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;listings&quot;,
+            &quot;kind&quot;: &quot;listings&quot;,
+            &quot;title&quot;: &quot;Section title goes here&quot;,
+            &quot;paragraph&quot;: &quot;Section paragraph goes here&quot;,
+            &quot;button_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;button_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+            &quot;button_title&quot;: &quot;Section link&quot;,
+            &quot;button_path&quot;: {&quot;value&quot;: &quot;https://google.com&quot;},
+            &quot;price_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;no_listing_image_background_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;no_listing_image_text&quot;: {&quot;type&quot;: &quot;translation&quot;, &quot;id&quot;: &quot;no_listing_image&quot;},
+            &quot;author_name_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;listings&quot;: [
+                {
+                    &quot;listing&quot;: { &quot;type&quot;: &quot;listing&quot;, &quot;id&quot;: 99999 }
+                },
+                {
+                    &quot;listing&quot;: { &quot;type&quot;: &quot;listing&quot;, &quot;id&quot;: 99999 }
+                },
+                {
+                    &quot;listing&quot;: { &quot;type&quot;: &quot;listing&quot;, &quot;id&quot;: 99999 }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;video&quot;,
+            &quot;kind&quot;: &quot;video&quot;,
+            &quot;variation&quot;: &quot;youtube&quot;,
+            &quot;youtube_video_id&quot;: &quot;UffchBUUIoI&quot;,
+            &quot;width&quot;: &quot;1280&quot;,
+            &quot;height&quot;: &quot;720&quot;
+        },
+        {
+            &quot;id&quot;: &quot;footer&quot;,
+            &quot;kind&quot;: &quot;footer&quot;,
+            &quot;theme&quot;: &quot;dark&quot;,
+            &quot;social_media_icon_color&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color&quot;},
+            &quot;social_media_icon_color_hover&quot;: {&quot;type&quot;: &quot;marketplace_data&quot;, &quot;id&quot;: &quot;primary_color_darken&quot;},
+            &quot;links&quot;: [
+                {&quot;label&quot;: &quot;About&quot;, &quot;href&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;about&quot;}},
+                {&quot;label&quot;: &quot;Example Link&quot;, &quot;href&quot;: {&quot;value&quot;: &quot;https://www.sharetribe.com&quot;}},
+                {&quot;label&quot;: &quot;Invite new members&quot;, &quot;href&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;new_invitation&quot;}},
+                {&quot;label&quot;: &quot;Contact us&quot;, &quot;href&quot;: {&quot;type&quot;: &quot;path&quot;, &quot;id&quot;: &quot;contact_us&quot;}}
+            ],
+            &quot;social&quot;: [
+                {&quot;service&quot;: &quot;facebook&quot;, &quot;url&quot;: &quot;https://www.facebook.com/CHANGEME&quot;},
+                {&quot;service&quot;: &quot;twitter&quot;, &quot;url&quot;: &quot;https://www.twitter.com/CHANGEME&quot;},
+                {&quot;service&quot;: &quot;instagram&quot;, &quot;url&quot;: &quot;https://www.instagram.com/CHANGEME&quot;}
+            ],
+            &quot;copyright&quot;: &quot;This website is powered by Sharetribe marketplace platform.&quot;
+        }
+    ],
+    &quot;composition&quot;: [
+        { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;hero&quot;}},
+        { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;info-1-column&quot;}},
+        { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;info-2-columns&quot;}},
+        { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;info-3-columns&quot;}},
+        { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;categories&quot;}},
+        { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;listings&quot;}},
+        { &quot;section&quot;: {&quot;type&quot;: &quot;sections&quot;, &quot;id&quot;: &quot;footer&quot;}}
+    ],
+    &quot;assets&quot;: [
+        {&quot;id&quot;: &quot;hero_background_image&quot;, &quot;src&quot;: &quot;example_bg_lighter.jpg&quot;, &quot;content_type&quot;: &quot;image/jpeg&quot;},
+        {&quot;id&quot;: &quot;info_background_image&quot;, &quot;src&quot;: &quot;example_bg_lighter.jpg&quot;, &quot;content_type&quot;: &quot;image/jpeg&quot;},
+        {&quot;id&quot;: &quot;category1_background_image&quot;, &quot;src&quot;: &quot;example_bg_lighter.jpg&quot;, &quot;content_type&quot;: &quot;image/jpeg&quot;},
+        {&quot;id&quot;: &quot;category2_background_image&quot;, &quot;src&quot;: &quot;example_bg_lighter.jpg&quot;, &quot;content_type&quot;: &quot;image/jpeg&quot;},
+        {&quot;id&quot;: &quot;category3_background_image&quot;, &quot;src&quot;: &quot;example_bg_lighter.jpg&quot;, &quot;content_type&quot;: &quot;image/jpeg&quot;}
+    ]
+}
+
+</span><span class='heredoc_end'>JSON</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:43 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

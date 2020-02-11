@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TransactionMailer
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "TransactionMailer";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (T)</a> &raquo;
+    
+    
+    <span class="title">TransactionMailer</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: TransactionMailer
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">ActionMailer::Base</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionMailer::Base</li>
+          
+            <li class="next">TransactionMailer</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="MailUtils.html" title="MailUtils (module)">MailUtils</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/mailers/transaction_mailer.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>rubocop:enable Style/MixinUsage</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_transaction-instance_method" title="#new_transaction (instance method)">#<strong>new_transaction</strong>(transaction, recipient)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#payment_receipt_to_buyer-instance_method" title="#payment_receipt_to_buyer (instance method)">#<strong>payment_receipt_to_buyer</strong>(transaction, seller_model = nil, buyer_model = nil, community = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>seller_model, buyer_model and community can be passed as params for testing purposes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#payment_receipt_to_seller-instance_method" title="#payment_receipt_to_seller (instance method)">#<strong>payment_receipt_to_seller</strong>(transaction, seller_model = nil, buyer_model = nil, community = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>seller_model, buyer_model and community can be passed as params for testing purposes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transaction_preauthorized-instance_method" title="#transaction_preauthorized (instance method)">#<strong>transaction_preauthorized</strong>(transaction)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transaction_preauthorized_reminder-instance_method" title="#transaction_preauthorized_reminder (instance method)">#<strong>transaction_preauthorized_reminder</strong>(transaction)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="MailUtils.html" title="MailUtils (module)">MailUtils</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="MailUtils.html#community_specific_sender-class_method" title="MailUtils.community_specific_sender (method)">community_specific_sender</a></span>, <span class='object_link'><a href="MailUtils.html#premailer-instance_method" title="MailUtils#premailer (method)">#premailer</a></span>, <span class='object_link'><a href="MailUtils.html#set_community-instance_method" title="MailUtils#set_community (method)">#set_community</a></span>, <span class='object_link'><a href="MailUtils.html#set_locale-instance_method" title="MailUtils#set_locale (method)">#set_locale</a></span>, <span class='object_link'><a href="MailUtils.html#set_up_layout_variables-instance_method" title="MailUtils#set_up_layout_variables (method)">#set_up_layout_variables</a></span>, <span class='object_link'><a href="MailUtils.html#with_locale-instance_method" title="MailUtils#with_locale (method)">#with_locale</a></span></p>
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="new_transaction-instance_method">
+  
+    #<strong>new_transaction</strong>(transaction, recipient)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/transaction_mailer.rb', line 175</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_transaction'>new_transaction</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='comma'>,</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='rparen'>)</span>
+  <span class='ivar'>@transaction</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span>
+  <span class='id identifier rubyid_community'>community</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@community_name</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_full_name'>full_name</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+    <span class='ivar'>@skip_unsubscribe_footer</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='label'>to:</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='label'>from:</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='label'>subject:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.new_transaction.subject</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="payment_receipt_to_buyer-instance_method">
+  
+    #<strong>payment_receipt_to_buyer</strong>(transaction, seller_model = nil, buyer_model = nil, community = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>seller_model, buyer_model and community can be passed as params for testing purposes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/transaction_mailer.rb', line 127</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_payment_receipt_to_buyer'>payment_receipt_to_buyer</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='comma'>,</span> <span class='id identifier rubyid_seller_model'>seller_model</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_buyer_model'>buyer_model</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_seller_model'>seller_model</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Person.html" title="Person (class)">Person</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing_author_id'>listing_author_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_buyer_model'>buyer_model</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Person.html" title="Person (class)">Person</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_starter_id'>starter_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_community'>community</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Community.html" title="Community (class)">Community</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_payment'>payment</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TransactionService.html" title="TransactionService (module)">TransactionService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TransactionService/Transaction.html" title="TransactionService::Transaction (module)">Transaction</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payment_details'><span class='object_link'><a href="TransactionService/Transaction.html#payment_details-class_method" title="TransactionService::Transaction.payment_details (method)">payment_details</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_buyer_service_fee'>buyer_service_fee</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_payment'>payment</span><span class='lbracket'>[</span><span class='symbol'>:buyer_commission</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_payment'>payment</span><span class='lbracket'>[</span><span class='symbol'>:buyer_commission</span><span class='rbracket'>]</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+                        <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='const'>Money</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_payment'>payment</span><span class='lbracket'>[</span><span class='symbol'>:buyer_commission</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_payment'>payment</span><span class='lbracket'>[</span><span class='symbol'>:payment_total</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_currency'>currency</span><span class='rparen'>)</span><span class='rparen'>)</span>
+                      <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_prepare_template'>prepare_template</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='id identifier rubyid_buyer_model'>buyer_model</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_about_new_payments</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_buyer_model'>buyer_model</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+
+    <span class='id identifier rubyid_unit_type'>unit_type</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='symbol'>:unit_type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="ListingViewUtils.html" title="ListingViewUtils (module)">ListingViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_translate_unit'><span class='object_link'><a href="ListingViewUtils.html#translate_unit-class_method" title="ListingViewUtils.translate_unit (method)">translate_unit</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='symbol'>:unit_type</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='symbol'>:unit_tr_key</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_quantity_selector_label'>quantity_selector_label</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='symbol'>:unit_type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="ListingViewUtils.html" title="ListingViewUtils (module)">ListingViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_translate_quantity'><span class='object_link'><a href="ListingViewUtils.html#translate_quantity-class_method" title="ListingViewUtils.translate_quantity (method)">translate_quantity</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='symbol'>:unit_type</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='symbol'>:unit_selector_tr_key</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_listing_title'>listing_title</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_booking'>booking</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:per_hour?</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.receipt_to_payer.listing_per_unit_title</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>title:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing_title'>listing_title</span><span class='comma'>,</span> <span class='label'>unit_type:</span> <span class='id identifier rubyid_unit_type'>unit_type</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing_title'>listing_title</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_buyer_model'>buyer_model</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.receipt_to_payer.receipt_of_payment</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+      <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span> <span class='lbrace'>{</span>
+        <span class='id identifier rubyid_render'>render</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payment_receipt_to_buyer</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>locals:</span> <span class='lbrace'>{</span>
+                 <span class='label'>conversation_url:</span> <span class='id identifier rubyid_person_transaction_url'>person_transaction_url</span><span class='lparen'>(</span><span class='id identifier rubyid_buyer_model'>buyer_model</span><span class='comma'>,</span> <span class='ivar'>@url_params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>listing_title:</span> <span class='id identifier rubyid_listing_title'>listing_title</span><span class='comma'>,</span>
+                 <span class='label'>price_per_unit_title:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.receipt_to_payer.price_per_unit_type</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>unit_type:</span> <span class='id identifier rubyid_unit_type'>unit_type</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>quantity_selector_label:</span> <span class='id identifier rubyid_quantity_selector_label'>quantity_selector_label</span><span class='comma'>,</span>
+                 <span class='label'>listing_price:</span> <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_unit_price'>unit_price</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>listing_quantity:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing_quantity'>listing_quantity</span><span class='comma'>,</span>
+                 <span class='label'>duration:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_booking'>booking</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>?</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing_quantity'>listing_quantity</span> <span class='op'>:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+                 <span class='label'>subtotal:</span> <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_item_total'>item_total</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>shipping_total:</span> <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_shipping_price'>shipping_price</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>payment_total:</span> <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_payment'>payment</span><span class='lbracket'>[</span><span class='symbol'>:payment_total</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>recipient_full_name:</span> <span class='id identifier rubyid_seller_model'>seller_model</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>recipient_given_name:</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name_for_type'><span class='object_link'><a href="PersonViewUtils.html#person_display_name_for_type-class_method" title="PersonViewUtils.person_display_name_for_type (method)">person_display_name_for_type</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_seller_model'>seller_model</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>first_name_only</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>automatic_confirmation_days:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+                 <span class='label'>show_money_will_be_transferred_note:</span> <span class='kw'>false</span><span class='comma'>,</span>
+                 <span class='label'>gateway:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_payment_gateway'>payment_gateway</span><span class='comma'>,</span>
+                 <span class='label'>community_name:</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_name_with_separator'>name_with_separator</span><span class='lparen'>(</span><span class='id identifier rubyid_buyer_model'>buyer_model</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>payment_buyer_service_fee:</span> <span class='id identifier rubyid_buyer_service_fee'>buyer_service_fee</span>
+               <span class='rbrace'>}</span>
+      <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="payment_receipt_to_seller-instance_method">
+  
+    #<strong>payment_receipt_to_seller</strong>(transaction, seller_model = nil, buyer_model = nil, community = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>seller_model, buyer_model and community can be passed as params for testing purposes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/transaction_mailer.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_payment_receipt_to_seller'>payment_receipt_to_seller</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='comma'>,</span> <span class='id identifier rubyid_seller_model'>seller_model</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_buyer_model'>buyer_model</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_seller_model'>seller_model</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Person.html" title="Person (class)">Person</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing_author_id'>listing_author_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_buyer_model'>buyer_model</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Person.html" title="Person (class)">Person</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_starter_id'>starter_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_community'>community</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Community.html" title="Community (class)">Community</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_payment'>payment</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TransactionService.html" title="TransactionService (module)">TransactionService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TransactionService/Transaction.html" title="TransactionService::Transaction (module)">Transaction</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payment_details'><span class='object_link'><a href="TransactionService/Transaction.html#payment_details-class_method" title="TransactionService::Transaction.payment_details (method)">payment_details</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_payment_total'>payment_total</span> <span class='op'>=</span> <span class='id identifier rubyid_payment'>payment</span><span class='lbracket'>[</span><span class='symbol'>:payment_total</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_service_fee'>service_fee</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_payment'>payment</span><span class='lbracket'>[</span><span class='symbol'>:charged_commission</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='const'>Money</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_payment_total'>payment_total</span><span class='period'>.</span><span class='id identifier rubyid_currency'>currency</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_buyer_service_fee'>buyer_service_fee</span> <span class='op'>=</span> <span class='id identifier rubyid_payment'>payment</span><span class='lbracket'>[</span><span class='symbol'>:buyer_commission</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>Money</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_payment_total'>payment_total</span><span class='period'>.</span><span class='id identifier rubyid_currency'>currency</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_gateway_fee'>gateway_fee</span> <span class='op'>=</span> <span class='id identifier rubyid_payment'>payment</span><span class='lbracket'>[</span><span class='symbol'>:payment_gateway_fee</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_subtotal'>subtotal</span> <span class='op'>=</span> <span class='id identifier rubyid_payment_total'>payment_total</span> <span class='op'>-</span> <span class='id identifier rubyid_buyer_service_fee'>buyer_service_fee</span>
+
+  <span class='id identifier rubyid_prepare_template'>prepare_template</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='id identifier rubyid_seller_model'>seller_model</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_about_new_payments</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_seller_model'>seller_model</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+
+    <span class='id identifier rubyid_you_get'>you_get</span> <span class='op'>=</span> <span class='id identifier rubyid_payment_total'>payment_total</span> <span class='op'>-</span> <span class='id identifier rubyid_service_fee'>service_fee</span> <span class='op'>-</span> <span class='id identifier rubyid_gateway_fee'>gateway_fee</span> <span class='op'>-</span> <span class='id identifier rubyid_buyer_service_fee'>buyer_service_fee</span>
+    <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='op'>-</span><span class='int'>1</span> <span class='op'>*</span> <span class='const'>Money</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_payment'>payment</span><span class='lbracket'>[</span><span class='symbol'>:buyer_commission</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_payment_total'>payment_total</span><span class='period'>.</span><span class='id identifier rubyid_currency'>currency</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_unit_type'>unit_type</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='symbol'>:unit_type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="ListingViewUtils.html" title="ListingViewUtils (module)">ListingViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_translate_unit'><span class='object_link'><a href="ListingViewUtils.html#translate_unit-class_method" title="ListingViewUtils.translate_unit (method)">translate_unit</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='symbol'>:unit_type</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='symbol'>:unit_tr_key</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_quantity_selector_label'>quantity_selector_label</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='symbol'>:unit_type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="ListingViewUtils.html" title="ListingViewUtils (module)">ListingViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_translate_quantity'><span class='object_link'><a href="ListingViewUtils.html#translate_quantity-class_method" title="ListingViewUtils.translate_quantity (method)">translate_quantity</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='symbol'>:unit_type</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='symbol'>:unit_selector_tr_key</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_listing_title'>listing_title</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_booking'>booking</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:per_hour?</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.new_payment.listing_per_unit_title</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>title:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing_title'>listing_title</span><span class='comma'>,</span> <span class='label'>unit_type:</span> <span class='id identifier rubyid_unit_type'>unit_type</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing_title'>listing_title</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_seller_model'>seller_model</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.new_payment.new_payment</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+      <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span> <span class='lbrace'>{</span>
+        <span class='id identifier rubyid_render'>render</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payment_receipt_to_seller</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>locals:</span> <span class='lbrace'>{</span>
+                 <span class='label'>conversation_url:</span> <span class='id identifier rubyid_person_transaction_url'>person_transaction_url</span><span class='lparen'>(</span><span class='id identifier rubyid_seller_model'>seller_model</span><span class='comma'>,</span> <span class='ivar'>@url_params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>id:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>listing_title:</span> <span class='id identifier rubyid_listing_title'>listing_title</span><span class='comma'>,</span>
+                 <span class='label'>price_per_unit_title:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.new_payment.price_per_unit_type</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>unit_type:</span> <span class='id identifier rubyid_unit_type'>unit_type</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>quantity_selector_label:</span> <span class='id identifier rubyid_quantity_selector_label'>quantity_selector_label</span><span class='comma'>,</span>
+                 <span class='label'>listing_price:</span> <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_unit_price'>unit_price</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>listing_quantity:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing_quantity'>listing_quantity</span><span class='comma'>,</span>
+                 <span class='label'>duration:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_booking'>booking</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>?</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing_quantity'>listing_quantity</span><span class='op'>:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+                 <span class='label'>subtotal:</span> <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_subtotal'>subtotal</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>payment_total:</span> <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_buyer_service_fee'>buyer_service_fee</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='id identifier rubyid_subtotal'>subtotal</span> <span class='op'>:</span> <span class='id identifier rubyid_payment_total'>payment_total</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>shipping_total:</span> <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_shipping_price'>shipping_price</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>payment_service_fee:</span> <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_service_fee'>service_fee</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>payment_buyer_service_fee:</span> <span class='id identifier rubyid_buyer_service_fee'>buyer_service_fee</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='op'>-</span><span class='int'>1</span> <span class='op'>*</span> <span class='id identifier rubyid_buyer_service_fee'>buyer_service_fee</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+                 <span class='label'>payment_gateway_fee:</span> <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='op'>-</span><span class='id identifier rubyid_gateway_fee'>gateway_fee</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>payment_seller_gets:</span> <span class='const'><span class='object_link'><a href="MoneyViewUtils.html" title="MoneyViewUtils (module)">MoneyViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_humanized'><span class='object_link'><a href="MoneyViewUtils.html#to_humanized-class_method" title="MoneyViewUtils.to_humanized (method)">to_humanized</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_you_get'>you_get</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>payer_full_name:</span> <span class='id identifier rubyid_buyer_model'>buyer_model</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>payer_given_name:</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name_for_type'><span class='object_link'><a href="PersonViewUtils.html#person_display_name_for_type-class_method" title="PersonViewUtils.person_display_name_for_type (method)">person_display_name_for_type</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_buyer_model'>buyer_model</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>first_name_only</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>gateway:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_payment_gateway'>payment_gateway</span><span class='comma'>,</span>
+                 <span class='label'>community_name:</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_name_with_separator'>name_with_separator</span><span class='lparen'>(</span><span class='id identifier rubyid_seller_model'>seller_model</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+               <span class='rbrace'>}</span>
+      <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transaction_preauthorized-instance_method">
+  
+    #<strong>transaction_preauthorized</strong>(transaction)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/transaction_mailer.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_transaction_preauthorized'>transaction_preauthorized</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='rparen'>)</span>
+  <span class='ivar'>@transaction</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span>
+  <span class='ivar'>@community</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span>
+
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+
+    <span class='id identifier rubyid_payment_type'>payment_type</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_payment_gateway'>payment_gateway</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+    <span class='id identifier rubyid_gateway_expires'>gateway_expires</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TransactionService.html" title="TransactionService (module)">TransactionService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TransactionService/Transaction.html" title="TransactionService::Transaction (module)">Transaction</a></span></span><span class='period'>.</span><span class='id identifier rubyid_authorization_expiration_period'><span class='object_link'><a href="TransactionService/Transaction.html#authorization_expiration_period-class_method" title="TransactionService::Transaction.authorization_expiration_period (method)">authorization_expiration_period</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_payment_type'>payment_type</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_expires'>expires</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_booking'>booking</span><span class='period'>.</span><span class='id identifier rubyid_end_on'>end_on</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_booking_end'>booking_end</span><span class='op'>|</span>
+      <span class='const'><span class='object_link'><a href="TransactionService.html" title="TransactionService (module)">TransactionService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TransactionService/Transaction.html" title="TransactionService::Transaction (module)">Transaction</a></span></span><span class='period'>.</span><span class='id identifier rubyid_preauth_expires_at'><span class='object_link'><a href="TransactionService/Transaction.html#preauth_expires_at-class_method" title="TransactionService::Transaction.preauth_expires_at (method)">preauth_expires_at</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_gateway_expires'>gateway_expires</span><span class='period'>.</span><span class='id identifier rubyid_days'>days</span><span class='period'>.</span><span class='id identifier rubyid_from_now'>from_now</span><span class='comma'>,</span> <span class='id identifier rubyid_booking_end'>booking_end</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='id identifier rubyid_gateway_expires'>gateway_expires</span><span class='period'>.</span><span class='id identifier rubyid_days'>days</span><span class='period'>.</span><span class='id identifier rubyid_from_now'>from_now</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_buffer'>buffer</span> <span class='op'>=</span> <span class='int'>1</span><span class='period'>.</span><span class='id identifier rubyid_minute'>minute</span> <span class='comment'># Add a small buffer (it might take a couple seconds until the email is sent)
+</span>    <span class='id identifier rubyid_expires_in'>expires_in</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TimeUtils.html" title="TimeUtils (module)">TimeUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_time_to'><span class='object_link'><a href="TimeUtils.html#time_to-class_method" title="TimeUtils.time_to (method)">time_to</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_expires'>expires</span> <span class='op'>+</span> <span class='id identifier rubyid_buffer'>buffer</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span>
+      <span class='id identifier rubyid_mail_params'>mail_params</span><span class='lparen'>(</span>
+        <span class='ivar'>@recipient</span><span class='comma'>,</span>
+        <span class='ivar'>@community</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.transaction_preauthorized.subject</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>requester:</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_starter'>starter</span><span class='comma'>,</span> <span class='ivar'>@community</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>listing_title:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+      <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span> <span class='lbrace'>{</span>
+        <span class='id identifier rubyid_render'>render</span> <span class='label'>locals:</span> <span class='lbrace'>{</span>
+                 <span class='label'>payment_expires_in_unit:</span> <span class='id identifier rubyid_expires_in'>expires_in</span><span class='lbracket'>[</span><span class='symbol'>:unit</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                 <span class='label'>payment_expires_in_count:</span> <span class='id identifier rubyid_expires_in'>expires_in</span><span class='lbracket'>[</span><span class='symbol'>:count</span><span class='rbracket'>]</span>
+               <span class='rbrace'>}</span>
+      <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transaction_preauthorized_reminder-instance_method">
+  
+    #<strong>transaction_preauthorized_reminder</strong>(transaction)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/transaction_mailer.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_transaction_preauthorized_reminder'>transaction_preauthorized_reminder</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='rparen'>)</span>
+  <span class='ivar'>@transaction</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span>
+  <span class='ivar'>@community</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span>
+
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span>
+      <span class='id identifier rubyid_mail_params'>mail_params</span><span class='lparen'>(</span>
+        <span class='ivar'>@recipient</span><span class='comma'>,</span>
+        <span class='ivar'>@community</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.transaction_preauthorized_reminder.subject</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>requester:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_starter'>starter</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='ivar'>@community</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>listing_title:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:59 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

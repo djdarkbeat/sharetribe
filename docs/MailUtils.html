@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: MailUtils
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "MailUtils";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (M)</a> &raquo;
+    
+    
+    <span class="title">MailUtils</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: MailUtils
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="CommunityMailer.html" title="CommunityMailer (class)">CommunityMailer</a></span>, <span class='object_link'><a href="PersonMailer.html" title="PersonMailer (class)">PersonMailer</a></span>, <span class='object_link'><a href="TransactionMailer.html" title="TransactionMailer (class)">TransactionMailer</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/utils/mail_utils.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#community_specific_sender-class_method" title="community_specific_sender (class method)">.<strong>community_specific_sender</strong>(community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#premailer-instance_method" title="#premailer (instance method)">#<strong>premailer</strong>(message)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_community-instance_method" title="#set_community (instance method)">#<strong>set_community</strong>(new_community_id, community_locales, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_locale-instance_method" title="#set_locale (instance method)">#<strong>set_locale</strong>(new_locale, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>private.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_up_layout_variables-instance_method" title="#set_up_layout_variables (instance method)">#<strong>set_up_layout_variables</strong>(recipient, community, ref = &quot;email&quot;)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Refactoring needed.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#with_locale-instance_method" title="#with_locale (instance method)">#<strong>with_locale</strong>(recipient_locale, community_locales, community_id = nil, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="community_specific_sender-class_method">
+  
+    .<strong>community_specific_sender</strong>(community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82
+83</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/mail_utils.rb', line 80</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_cid'>cid</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="EmailService.html" title="EmailService (class)">EmailService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EmailService/API.html" title="EmailService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EmailService/API/Api.html" title="EmailService::API::Api (class)">Api</a></span></span><span class='period'>.</span><span class='id identifier rubyid_addresses'><span class='object_link'><a href="EmailService/API/Api.html#addresses-class_method" title="EmailService::API::Api.addresses (method)">addresses</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_sender'>get_sender</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_cid'>cid</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:smtp_format</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="premailer-instance_method">
+  
+    #<strong>premailer</strong>(message)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32
+33
+34
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/mail_utils.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_premailer'>premailer</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_parts'>parts</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+    <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_text_part'>text_part</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='const'>Premailer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_text_part'>text_part</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='label'>with_html_string:</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_plain_text'>to_plain_text</span>
+    <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_html_part'>html_part</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='const'>Premailer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_html_part'>html_part</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='label'>with_html_string:</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_inline_css'>to_inline_css</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='const'>Premailer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='label'>with_html_string:</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_inline_css'>to_inline_css</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_community-instance_method">
+  
+    #<strong>set_community</strong>(new_community_id, community_locales, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/mail_utils.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_community'>set_community</span><span class='lparen'>(</span><span class='id identifier rubyid_new_community_id'>new_community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_locales'>community_locales</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_community_backend'>community_backend</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='op'>::</span><span class='const'>Backend</span><span class='op'>::</span><span class='const'>CommunityBackend</span><span class='period'>.</span><span class='id identifier rubyid_instance'>instance</span>
+  <span class='id identifier rubyid_old_community'>old_community</span> <span class='op'>=</span> <span class='id identifier rubyid_community_backend'>community_backend</span><span class='period'>.</span><span class='id identifier rubyid_set_community!'>set_community!</span><span class='lparen'>(</span><span class='id identifier rubyid_new_community_id'>new_community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_locales'>community_locales</span><span class='comma'>,</span> <span class='label'>clear:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_old_community'>old_community</span><span class='lbracket'>[</span><span class='symbol'>:community_id</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='id identifier rubyid_new_community_id'>new_community_id</span>
+    <span class='id identifier rubyid_community_translations'>community_translations</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TranslationService.html" title="TranslationService (module)">TranslationService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TranslationService/API.html" title="TranslationService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TranslationService/API/Api.html" title="TranslationService::API::Api (class)">Api</a></span></span><span class='period'>.</span><span class='id identifier rubyid_translations'><span class='object_link'><a href="TranslationService/API/Api.html#translations-class_method" title="TranslationService::API::Api.translations (method)">translations</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_new_community_id'>new_community_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:data</span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="TranslationServiceHelper.html" title="TranslationServiceHelper (module)">TranslationServiceHelper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_community_translations_for_i18n_backend'><span class='object_link'><a href="TranslationServiceHelper.html#community_translations_for_i18n_backend-class_method" title="TranslationServiceHelper.community_translations_for_i18n_backend (method)">community_translations_for_i18n_backend</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_community_translations'>community_translations</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>|</span>
+      <span class='comment'># Store community translations to I18n backend.
+</span>      <span class='comment'>#
+</span>      <span class='comment'># Since the data in data hash is already flatten, we don&#39;t want to
+</span>      <span class='comment'># escape the separators (. dots) in the key
+</span>      <span class='id identifier rubyid_community_backend'>community_backend</span><span class='period'>.</span><span class='id identifier rubyid_store_translations'>store_translations</span><span class='lparen'>(</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='label'>escape:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+  <span class='kw'>ensure</span>
+    <span class='id identifier rubyid_community_backend'>community_backend</span><span class='period'>.</span><span class='id identifier rubyid_set_community!'>set_community!</span><span class='lparen'>(</span><span class='id identifier rubyid_old_community'>old_community</span><span class='lbracket'>[</span><span class='symbol'>:community_id</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_old_community'>old_community</span><span class='lbracket'>[</span><span class='symbol'>:locales_in_use</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>clear:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_locale-instance_method">
+  
+    #<strong>set_locale</strong>(new_locale, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>private</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/mail_utils.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_locale'>set_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_new_locale'>new_locale</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_old_locale'>old_locale</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_old_locale'>old_locale</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span> <span class='op'>!=</span> <span class='id identifier rubyid_new_locale'>new_locale</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+    <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span> <span class='op'>=</span> <span class='id identifier rubyid_new_locale'>new_locale</span>
+    <span class='kw'>begin</span>
+      <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+    <span class='kw'>ensure</span>
+      <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span> <span class='op'>=</span> <span class='id identifier rubyid_old_locale'>old_locale</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_up_layout_variables-instance_method">
+  
+    #<strong>set_up_layout_variables</strong>(recipient, community, ref = &quot;email&quot;)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Refactoring needed. This is an ugly method that sets a lot of global state</p>
+
+<p>Avoid adding more state to instance variables. Instead, pass the data to the `render` method in `locals` hash.</p>
+
+<p>If the data is used in the layout, you can make an exception and set it to instance variable</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/mail_utils.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='id identifier rubyid_ref'>ref</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@community</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span>
+  <span class='ivar'>@current_community</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span>
+  <span class='ivar'>@url_params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='ivar'>@url_params</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_full_domain'>full_domain</span>
+  <span class='ivar'>@url_params</span><span class='lbracket'>[</span><span class='symbol'>:ref</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_ref'>ref</span>
+  <span class='ivar'>@show_branding_info</span> <span class='op'>=</span> <span class='op'>!</span><span class='const'>PlanService</span><span class='op'>::</span><span class='const'>API</span><span class='op'>::</span><span class='const'>Api</span><span class='period'>.</span><span class='id identifier rubyid_plans'>plans</span><span class='period'>.</span><span class='id identifier rubyid_get_current'>get_current</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:features</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:whitelabel</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_recipient'>recipient</span>
+    <span class='ivar'>@recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_recipient'>recipient</span>
+    <span class='ivar'>@unsubscribe_token</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="AuthToken.html" title="AuthToken (class)">AuthToken</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_unsubscribe_token'><span class='object_link'><a href="AuthToken.html#create_unsubscribe_token-class_method" title="AuthToken.create_unsubscribe_token (method)">create_unsubscribe_token</a></span></span><span class='lparen'>(</span><span class='label'>person_id:</span> <span class='ivar'>@recipient</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span>
+    <span class='ivar'>@url_params</span><span class='lbracket'>[</span><span class='symbol'>:locale</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="with_locale-instance_method">
+  
+    #<strong>with_locale</strong>(recipient_locale, community_locales, community_id = nil, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/mail_utils.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient_locale'>recipient_locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community_locales'>community_locales</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_set_locale'>set_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient_locale'>recipient_locale</span><span class='rparen'>)</span> <span class='lbrace'>{</span>
+    <span class='id identifier rubyid_set_community'>set_community</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_locales'>community_locales</span><span class='rparen'>)</span> <span class='lbrace'>{</span>
+      <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+    <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:33 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

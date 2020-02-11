@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: PaypalService::API::Payments
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "PaypalService::API::Payments";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../PaypalService.html" title="PaypalService (module)">PaypalService</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../API.html" title="PaypalService::API (module)">API</a></span></span>
+     &raquo; 
+    <span class="title">Payments</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: PaypalService::API::Payments
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">PaypalService::API::Payments</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="RequestWrapper.html" title="PaypalService::API::RequestWrapper (module)">RequestWrapper</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/services/paypal_service/api/payments.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="MerchantData-constant" class="">MerchantData =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../PaypalService.html" title="PaypalService (module)">PaypalService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DataTypes.html" title="PaypalService::DataTypes (module)">DataTypes</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DataTypes/Merchant.html" title="PaypalService::DataTypes::Merchant (module)">Merchant</a></span></span></pre></dd>
+      
+        <dt id="TokenStore-constant" class="">TokenStore =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../PaypalService.html" title="PaypalService (module)">PaypalService</a></span></span><span class='op'>::</span><span class='const'>Store</span><span class='op'>::</span><span class='const'>Token</span></pre></dd>
+      
+        <dt id="PaymentStore-constant" class="">PaymentStore =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../PaypalService.html" title="PaypalService (module)">PaypalService</a></span></span><span class='op'>::</span><span class='const'>Store</span><span class='op'>::</span><span class='const'>PaypalPayment</span></pre></dd>
+      
+        <dt id="Lookup-constant" class="">Lookup =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../PaypalService.html" title="PaypalService (module)">PaypalService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../API.html" title="PaypalService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Lookup.html" title="PaypalService::API::Lookup (class)">Lookup</a></span></span></pre></dd>
+      
+        <dt id="Worker-constant" class="">Worker =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../PaypalService.html" title="PaypalService (module)">PaypalService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../API.html" title="PaypalService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Worker.html" title="PaypalService::API::Worker (module)">Worker</a></span></span></pre></dd>
+      
+        <dt id="Invnum-constant" class="">Invnum =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../PaypalService.html" title="PaypalService (module)">PaypalService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../API.html" title="PaypalService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Invnum.html" title="PaypalService::API::Invnum (module)">Invnum</a></span></span></pre></dd>
+      
+        <dt id="APIDataTypes-constant" class="">APIDataTypes =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../PaypalService.html" title="PaypalService (module)">PaypalService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../API.html" title="PaypalService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="DataTypes.html" title="PaypalService::API::DataTypes (module)">DataTypes</a></span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#logger-instance_method" title="#logger (instance method)">#<strong>logger</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute logger.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-instance_method" title="#create (instance method)">#<strong>create</strong>(community_id, token, force_sync: true)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>POST /payments/:community_id/create?token=EC-7XU83376C70426719.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_create-instance_method" title="#do_create (instance method)">#<strong>do_create</strong>(community_id, token)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_full_capture-instance_method" title="#do_full_capture (instance method)">#<strong>do_full_capture</strong>(community_id, transaction_id, info, payment, m_acc)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_request-instance_method" title="#do_request (instance method)">#<strong>do_request</strong>(community_id, create_payment, m_acc)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_void-instance_method" title="#do_void (instance method)">#<strong>do_void</strong>(community_id, transaction_id, info, payment, m_acc)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ensure_payment_authorized-instance_method" title="#ensure_payment_authorized (instance method)">#<strong>ensure_payment_authorized</strong>(community_id, payment_entity)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#full_capture-instance_method" title="#full_capture (instance method)">#<strong>full_capture</strong>(community_id, transaction_id, info, force_sync: true)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>POST /payments/:community_id/:transaction_id/full_capture.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_payment-instance_method" title="#get_payment (instance method)">#<strong>get_payment</strong>(community_id, transaction_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /payments/:community_id/:transaction_id.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_request_token-instance_method" title="#get_request_token (instance method)">#<strong>get_request_token</strong>(community_id, token)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(events, merchant, logger = PaypalService::Logger.new)  &#x21d2; Payments </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Payments.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#paypal_merchant-instance_method" title="#paypal_merchant (instance method)">#<strong>paypal_merchant</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>For RequestWrapper mixin.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#refund-instance_method" title="#refund (instance method)">#<strong>refund</strong>(community_id, transaction_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>POST /payments/:community_id/:transaction_id/refund.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#request-instance_method" title="#request (instance method)">#<strong>request</strong>(community_id, create_payment, force_sync: true)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>POST /payments/request.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#request_cancel-instance_method" title="#request_cancel (instance method)">#<strong>request_cancel</strong>(community_id, token_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>POST /payments/request/cancel?token=EC-7XU83376C70426719.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#retry_and_clean_tokens-instance_method" title="#retry_and_clean_tokens (instance method)">#<strong>retry_and_clean_tokens</strong>(clean_time_limit)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Not part of the public API, used by rake task to retry and clean unfinished orders.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#void-instance_method" title="#void (instance method)">#<strong>void</strong>(community_id, transaction_id, info, force_sync: true)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>POST /payments/:community_id/:transaction_id/void.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="RequestWrapper.html" title="PaypalService::API::RequestWrapper (module)">RequestWrapper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="RequestWrapper.html#log_and_return-instance_method" title="PaypalService::API::RequestWrapper#log_and_return (method)">#log_and_return</a></span>, <span class='object_link'><a href="RequestWrapper.html#parse_policy-instance_method" title="PaypalService::API::RequestWrapper#parse_policy (method)">#parse_policy</a></span>, <span class='object_link'><a href="RequestWrapper.html#try_operation-instance_method" title="PaypalService::API::RequestWrapper#try_operation (method)">#try_operation</a></span>, <span class='object_link'><a href="RequestWrapper.html#with_success-instance_method" title="PaypalService::API::RequestWrapper#with_success (method)">#with_success</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(events, merchant, logger = PaypalService::Logger.new)  &#x21d2; <tt><span class='object_link'><a href="" title="PaypalService::API::Payments (class)">Payments</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Payments</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_events'>events</span><span class='comma'>,</span> <span class='id identifier rubyid_merchant'>merchant</span><span class='comma'>,</span> <span class='id identifier rubyid_logger'>logger</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../PaypalService.html" title="PaypalService (module)">PaypalService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Logger.html" title="PaypalService::Logger (class)">Logger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+  <span class='ivar'>@logger</span> <span class='op'>=</span> <span class='id identifier rubyid_logger'>logger</span>
+  <span class='ivar'>@events</span> <span class='op'>=</span> <span class='id identifier rubyid_events'>events</span>
+  <span class='ivar'>@merchant</span> <span class='op'>=</span> <span class='id identifier rubyid_merchant'>merchant</span>
+  <span class='ivar'>@lookup</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#Lookup-constant" title="PaypalService::API::Payments::Lookup (constant)">Lookup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_logger'>logger</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="logger-instance_method">
+  
+    #<strong>logger</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute logger</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_logger'>logger</span>
+  <span class='ivar'>@logger</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create-instance_method">
+  
+    #<strong>create</strong>(community_id, token, force_sync: true)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>POST /payments/:community_id/create?token=EC-7XU83376C70426719</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='label'>force_sync:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='ivar'>@lookup</span><span class='period'>.</span><span class='id identifier rubyid_with_token'>with_token</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_token'>token</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_force_sync'>force_sync</span>
+      <span class='id identifier rubyid_proc_token'>proc_token</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#Worker-constant" title="PaypalService::API::Payments::Worker (constant)">Worker</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enqueue_payments_op'>enqueue_payments_op</span><span class='lparen'>(</span>
+        <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+        <span class='label'>transaction_id:</span> <span class='id identifier rubyid_token'>token</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='label'>op_name:</span> <span class='symbol'>:do_create</span><span class='comma'>,</span>
+        <span class='label'>op_input:</span> <span class='lbracket'>[</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+      <span class='id identifier rubyid_proc_status_response'>proc_status_response</span><span class='lparen'>(</span><span class='id identifier rubyid_proc_token'>proc_token</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_do_create'>do_create</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_create-instance_method">
+  
+    #<strong>do_create</strong>(community_id, token)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 133</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_do_create'>do_create</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_existing_payment'>existing_payment</span> <span class='op'>=</span> <span class='ivar'>@lookup</span><span class='period'>.</span><span class='id identifier rubyid_get_payment_by_token'>get_payment_by_token</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_existing_payment'>existing_payment</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+      <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
+        <span class='period'>.</span><span class='id identifier rubyid_and_then'>and_then</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_payment_entity'>payment_entity</span><span class='op'>|</span> <span class='id identifier rubyid_ensure_payment_authorized'>ensure_payment_authorized</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_payment_entity'>payment_entity</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_ensure_payment_authorized'>ensure_payment_authorized</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_existing_payment'>existing_payment</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span>
+    <span class='comment'># Delete the token, we have now completed the payment request
+</span>    <span class='const'><span class='object_link'><a href="#TokenStore-constant" title="PaypalService::API::Payments::TokenStore (constant)">TokenStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='lbracket'>[</span><span class='symbol'>:data</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_response'>response</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_full_capture-instance_method">
+  
+    #<strong>do_full_capture</strong>(community_id, transaction_id, info, payment, m_acc)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 181</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_do_full_capture'>do_full_capture</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='comma'>,</span> <span class='id identifier rubyid_payment'>payment</span><span class='comma'>,</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_success'>with_success</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="#MerchantData-constant" title="PaypalService::API::Payments::MerchantData (constant)">MerchantData</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_do_full_capture'>create_do_full_capture</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+        <span class='label'>receiver_username:</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='label'>authorization_id:</span> <span class='id identifier rubyid_payment'>payment</span><span class='lbracket'>[</span><span class='symbol'>:authorization_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='label'>payment_total:</span> <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:payment_total</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='label'>invnum:</span> <span class='const'><span class='object_link'><a href="#Invnum-constant" title="PaypalService::API::Payments::Invnum (constant)">Invnum</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="#create-instance_method" title="PaypalService::API::Payments#create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span> <span class='symbol'>:payment</span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>error_policy:</span> <span class='lbrace'>{</span>
+      <span class='label'>codes_to_retry:</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>10001</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x-timeout</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x-servererror</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>try_max:</span> <span class='int'>5</span><span class='comma'>,</span>
+      <span class='label'>finally:</span> <span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span> <span class='symbol'>:void_failed_payment</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_payment'>payment</span><span class='comma'>,</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+    <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_res'>payment_res</span><span class='op'>|</span>
+
+    <span class='comment'># Save payment data to payment
+</span>    <span class='id identifier rubyid_payment'>payment</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#PaymentStore-constant" title="PaypalService::API::Payments::PaymentStore (constant)">PaymentStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span>
+      <span class='label'>data:</span> <span class='id identifier rubyid_payment_res'>payment_res</span><span class='comma'>,</span>
+      <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+      <span class='label'>transaction_id:</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span>
+     <span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_payment_entity'>payment_entity</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#APIDataTypes-constant" title="PaypalService::API::Payments::APIDataTypes (constant)">APIDataTypes</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_payment'>create_payment</span><span class='lparen'>(</span><span class='id identifier rubyid_payment'>payment</span><span class='rparen'>)</span>
+
+    <span class='comment'># Trigger payment_updated event
+</span>    <span class='ivar'>@events</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='symbol'>:payment_updated</span><span class='comma'>,</span> <span class='symbol'>:success</span><span class='comma'>,</span> <span class='id identifier rubyid_payment_entity'>payment_entity</span><span class='rparen'>)</span>
+
+    <span class='comment'># Return as payment entity
+</span>    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_payment_entity'>payment_entity</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_request-instance_method">
+  
+    #<strong>do_request</strong>(community_id, create_payment, m_acc)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_do_request'>do_request</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='comma'>,</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_create_payment_data'>create_payment_data</span> <span class='op'>=</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+    <span class='lbrace'>{</span> <span class='label'>receiver_username:</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>invnum:</span> <span class='const'><span class='object_link'><a href="#Invnum-constant" title="PaypalService::API::Payments::Invnum (constant)">Invnum</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="#create-instance_method" title="PaypalService::API::Payments#create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:payment</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:payment_action</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='symbol'>:order</span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="#MerchantData-constant" title="PaypalService::API::Payments::MerchantData (constant)">MerchantData</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_set_express_checkout_order'>create_set_express_checkout_order</span><span class='lparen'>(</span><span class='id identifier rubyid_create_payment_data'>create_payment_data</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='const'><span class='object_link'><a href="#MerchantData-constant" title="PaypalService::API::Payments::MerchantData (constant)">MerchantData</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_set_express_checkout_authorization'>create_set_express_checkout_authorization</span><span class='lparen'>(</span><span class='id identifier rubyid_create_payment_data'>create_payment_data</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_with_success'>with_success</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_request'>request</span><span class='comma'>,</span>
+    <span class='label'>error_policy:</span> <span class='lbrace'>{</span>
+      <span class='label'>codes_to_retry:</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>10001</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x-timeout</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>x-servererror</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>try_max:</span> <span class='int'>3</span>
+    <span class='rbrace'>}</span>
+  <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_response'>response</span><span class='op'>|</span>
+    <span class='const'><span class='object_link'><a href="#TokenStore-constant" title="PaypalService::API::Payments::TokenStore (constant)">TokenStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="#create-instance_method" title="PaypalService::API::Payments#create (method)">create</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span>
+      <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+      <span class='label'>token:</span> <span class='id identifier rubyid_response'>response</span><span class='lbracket'>[</span><span class='symbol'>:token</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>transaction_id:</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>payment_action:</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:payment_action</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>merchant_id:</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='lbracket'>[</span><span class='symbol'>:person_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>receiver_id:</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>item_name:</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:item_name</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>item_quantity:</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:item_quantity</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>item_price:</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:item_price</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:order_total</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>shipping_total:</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:shipping_total</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>express_checkout_url:</span> <span class='id identifier rubyid_response'>response</span><span class='lbracket'>[</span><span class='symbol'>:redirect_url</span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span><span class='rparen'>)</span>
+
+    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+      <span class='const'><span class='object_link'><a href="#APIDataTypes-constant" title="PaypalService::API::Payments::APIDataTypes (constant)">APIDataTypes</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_payment_request'>create_payment_request</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+          <span class='label'>transaction_id:</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='label'>token:</span> <span class='id identifier rubyid_response'>response</span><span class='lbracket'>[</span><span class='symbol'>:token</span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='label'>redirect_url:</span> <span class='id identifier rubyid_response'>response</span><span class='lbracket'>[</span><span class='symbol'>:redirect_url</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_void-instance_method">
+  
+    #<strong>do_void</strong>(community_id, transaction_id, info, payment, m_acc)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+237
+238
+239
+240
+241
+242
+243
+244
+245</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 237</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_do_void'>do_void</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='comma'>,</span> <span class='id identifier rubyid_payment'>payment</span><span class='comma'>,</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_void_payment'>void_payment</span><span class='lparen'>(</span>
+    <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_payment'>payment</span><span class='comma'>,</span>
+    <span class='symbol'>:success</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_m_acc'>m_acc</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:note</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ensure_payment_authorized-instance_method">
+  
+    #<strong>ensure_payment_authorized</strong>(community_id, payment_entity)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 152</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ensure_payment_authorized'>ensure_payment_authorized</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_payment_entity'>payment_entity</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_payment_entity'>payment_entity</span><span class='lbracket'>[</span><span class='symbol'>:pending_reason</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='symbol'>:&quot;payment-review&quot;</span>
+    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Error.html" title="Result::Error (class)">Error</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Error.html#initialize-instance_method" title="Result::Error#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Cannot complete authorization because the payment is pending for manual review by PayPal.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='lbrace'>{</span> <span class='label'>error_code:</span> <span class='symbol'>:&quot;payment-review&quot;</span><span class='comma'>,</span> <span class='label'>payment:</span> <span class='id identifier rubyid_payment_entity'>payment_entity</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_payment_entity'>payment_entity</span><span class='lbracket'>[</span><span class='symbol'>:pending_reason</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='symbol'>:authorization</span>
+    <span class='id identifier rubyid_authorize_payment'>authorize_payment</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_payment_entity'>payment_entity</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_payment_entity'>payment_entity</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="full_capture-instance_method">
+  
+    #<strong>full_capture</strong>(community_id, transaction_id, info, force_sync: true)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>POST /payments/:community_id/:transaction_id/full_capture</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 165</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_full_capture'>full_capture</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='comma'>,</span> <span class='label'>force_sync:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='ivar'>@lookup</span><span class='period'>.</span><span class='id identifier rubyid_with_payment'>with_payment</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='symbol'>:pending</span><span class='comma'>,</span> <span class='symbol'>:authorization</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment'>payment</span><span class='comma'>,</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_force_sync'>force_sync</span>
+      <span class='id identifier rubyid_proc_token'>proc_token</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#Worker-constant" title="PaypalService::API::Payments::Worker (constant)">Worker</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enqueue_payments_op'>enqueue_payments_op</span><span class='lparen'>(</span>
+        <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+        <span class='label'>transaction_id:</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span>
+        <span class='label'>op_name:</span> <span class='symbol'>:do_full_capture</span><span class='comma'>,</span>
+        <span class='label'>op_input:</span> <span class='lbracket'>[</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='comma'>,</span> <span class='id identifier rubyid_payment'>payment</span><span class='comma'>,</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+      <span class='id identifier rubyid_proc_status_response'>proc_status_response</span><span class='lparen'>(</span><span class='id identifier rubyid_proc_token'>proc_token</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_do_full_capture'>do_full_capture</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='comma'>,</span> <span class='id identifier rubyid_payment'>payment</span><span class='comma'>,</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_payment-instance_method">
+  
+    #<strong>get_payment</strong>(community_id, transaction_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /payments/:community_id/:transaction_id</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+214
+215
+216
+217
+218</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 214</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_payment'>get_payment</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='rparen'>)</span>
+  <span class='const'>Maybe</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#PaymentStore-constant" title="PaypalService::API::Payments::PaymentStore (constant)">PaymentStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_payment'>payment</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#APIDataTypes-constant" title="PaypalService::API::Payments::APIDataTypes (constant)">APIDataTypes</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_payment'>create_payment</span><span class='lparen'>(</span><span class='id identifier rubyid_payment'>payment</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Error.html" title="Result::Error (class)">Error</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Error.html#initialize-instance_method" title="Result::Error#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>No matching payment for community_id: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_community_id'>community_id</span><span class='embexpr_end'>}</span><span class='tstring_content'> and transaction_id: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_request_token-instance_method">
+  
+    #<strong>get_request_token</strong>(community_id, token)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 93</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_request_token'>get_request_token</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
+  <span class='ivar'>@lookup</span><span class='period'>.</span><span class='id identifier rubyid_with_token'>with_token</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_token'>token</span><span class='op'>|</span>
+    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="paypal_merchant-instance_method">
+  
+    #<strong>paypal_merchant</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>For RequestWrapper mixin</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_paypal_merchant'>paypal_merchant</span>
+  <span class='ivar'>@merchant</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="refund-instance_method">
+  
+    #<strong>refund</strong>(community_id, transaction_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>POST /payments/:community_id/:transaction_id/refund</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NoMethodError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+248
+249
+250</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 248</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_refund'>refund</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NoMethodError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Not implemented</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="request-instance_method">
+  
+    #<strong>request</strong>(community_id, create_payment, force_sync: true)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>POST /payments/request</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='comma'>,</span> <span class='label'>force_sync:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='ivar'>@lookup</span><span class='period'>.</span><span class='id identifier rubyid_with_active_account'>with_active_account</span><span class='lparen'>(</span>
+    <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:merchant_id</span><span class='rbracket'>]</span>
+  <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_m_acc'>m_acc</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_force_sync'>force_sync</span>
+      <span class='id identifier rubyid_proc_token'>proc_token</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#Worker-constant" title="PaypalService::API::Payments::Worker (constant)">Worker</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enqueue_payments_op'>enqueue_payments_op</span><span class='lparen'>(</span>
+        <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+        <span class='label'>transaction_id:</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='label'>op_name:</span> <span class='symbol'>:do_request</span><span class='comma'>,</span>
+        <span class='label'>op_input:</span> <span class='lbracket'>[</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='comma'>,</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+      <span class='id identifier rubyid_proc_status_response'>proc_status_response</span><span class='lparen'>(</span><span class='id identifier rubyid_proc_token'>proc_token</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_do_request'>do_request</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_create_payment'>create_payment</span><span class='comma'>,</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="request_cancel-instance_method">
+  
+    #<strong>request_cancel</strong>(community_id, token_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>POST /payments/request/cancel?token=EC-7XU83376C70426719</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 100</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_request_cancel'>request_cancel</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_token_id'>token_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_token'>token</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#TokenStore-constant" title="PaypalService::API::Payments::TokenStore (constant)">TokenStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_token_id'>token_id</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="#TokenStore-constant" title="PaypalService::API::Payments::TokenStore (constant)">TokenStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+    <span class='comment'>#trigger callback for request cancelled
+</span>    <span class='ivar'>@events</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='symbol'>:request_cancelled</span><span class='comma'>,</span> <span class='symbol'>:success</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
+
+    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span>
+  <span class='kw'>else</span>
+    <span class='comment'>#Handle errors by logging, because request cancellations are async (direct cancels + scheduling)
+</span>    <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tried to cancel non-existent request: [token: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_token_id'>token_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>, community: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_community_id'>community_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Error.html" title="Result::Error (class)">Error</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Error.html#initialize-instance_method" title="Result::Error#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tried to cancel non-existent request: [token: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_token_id'>token_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>, community: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_community_id'>community_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="retry_and_clean_tokens-instance_method">
+  
+    #<strong>retry_and_clean_tokens</strong>(clean_time_limit)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Not part of the public API, used by rake task to retry and clean unfinished orders</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 253</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_retry_and_clean_tokens'>retry_and_clean_tokens</span><span class='lparen'>(</span><span class='id identifier rubyid_clean_time_limit'>clean_time_limit</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="#TokenStore-constant" title="PaypalService::API::Payments::TokenStore (constant)">TokenStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_all'>get_all</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_token'>token</span><span class='op'>|</span>
+    <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='period'>.</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span><span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_response'>response</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_stop_retrying_token?'>stop_retrying_token?</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='period'>.</span><span class='id identifier rubyid_created_at'>created_at</span><span class='comma'>,</span> <span class='id identifier rubyid_clean_time_limit'>clean_time_limit</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_request_cancel'>request_cancel</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='period'>.</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># This operation is one of the few operations that span across
+</span>    <span class='comment'># multiple users and multiple marketplaces. Because of this,
+</span>    <span class='comment'># we need to reset SessionContext when ever we move to the
+</span>    <span class='comment'># next payment
+</span>    <span class='const'><span class='object_link'><a href="../../SessionContextStore.html" title="SessionContextStore (module)">SessionContextStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_reset!'><span class='object_link'><a href="../../SessionContextStore.html#reset!-class_method" title="SessionContextStore.reset! (method)">reset!</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="void-instance_method">
+  
+    #<strong>void</strong>(community_id, transaction_id, info, force_sync: true)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>POST /payments/:community_id/:transaction_id/void</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/api/payments.rb', line 221</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_void'>void</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='comma'>,</span> <span class='label'>force_sync:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='ivar'>@lookup</span><span class='period'>.</span><span class='id identifier rubyid_with_payment'>with_payment</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='symbol'>:pending</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment'>payment</span><span class='comma'>,</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_force_sync'>force_sync</span>
+      <span class='id identifier rubyid_proc_token'>proc_token</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#Worker-constant" title="PaypalService::API::Payments::Worker (constant)">Worker</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enqueue_payments_op'>enqueue_payments_op</span><span class='lparen'>(</span>
+        <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+        <span class='label'>transaction_id:</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span>
+        <span class='label'>op_name:</span> <span class='symbol'>:do_void</span><span class='comma'>,</span>
+        <span class='label'>op_input:</span> <span class='lbracket'>[</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='comma'>,</span> <span class='id identifier rubyid_payment'>payment</span><span class='comma'>,</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+      <span class='id identifier rubyid_proc_status_response'>proc_status_response</span><span class='lparen'>(</span><span class='id identifier rubyid_proc_token'>proc_token</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_do_void'>do_void</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction_id'>transaction_id</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='comma'>,</span> <span class='id identifier rubyid_payment'>payment</span><span class='comma'>,</span> <span class='id identifier rubyid_m_acc'>m_acc</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:02:21 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

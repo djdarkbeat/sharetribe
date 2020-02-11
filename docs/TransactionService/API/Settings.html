@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TransactionService::API::Settings
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "TransactionService::API::Settings";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../TransactionService.html" title="TransactionService (module)">TransactionService</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../API.html" title="TransactionService::API (module)">API</a></span></span>
+     &raquo; 
+    <span class="title">Settings</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: TransactionService::API::Settings
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">TransactionService::API::Settings</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/services/transaction_service/api/settings.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="PaymentSettingsStore-constant" class="">PaymentSettingsStore =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../TransactionService.html" title="TransactionService (module)">TransactionService</a></span></span><span class='op'>::</span><span class='const'>Store</span><span class='op'>::</span><span class='const'>PaymentSettings</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#activate-instance_method" title="#activate (instance method)">#<strong>activate</strong>(community_id:, payment_gateway:, payment_process:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Update the given gateway and process to be the active one, disable others.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#api_verified-instance_method" title="#api_verified (instance method)">#<strong>api_verified</strong>(community_id:, payment_gateway:, payment_process:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#disable-instance_method" title="#disable (instance method)">#<strong>disable</strong>(community_id:, payment_gateway:, payment_process:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get-instance_method" title="#get (instance method)">#<strong>get</strong>(community_id:, payment_gateway:, payment_process:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_active_by_gateway-instance_method" title="#get_active_by_gateway (instance method)">#<strong>get_active_by_gateway</strong>(community_id:, payment_gateway:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#provision-instance_method" title="#provision (instance method)">#<strong>provision</strong>(settings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Provision new settings (= new gateway and/or process) for a community.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>(settings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Update settings but don&#39;t change gateway, process or active state.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="activate-instance_method">
+  
+    #<strong>activate</strong>(community_id:, payment_gateway:, payment_process:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Update the given gateway and process to be the active one, disable others</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/transaction_service/api/settings.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_activate'>activate</span><span class='lparen'>(</span><span class='label'>community_id:</span><span class='comma'>,</span> <span class='label'>payment_gateway:</span><span class='comma'>,</span> <span class='label'>payment_process:</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#PaymentSettingsStore-constant" title="TransactionService::API::Settings::PaymentSettingsStore (constant)">PaymentSettingsStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_activate'>activate</span><span class='lparen'>(</span>
+                       <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+                       <span class='label'>payment_gateway:</span> <span class='id identifier rubyid_payment_gateway'>payment_gateway</span><span class='comma'>,</span>
+                       <span class='label'>payment_process:</span> <span class='id identifier rubyid_payment_process'>payment_process</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="api_verified-instance_method">
+  
+    #<strong>api_verified</strong>(community_id:, payment_gateway:, payment_process:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/transaction_service/api/settings.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_api_verified'>api_verified</span><span class='lparen'>(</span><span class='label'>community_id:</span><span class='comma'>,</span> <span class='label'>payment_gateway:</span><span class='comma'>,</span> <span class='label'>payment_process:</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#PaymentSettingsStore-constant" title="TransactionService::API::Settings::PaymentSettingsStore (constant)">PaymentSettingsStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_api_verified'>api_verified</span><span class='lparen'>(</span>
+                       <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+                       <span class='label'>payment_gateway:</span> <span class='id identifier rubyid_payment_gateway'>payment_gateway</span><span class='comma'>,</span>
+                       <span class='label'>payment_process:</span> <span class='id identifier rubyid_payment_process'>payment_process</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="disable-instance_method">
+  
+    #<strong>disable</strong>(community_id:, payment_gateway:, payment_process:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/transaction_service/api/settings.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disable'>disable</span><span class='lparen'>(</span><span class='label'>community_id:</span><span class='comma'>,</span> <span class='label'>payment_gateway:</span><span class='comma'>,</span> <span class='label'>payment_process:</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#PaymentSettingsStore-constant" title="TransactionService::API::Settings::PaymentSettingsStore (constant)">PaymentSettingsStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_disable'>disable</span><span class='lparen'>(</span>
+                       <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+                       <span class='label'>payment_gateway:</span> <span class='id identifier rubyid_payment_gateway'>payment_gateway</span><span class='comma'>,</span>
+                       <span class='label'>payment_process:</span> <span class='id identifier rubyid_payment_process'>payment_process</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get-instance_method">
+  
+    #<strong>get</strong>(community_id:, payment_gateway:, payment_process:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/transaction_service/api/settings.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='label'>community_id:</span><span class='comma'>,</span> <span class='label'>payment_gateway:</span><span class='comma'>,</span> <span class='label'>payment_process:</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#PaymentSettingsStore-constant" title="TransactionService::API::Settings::PaymentSettingsStore (constant)">PaymentSettingsStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span>
+                       <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+                       <span class='label'>payment_gateway:</span> <span class='id identifier rubyid_payment_gateway'>payment_gateway</span><span class='comma'>,</span>
+                       <span class='label'>payment_process:</span> <span class='id identifier rubyid_payment_process'>payment_process</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_active_by_gateway-instance_method">
+  
+    #<strong>get_active_by_gateway</strong>(community_id:, payment_gateway:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/transaction_service/api/settings.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_active_by_gateway'>get_active_by_gateway</span><span class='lparen'>(</span><span class='label'>community_id:</span><span class='comma'>,</span> <span class='label'>payment_gateway:</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#PaymentSettingsStore-constant" title="TransactionService::API::Settings::PaymentSettingsStore (constant)">PaymentSettingsStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_active_by_gateway'>get_active_by_gateway</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='label'>payment_gateway:</span> <span class='id identifier rubyid_payment_gateway'>payment_gateway</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="provision-instance_method">
+  
+    #<strong>provision</strong>(settings)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Provision new settings (= new gateway and/or process) for a community</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9
+10
+11
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/transaction_service/api/settings.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_provision'>provision</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_existing_settings'>existing_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#PaymentSettingsStore-constant" title="TransactionService::API::Settings::PaymentSettingsStore (constant)">PaymentSettingsStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="#get-instance_method" title="TransactionService::API::Settings#get (method)">get</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='symbol'>:community_id</span><span class='comma'>,</span> <span class='symbol'>:payment_gateway</span><span class='comma'>,</span> <span class='symbol'>:payment_process</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_existing_settings'>existing_settings</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Error.html" title="Result::Error (class)">Error</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Error.html#initialize-instance_method" title="Result::Error#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gateway / process already provisioned. cid: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_settings'>settings</span><span class='lbracket'>[</span><span class='symbol'>:community_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>, gateway: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_settings'>settings</span><span class='lbracket'>[</span><span class='symbol'>:payment_gateway</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>, process: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_settings'>settings</span><span class='lbracket'>[</span><span class='symbol'>:payment_process</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#PaymentSettingsStore-constant" title="TransactionService::API::Settings::PaymentSettingsStore (constant)">PaymentSettingsStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update-instance_method">
+  
+    #<strong>update</strong>(settings)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Update settings but don&#39;t change gateway, process or active state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/transaction_service/api/settings.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#PaymentSettingsStore-constant" title="TransactionService::API::Settings::PaymentSettingsStore (constant)">PaymentSettingsStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:02:30 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

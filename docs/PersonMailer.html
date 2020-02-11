@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: PersonMailer
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "PersonMailer";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (P)</a> &raquo;
+    
+    
+    <span class="title">PersonMailer</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: PersonMailer
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">ActionMailer::Base</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionMailer::Base</li>
+          
+            <li class="next">PersonMailer</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="MailUtils.html" title="MailUtils (module)">MailUtils</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/mailers/person_mailer.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>rubocop:enable Style/MixinUsage</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#community_member_email_from_admin-class_method" title="community_member_email_from_admin (class method)">.<strong>community_member_email_from_admin</strong>(sender, recipient, community, email_content, email_locale, test = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A message from the community admin to a community member.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#booking_transaction_automatically_confirmed-instance_method" title="#booking_transaction_automatically_confirmed (instance method)">#<strong>booking_transaction_automatically_confirmed</strong>(transaction, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#community_member_email-instance_method" title="#community_member_email (instance method)">#<strong>community_member_email</strong>(sender, recipient, email_subject, email_content, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A message from the community admin to a single community member.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#confirm_reminder-instance_method" title="#confirm_reminder (instance method)">#<strong>confirm_reminder</strong>(conversation, _, community, days_to_cancel)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remind users of conversations that have not been accepted or rejected.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#conversation_status_changed-instance_method" title="#conversation_status_changed (instance method)">#<strong>conversation_status_changed</strong>(transaction, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#edited_listing_submited_for_review-instance_method" title="#edited_listing_submited_for_review (instance method)">#<strong>edited_listing_submited_for_review</strong>(listing, recipient)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#email_confirmation-instance_method" title="#email_confirmation (instance method)">#<strong>email_confirmation</strong>(email, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#invitation_to_kassi-instance_method" title="#invitation_to_kassi (instance method)">#<strong>invitation_to_kassi</strong>(invitation)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#listing_approved-instance_method" title="#listing_approved (instance method)">#<strong>listing_approved</strong>(listing)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#listing_rejected-instance_method" title="#listing_rejected (instance method)">#<strong>listing_rejected</strong>(listing)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#listing_submited_for_review-instance_method" title="#listing_submited_for_review (instance method)">#<strong>listing_submited_for_review</strong>(listing, recipient)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mail_feedback_to-instance_method" title="#mail_feedback_to (instance method)">#<strong>mail_feedback_to</strong>(community, platform_admin_email)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_comment_to_followed_listing_notification-instance_method" title="#new_comment_to_followed_listing_notification (instance method)">#<strong>new_comment_to_followed_listing_notification</strong>(comment, recipient, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_comment_to_own_listing_notification-instance_method" title="#new_comment_to_own_listing_notification (instance method)">#<strong>new_comment_to_own_listing_notification</strong>(comment, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_feedback-instance_method" title="#new_feedback (instance method)">#<strong>new_feedback</strong>(feedback, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Used to send notification to marketplace admins when somebody gives feedback on marketplace throught the contact us button in menu.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_listing_by_followed_person-instance_method" title="#new_listing_by_followed_person (instance method)">#<strong>new_listing_by_followed_person</strong>(listing, recipient, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_member_notification-instance_method" title="#new_member_notification (instance method)">#<strong>new_member_notification</strong>(new_member, community, admin)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Old layout.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_message_notification-instance_method" title="#new_message_notification (instance method)">#<strong>new_message_notification</strong>(message, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_testimonial-instance_method" title="#new_testimonial (instance method)">#<strong>new_testimonial</strong>(testimonial, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_update_to_followed_listing_notification-instance_method" title="#new_update_to_followed_listing_notification (instance method)">#<strong>new_update_to_followed_listing_notification</strong>(listing, recipient, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#payment_settings_reminder-instance_method" title="#payment_settings_reminder (instance method)">#<strong>payment_settings_reminder</strong>(listing, recipient, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remind user to fill in payment details.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#premailer_mail-instance_method" title="#premailer_mail (instance method)">#<strong>premailer_mail</strong>(opts, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset_password_instructions-instance_method" title="#reset_password_instructions (instance method)">#<strong>reset_password_instructions</strong>(person, email_address, reset_token, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#testimonial_reminder-instance_method" title="#testimonial_reminder (instance method)">#<strong>testimonial_reminder</strong>(conversation, recipient, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remind users to give feedback.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transaction_automatically_confirmed-instance_method" title="#transaction_automatically_confirmed (instance method)">#<strong>transaction_automatically_confirmed</strong>(conversation, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transaction_confirmed-instance_method" title="#transaction_confirmed (instance method)">#<strong>transaction_confirmed</strong>(conversation, community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#welcome_email-instance_method" title="#welcome_email (instance method)">#<strong>welcome_email</strong>(person, community, regular_email = nil, test_email = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="MailUtils.html" title="MailUtils (module)">MailUtils</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="MailUtils.html#community_specific_sender-class_method" title="MailUtils.community_specific_sender (method)">community_specific_sender</a></span>, <span class='object_link'><a href="MailUtils.html#premailer-instance_method" title="MailUtils#premailer (method)">#premailer</a></span>, <span class='object_link'><a href="MailUtils.html#set_community-instance_method" title="MailUtils#set_community (method)">#set_community</a></span>, <span class='object_link'><a href="MailUtils.html#set_locale-instance_method" title="MailUtils#set_locale (method)">#set_locale</a></span>, <span class='object_link'><a href="MailUtils.html#set_up_layout_variables-instance_method" title="MailUtils#set_up_layout_variables (method)">#set_up_layout_variables</a></span>, <span class='object_link'><a href="MailUtils.html#with_locale-instance_method" title="MailUtils#with_locale (method)">#with_locale</a></span></p>
+
+  
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="community_member_email_from_admin-class_method">
+  
+    .<strong>community_member_email_from_admin</strong>(sender, recipient, community, email_content, email_locale, test = false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A message from the community admin to a community member</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 340</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_community_member_email_from_admin'>community_member_email_from_admin</span><span class='lparen'>(</span><span class='id identifier rubyid_sender'>sender</span><span class='comma'>,</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='id identifier rubyid_email_content'>email_content</span><span class='comma'>,</span> <span class='id identifier rubyid_email_locale'>email_locale</span><span class='comma'>,</span> <span class='id identifier rubyid_test'>test</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_should_receive?'>should_receive?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_from_admins</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_email_locale'>email_locale</span><span class='period'>.</span><span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>any</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='period'>.</span><span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_email_locale'>email_locale</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_subject'>subject</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>admin.emails.new.email_subject_text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                     <span class='symbol'>:service_name</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='id identifier rubyid_email_locale'>email_locale</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='symbol'>:locale</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_subject'>subject</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[TEST] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_subject'>subject</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_test'>test</span>
+    <span class='id identifier rubyid_content_hello'>content_hello</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>admin.emails.new.hello_firstname_text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                           <span class='symbol'>:person</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name_for_type'><span class='object_link'><a href="PersonViewUtils.html#person_display_name_for_type-class_method" title="PersonViewUtils.person_display_name_for_type (method)">person_display_name_for_type</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>first_name_only</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+                           <span class='symbol'>:locale</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_content_hello'>content_hello</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;BR /&gt;\n </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_email_content'>email_content</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>begin</span>
+      <span class='const'><span class='object_link'><a href="MailCarrier.html" title="MailCarrier (module)">MailCarrier</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deliver_now'><span class='object_link'><a href="MailCarrier.html#deliver_now-class_method" title="MailCarrier.deliver_now (method)">deliver_now</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_community_member_email'>community_member_email</span><span class='lparen'>(</span><span class='id identifier rubyid_sender'>sender</span><span class='comma'>,</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_subject'>subject</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>rescue</span> <span class='const'>StandardError</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+      <span class='comment'># Catch the exception and continue sending the emails
+</span>      <span class='const'><span class='object_link'><a href="ApplicationHelper.html" title="ApplicationHelper (module)">ApplicationHelper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_send_error_notification'><span class='object_link'><a href="ApplicationHelper.html#send_error_notification-class_method" title="ApplicationHelper.send_error_notification (method)">send_error_notification</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Error sending email to all the members of community </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_full_name'>full_name</span><span class='lparen'>(</span><span class='id identifier rubyid_email_locale'>email_locale</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="booking_transaction_automatically_confirmed-instance_method">
+  
+    #<strong>booking_transaction_automatically_confirmed</strong>(transaction, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_booking_transaction_automatically_confirmed'>booking_transaction_automatically_confirmed</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='ivar'>@email_type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_about_completed_transactions</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@transaction</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span>
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='ivar'>@transaction</span><span class='period'>.</span><span class='id identifier rubyid_buyer'>buyer</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='ivar'>@email_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_mail'>mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='ivar'>@recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+         <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+         <span class='symbol'>:template_path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>person_mailer/automatic_confirmation</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+         <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.booking_transaction_automatically_confirmed.subject</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="community_member_email-instance_method">
+  
+    #<strong>community_member_email</strong>(sender, recipient, email_subject, email_content, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A message from the community admin to a single community member</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 213</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_community_member_email'>community_member_email</span><span class='lparen'>(</span><span class='id identifier rubyid_sender'>sender</span><span class='comma'>,</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_email_subject'>email_subject</span><span class='comma'>,</span> <span class='id identifier rubyid_email_content'>email_content</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='ivar'>@email_type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_from_admins</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='ivar'>@email_type</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_sender_address'>sender_address</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="EmailService.html" title="EmailService (class)">EmailService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EmailService/API.html" title="EmailService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EmailService/API/Api.html" title="EmailService::API::Api (class)">Api</a></span></span><span class='period'>.</span><span class='id identifier rubyid_addresses'><span class='object_link'><a href="EmailService/API/Api.html#addresses-class_method" title="EmailService::API::Api.addresses (method)">addresses</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_sender'>get_sender</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_sender_address'>sender_address</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='symbol'>:default</span>
+    <span class='id identifier rubyid_sender_name'>sender_name</span> <span class='op'>=</span> <span class='id identifier rubyid_sender'>sender</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_sender_email'>sender_email</span> <span class='op'>=</span> <span class='id identifier rubyid_sender'>sender</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_email_to'>confirmed_notification_email_to</span>
+    <span class='id identifier rubyid_reply_to'>reply_to</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sender_name'>sender_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot;&lt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sender_email'>sender_email</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_reply_to'>reply_to</span> <span class='op'>=</span> <span class='id identifier rubyid_sender_address'>sender_address</span><span class='lbracket'>[</span><span class='symbol'>:smtp_format</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@email_content</span> <span class='op'>=</span> <span class='id identifier rubyid_email_content'>email_content</span>
+    <span class='ivar'>@no_recipient_name</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_email_subject'>email_subject</span><span class='comma'>,</span>
+                   <span class='symbol'>:reply_to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_reply_to'>reply_to</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="confirm_reminder-instance_method">
+  
+    #<strong>confirm_reminder</strong>(conversation, _, community, days_to_cancel)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remind users of conversations that have not been accepted or rejected</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 118</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_confirm_reminder'>confirm_reminder</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='id identifier rubyid_days_to_cancel'>days_to_cancel</span><span class='rparen'>)</span>
+  <span class='ivar'>@email_type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_about_confirm_reminders</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_buyer'>buyer</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='ivar'>@email_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@conversation</span> <span class='op'>=</span> <span class='id identifier rubyid_conversation'>conversation</span>
+    <span class='ivar'>@days_to_cancel</span> <span class='op'>=</span> <span class='id identifier rubyid_days_to_cancel'>days_to_cancel</span>
+    <span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>confirm_reminder</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.confirm_reminder.remember_to_confirm_request</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+      <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_render'>render</span> <span class='id identifier rubyid_template'>template</span> <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="conversation_status_changed-instance_method">
+  
+    #<strong>conversation_status_changed</strong>(transaction, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_conversation_status_changed'>conversation_status_changed</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='ivar'>@email_type</span> <span class='op'>=</span>  <span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>accepted</span><span class='tstring_end'>&quot;</span></span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_when_conversation_accepted</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_when_conversation_rejected</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_other_party'>other_party</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='ivar'>@email_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@transaction</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span>
+
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.conversation_status_changed.your_request_was_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="edited_listing_submited_for_review-instance_method">
+  
+    #<strong>edited_listing_submited_for_review</strong>(listing, recipient)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 413</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_edited_listing_submited_for_review'>edited_listing_submited_for_review</span><span class='lparen'>(</span><span class='id identifier rubyid_listing'>listing</span><span class='comma'>,</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_community'>community</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@community_name</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+    <span class='ivar'>@listing</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span>
+    <span class='ivar'>@author_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+    <span class='ivar'>@listing_url</span> <span class='op'>=</span> <span class='id identifier rubyid_listing_url'>listing_url</span><span class='lparen'>(</span><span class='ivar'>@url_params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.edited_listing_submited_for_review.subject</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                 <span class='symbol'>:listing_title</span> <span class='op'>=&gt;</span> <span class='ivar'>@listing</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
+                                 <span class='symbol'>:author_name</span> <span class='op'>=&gt;</span> <span class='ivar'>@author_name</span><span class='comma'>,</span>
+                                 <span class='symbol'>:community</span> <span class='op'>=&gt;</span> <span class='ivar'>@community_name</span><span class='rparen'>)</span>
+                  <span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="email_confirmation-instance_method">
+  
+    #<strong>email_confirmation</strong>(email, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 282</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_email_confirmation'>email_confirmation</span><span class='lparen'>(</span><span class='id identifier rubyid_email'>email</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='ivar'>@current_community</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span>
+  <span class='ivar'>@no_settings</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@resource</span> <span class='op'>=</span> <span class='id identifier rubyid_email'>email</span><span class='period'>.</span><span class='id identifier rubyid_person'>person</span>
+  <span class='ivar'>@confirmation_token</span> <span class='op'>=</span> <span class='id identifier rubyid_email'>email</span><span class='period'>.</span><span class='id identifier rubyid_confirmation_token'>confirmation_token</span>
+  <span class='ivar'>@host</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_full_domain'>full_domain</span>
+  <span class='ivar'>@show_branding_info</span> <span class='op'>=</span> <span class='op'>!</span><span class='const'>PlanService</span><span class='op'>::</span><span class='const'>API</span><span class='op'>::</span><span class='const'>Api</span><span class='period'>.</span><span class='id identifier rubyid_plans'>plans</span><span class='period'>.</span><span class='id identifier rubyid_get_current'>get_current</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:features</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:whitelabel</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_email'>email</span><span class='period'>.</span><span class='id identifier rubyid_person'>person</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_email'>email</span><span class='period'>.</span><span class='id identifier rubyid_update_attribute'>update_attribute</span><span class='lparen'>(</span><span class='symbol'>:confirmation_sent_at</span><span class='comma'>,</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_email'>email</span><span class='period'>.</span><span class='id identifier rubyid_address'>address</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>devise.mailer.confirmation_instructions.subject</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:template_path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>devise/mailer</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                   <span class='symbol'>:template_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>confirmation_instructions</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="invitation_to_kassi-instance_method">
+  
+    #<strong>invitation_to_kassi</strong>(invitation)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 195</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_invitation_to_kassi'>invitation_to_kassi</span><span class='lparen'>(</span><span class='id identifier rubyid_invitation'>invitation</span><span class='rparen'>)</span>
+  <span class='ivar'>@invitation</span> <span class='op'>=</span> <span class='id identifier rubyid_invitation'>invitation</span>
+  <span class='id identifier rubyid_mail_locale'>mail_locale</span> <span class='op'>=</span> <span class='ivar'>@invitation</span><span class='period'>.</span><span class='id identifier rubyid_inviter'>inviter</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span>
+  <span class='ivar'>@invitation_code_required</span> <span class='op'>=</span> <span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_join_with_invite_only'>join_with_invite_only</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='ivar'>@url_params</span><span class='lbracket'>[</span><span class='symbol'>:locale</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_mail_locale'>mail_locale</span>
+  <span class='ivar'>@url_params</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span>
+  <span class='ivar'>@invitation_community</span> <span class='op'>=</span> <span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_full_name_with_separator'>full_name_with_separator</span><span class='lparen'>(</span><span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_inviter'>inviter</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_mail_locale'>mail_locale</span><span class='comma'>,</span> <span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_subject'>subject</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.invitation_to_kassi.you_have_been_invited_to_kassi</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:inviter</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_inviter'>inviter</span><span class='comma'>,</span> <span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='symbol'>:community</span> <span class='op'>=&gt;</span> <span class='ivar'>@invitation_community</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_subject'>subject</span><span class='comma'>,</span>
+                   <span class='symbol'>:reply_to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_inviter'>inviter</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_email_to'>confirmed_notification_email_to</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="listing_approved-instance_method">
+  
+    #<strong>listing_approved</strong>(listing)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 376</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_listing_approved'>listing_approved</span><span class='lparen'>(</span><span class='id identifier rubyid_listing'>listing</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_community'>community</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span>
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@community_name</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+    <span class='ivar'>@listing</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span>
+    <span class='ivar'>@author_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+    <span class='ivar'>@listing_url</span> <span class='op'>=</span> <span class='id identifier rubyid_listing_url'>listing_url</span><span class='lparen'>(</span><span class='ivar'>@url_params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.listing_approved.subject</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                 <span class='symbol'>:listing_title</span> <span class='op'>=&gt;</span> <span class='ivar'>@listing</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
+                                 <span class='symbol'>:community</span> <span class='op'>=&gt;</span> <span class='ivar'>@community_name</span><span class='rparen'>)</span>
+                  <span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="listing_rejected-instance_method">
+  
+    #<strong>listing_rejected</strong>(listing)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 394</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_listing_rejected'>listing_rejected</span><span class='lparen'>(</span><span class='id identifier rubyid_listing'>listing</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_community'>community</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span>
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@community_name</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+    <span class='ivar'>@listing</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span>
+    <span class='ivar'>@author_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+    <span class='ivar'>@listing_url</span> <span class='op'>=</span> <span class='id identifier rubyid_listing_url'>listing_url</span><span class='lparen'>(</span><span class='ivar'>@url_params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='ivar'>@contact_url</span> <span class='op'>=</span> <span class='id identifier rubyid_new_user_feedback_url'>new_user_feedback_url</span><span class='lparen'>(</span><span class='ivar'>@url_params</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.listing_rejected.subject</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                 <span class='symbol'>:listing_title</span> <span class='op'>=&gt;</span> <span class='ivar'>@listing</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
+                                 <span class='symbol'>:community</span> <span class='op'>=&gt;</span> <span class='ivar'>@community_name</span><span class='rparen'>)</span>
+                  <span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="listing_submited_for_review-instance_method">
+  
+    #<strong>listing_submited_for_review</strong>(listing, recipient)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 358</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_listing_submited_for_review'>listing_submited_for_review</span><span class='lparen'>(</span><span class='id identifier rubyid_listing'>listing</span><span class='comma'>,</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_community'>community</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@community_name</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+    <span class='ivar'>@listing</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span>
+    <span class='ivar'>@author_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+    <span class='ivar'>@listing_url</span> <span class='op'>=</span> <span class='id identifier rubyid_listing_url'>listing_url</span><span class='lparen'>(</span><span class='ivar'>@url_params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.listing_submited_for_review.subject</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                 <span class='symbol'>:listing_title</span> <span class='op'>=&gt;</span> <span class='ivar'>@listing</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
+                                 <span class='symbol'>:author_name</span> <span class='op'>=&gt;</span> <span class='ivar'>@author_name</span><span class='comma'>,</span>
+                                 <span class='symbol'>:community</span> <span class='op'>=&gt;</span> <span class='ivar'>@community_name</span><span class='rparen'>)</span>
+                  <span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="mail_feedback_to-instance_method">
+  
+    #<strong>mail_feedback_to</strong>(community, platform_admin_email)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+256
+257
+258
+259
+260
+261
+262</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 256</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_mail_feedback_to'>mail_feedback_to</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='id identifier rubyid_platform_admin_email'>platform_admin_email</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_admin_emails'>admin_emails</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+    <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_admin_emails'>admin_emails</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_platform_admin_email'>platform_admin_email</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_comment_to_followed_listing_notification-instance_method">
+  
+    #<strong>new_comment_to_followed_listing_notification</strong>(comment, recipient, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+159
+160
+161
+162
+163
+164
+165
+166
+167</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 159</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_comment_to_followed_listing_notification'>new_comment_to_followed_listing_notification</span><span class='lparen'>(</span><span class='id identifier rubyid_comment'>comment</span><span class='comma'>,</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@comment</span> <span class='op'>=</span> <span class='id identifier rubyid_comment'>comment</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.new_comment.listing_you_follow_has_a_new_comment</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:author</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_comment'>comment</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_comment_to_own_listing_notification-instance_method">
+  
+    #<strong>new_comment_to_own_listing_notification</strong>(comment, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 147</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_comment_to_own_listing_notification'>new_comment_to_own_listing_notification</span><span class='lparen'>(</span><span class='id identifier rubyid_comment'>comment</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='ivar'>@email_type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_about_new_comments_to_own_listing</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_comment'>comment</span><span class='period'>.</span><span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='ivar'>@email_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@comment</span> <span class='op'>=</span> <span class='id identifier rubyid_comment'>comment</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.new_comment.you_have_a_new_comment</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:author</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_comment'>comment</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_feedback-instance_method">
+  
+    #<strong>new_feedback</strong>(feedback, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Used to send notification to marketplace admins when somebody gives feedback on marketplace throught the contact us button in menu</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 238</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_feedback'>new_feedback</span><span class='lparen'>(</span><span class='id identifier rubyid_feedback'>feedback</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_subject'>subject</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>feedback.feedback_subject</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>service_name:</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span>
+    <span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_mail_feedback_to'>mail_feedback_to</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='const'>APP_CONFIG</span><span class='period'>.</span><span class='id identifier rubyid_feedback_mailer_recipients'>feedback_mailer_recipients</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_subject'>subject</span><span class='comma'>,</span>
+    <span class='symbol'>:reply_to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_feedback'>feedback</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+      <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span> <span class='lbrace'>{</span>
+        <span class='id identifier rubyid_render'>render</span> <span class='label'>locals:</span> <span class='lbrace'>{</span>
+                 <span class='label'>author_name_and_email:</span> <span class='id identifier rubyid_feedback_author_name_and_email'>feedback_author_name_and_email</span><span class='lparen'>(</span><span class='id identifier rubyid_feedback'>feedback</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span><span class='comma'>,</span> <span class='id identifier rubyid_feedback'>feedback</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>community_name:</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='label'>content:</span> <span class='id identifier rubyid_feedback'>feedback</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span>
+               <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_listing_by_followed_person-instance_method">
+  
+    #<strong>new_listing_by_followed_person</strong>(listing, recipient, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 179</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_listing_by_followed_person'>new_listing_by_followed_person</span><span class='lparen'>(</span><span class='id identifier rubyid_listing'>listing</span><span class='comma'>,</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@listing</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span>
+    <span class='ivar'>@no_recipient_name</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='ivar'>@author_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+    <span class='ivar'>@listing_url</span> <span class='op'>=</span> <span class='id identifier rubyid_listing_url'>listing_url</span><span class='lparen'>(</span><span class='ivar'>@url_params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_listing'>listing</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='ivar'>@translate_scope</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:emails</span><span class='comma'>,</span> <span class='symbol'>:new_listing_by_followed_person</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.new_listing_by_followed_person.subject</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                 <span class='symbol'>:author_name</span> <span class='op'>=&gt;</span> <span class='ivar'>@author_name</span><span class='comma'>,</span>
+                                 <span class='symbol'>:community</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_full_name_with_separator'>full_name_with_separator</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_member_notification-instance_method">
+  
+    #<strong>new_member_notification</strong>(new_member, community, admin)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Old layout</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 266</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_member_notification'>new_member_notification</span><span class='lparen'>(</span><span class='id identifier rubyid_new_member'>new_member</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='id identifier rubyid_admin'>admin</span><span class='rparen'>)</span>
+  <span class='ivar'>@community</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span>
+  <span class='ivar'>@no_settings</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@person</span> <span class='op'>=</span> <span class='id identifier rubyid_new_member'>new_member</span>
+  <span class='ivar'>@email</span> <span class='op'>=</span> <span class='id identifier rubyid_new_member'>new_member</span><span class='period'>.</span><span class='id identifier rubyid_emails'>emails</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_address'>address</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_admin'>admin</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_address'>address</span> <span class='op'>=</span> <span class='id identifier rubyid_admin'>admin</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_address'>address</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+      <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_address'>address</span><span class='comma'>,</span>
+                     <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                     <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.new_member_notification.subject</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>community:</span> <span class='ivar'>@community</span><span class='period'>.</span><span class='id identifier rubyid_full_name'>full_name</span><span class='lparen'>(</span><span class='ivar'>@person</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span>
+                     <span class='symbol'>:template_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new_member_notification</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_message_notification-instance_method">
+  
+    #<strong>new_message_notification</strong>(message, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_message_notification'>new_message_notification</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='ivar'>@email_type</span> <span class='op'>=</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_about_new_messages</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_other_party'>other_party</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_sender'>sender</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='ivar'>@email_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@message</span> <span class='op'>=</span> <span class='id identifier rubyid_message'>message</span>
+    <span class='id identifier rubyid_sending_params'>sending_params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                      <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.new_message.you_have_a_new_message</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:sender_name</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_sender'>sender</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span>
+                      <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='rbrace'>}</span>
+
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='id identifier rubyid_sending_params'>sending_params</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_testimonial-instance_method">
+  
+    #<strong>new_testimonial</strong>(testimonial, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_testimonial'>new_testimonial</span><span class='lparen'>(</span><span class='id identifier rubyid_testimonial'>testimonial</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='ivar'>@email_type</span> <span class='op'>=</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_about_new_received_testimonials</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_testimonial'>testimonial</span><span class='period'>.</span><span class='id identifier rubyid_receiver'>receiver</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='ivar'>@email_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@testimonial</span> <span class='op'>=</span> <span class='id identifier rubyid_testimonial'>testimonial</span>
+    <span class='ivar'>@wating_testimonial</span> <span class='op'>=</span> <span class='ivar'>@testimonial</span><span class='period'>.</span><span class='id identifier rubyid_tx'>tx</span><span class='period'>.</span><span class='id identifier rubyid_waiting_testimonial_from?'>waiting_testimonial_from?</span><span class='lparen'>(</span><span class='ivar'>@testimonial</span><span class='period'>.</span><span class='id identifier rubyid_receiver'>receiver</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.new_testimonial.has_given_you_feedback_in_kassi</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_testimonial'>testimonial</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_update_to_followed_listing_notification-instance_method">
+  
+    #<strong>new_update_to_followed_listing_notification</strong>(listing, recipient, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+169
+170
+171
+172
+173
+174
+175
+176
+177</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 169</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_update_to_followed_listing_notification'>new_update_to_followed_listing_notification</span><span class='lparen'>(</span><span class='id identifier rubyid_listing'>listing</span><span class='comma'>,</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@listing</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.new_update_to_listing.listing_you_follow_has_been_updated</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="payment_settings_reminder-instance_method">
+  
+    #<strong>payment_settings_reminder</strong>(listing, recipient, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remind user to fill in payment details</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 100</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_payment_settings_reminder'>payment_settings_reminder</span><span class='lparen'>(</span><span class='id identifier rubyid_listing'>listing</span><span class='comma'>,</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@listing</span> <span class='op'>=</span> <span class='id identifier rubyid_listing'>listing</span>
+    <span class='ivar'>@recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_recipient'>recipient</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_payments_in_use?'>payments_in_use?</span>
+      <span class='ivar'>@payment_settings_link</span> <span class='op'>=</span> <span class='id identifier rubyid_paypal_account_settings_payment_url'>paypal_account_settings_payment_url</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='ivar'>@url_params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@skip_unsubscribe_footer</span> <span class='op'>=</span> <span class='kw'>true</span>
+
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.payment_settings_reminder.remember_to_add_payment_details</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="premailer_mail-instance_method">
+  
+    #<strong>premailer_mail</strong>(opts, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+431
+432
+433</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 431</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_premailer'>premailer</span><span class='lparen'>(</span><span class='id identifier rubyid_mail'>mail</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reset_password_instructions-instance_method">
+  
+    #<strong>reset_password_instructions</strong>(person, email_address, reset_token, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 299</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reset_password_instructions'>reset_password_instructions</span><span class='lparen'>(</span><span class='id identifier rubyid_person'>person</span><span class='comma'>,</span> <span class='id identifier rubyid_email_address'>email_address</span><span class='comma'>,</span> <span class='id identifier rubyid_reset_token'>reset_token</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='comment'># Using nil as recipient, as we don&#39;t want auth token here.
+</span>  <span class='ivar'>@person</span> <span class='op'>=</span> <span class='id identifier rubyid_person'>person</span>
+  <span class='ivar'>@no_settings</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span>
+       <span class='label'>to:</span> <span class='id identifier rubyid_email_address'>email_address</span><span class='comma'>,</span>
+       <span class='label'>from:</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='ivar'>@community</span><span class='rparen'>)</span><span class='comma'>,</span>
+       <span class='label'>subject:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>devise.mailer.reset_password_instructions.subject</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+    <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span> <span class='lbrace'>{</span>
+      <span class='id identifier rubyid_render'>render</span> <span class='label'>layout:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>locals:</span> <span class='lbrace'>{</span> <span class='label'>reset_token:</span> <span class='id identifier rubyid_reset_token'>reset_token</span><span class='comma'>,</span>
+                                      <span class='label'>host:</span> <span class='ivar'>@community</span><span class='period'>.</span><span class='id identifier rubyid_full_domain'>full_domain</span><span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+   <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="testimonial_reminder-instance_method">
+  
+    #<strong>testimonial_reminder</strong>(conversation, recipient, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remind users to give feedback</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 135</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_testimonial_reminder'>testimonial_reminder</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='comma'>,</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='ivar'>@email_type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_about_testimonial_reminders</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='ivar'>@email_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@conversation</span> <span class='op'>=</span> <span class='id identifier rubyid_conversation'>conversation</span>
+    <span class='ivar'>@other_party</span> <span class='op'>=</span> <span class='ivar'>@conversation</span><span class='period'>.</span><span class='id identifier rubyid_other_party'>other_party</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.testimonial_reminder.remember_to_give_feedback_to</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='ivar'>@other_party</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transaction_automatically_confirmed-instance_method">
+  
+    #<strong>transaction_automatically_confirmed</strong>(conversation, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_transaction_automatically_confirmed'>transaction_automatically_confirmed</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='ivar'>@email_type</span> <span class='op'>=</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_about_completed_transactions</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@conversation</span> <span class='op'>=</span> <span class='id identifier rubyid_conversation'>conversation</span>
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_buyer'>buyer</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='ivar'>@email_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:template_path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>person_mailer/automatic_confirmation</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.transaction_automatically_confirmed.subject</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transaction_confirmed-instance_method">
+  
+    #<strong>transaction_confirmed</strong>(conversation, community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_transaction_confirmed'>transaction_confirmed</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='ivar'>@email_type</span> <span class='op'>=</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email_about_completed_transactions</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@conversation</span> <span class='op'>=</span> <span class='id identifier rubyid_conversation'>conversation</span>
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_seller'>seller</span>
+  <span class='id identifier rubyid_set_up_layout_variables'>set_up_layout_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_seller'>seller</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='ivar'>@email_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.transaction_confirmed.request_marked_as_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@conversation</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="welcome_email-instance_method">
+  
+    #<strong>welcome_email</strong>(person, community, regular_email = nil, test_email = false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/mailers/person_mailer.rb', line 314</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_welcome_email'>welcome_email</span><span class='lparen'>(</span><span class='id identifier rubyid_person'>person</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='id identifier rubyid_regular_email'>regular_email</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_test_email'>test_email</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='ivar'>@recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_person'>person</span>
+  <span class='id identifier rubyid_recipient'>recipient</span> <span class='op'>=</span> <span class='id identifier rubyid_person'>person</span>
+  <span class='id identifier rubyid_with_locale'>with_locale</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_locales'>locales</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>do</span>
+
+    <span class='ivar'>@current_community</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span>
+
+    <span class='ivar'>@regular_email</span> <span class='op'>=</span> <span class='id identifier rubyid_regular_email'>regular_email</span>
+    <span class='ivar'>@url_params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='ivar'>@url_params</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_full_domain'>full_domain</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='ivar'>@url_params</span><span class='lbracket'>[</span><span class='symbol'>:locale</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span>
+    <span class='ivar'>@url_params</span><span class='lbracket'>[</span><span class='symbol'>:ref</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>welcome_email</span><span class='tstring_end'>&quot;</span></span>
+    <span class='ivar'>@url_params</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span> <span class='comment'># to avoid accidental modifications later
+</span>    <span class='ivar'>@test_email</span> <span class='op'>=</span> <span class='id identifier rubyid_test_email'>test_email</span>
+    <span class='ivar'>@show_branding_info</span> <span class='op'>=</span> <span class='op'>!</span><span class='const'>PlanService</span><span class='op'>::</span><span class='const'>API</span><span class='op'>::</span><span class='const'>Api</span><span class='period'>.</span><span class='id identifier rubyid_plans'>plans</span><span class='period'>.</span><span class='id identifier rubyid_get_current'>get_current</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:features</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:whitelabel</span><span class='rbracket'>]</span>
+
+    <span class='id identifier rubyid_subject'>subject</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>emails.welcome_email.welcome_email_subject</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:community</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_full_name'>full_name</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='symbol'>:person</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name_for_type'><span class='object_link'><a href="PersonViewUtils.html#person_display_name_for_type-class_method" title="PersonViewUtils.person_display_name_for_type (method)">person_display_name_for_type</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_person'>person</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>first_name_only</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_premailer_mail'>premailer_mail</span><span class='lparen'>(</span><span class='symbol'>:to</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_recipient'>recipient</span><span class='period'>.</span><span class='id identifier rubyid_confirmed_notification_emails_to'>confirmed_notification_emails_to</span><span class='comma'>,</span>
+                   <span class='symbol'>:from</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_community_specific_sender'>community_specific_sender</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='comma'>,</span>
+                   <span class='symbol'>:subject</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_subject'>subject</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+      <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_render'>render</span> <span class='symbol'>:layout</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>email_blank_layout</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:56 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

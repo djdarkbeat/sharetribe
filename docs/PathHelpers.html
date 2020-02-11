@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: PathHelpers
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "PathHelpers";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (P)</a> &raquo;
+    
+    
+    <span class="title">PathHelpers</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: PathHelpers
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/view_utils/path_helpers.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#change_locale_path-class_method" title="change_locale_path (class method)">.<strong>change_locale_path</strong>(is_logged_in:, locale:, redirect_uri:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Path for locale change.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#landing_page_path-class_method" title="landing_page_path (class method)">.<strong>landing_page_path</strong>(community_id:, logged_in:, locale_param:, default_locale:, custom: false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#path_after_locale_change-class_method" title="path_after_locale_change (class method)">.<strong>path_after_locale_change</strong>(locale:, redirect_uri:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Path after the current_user locale has been changed OR the new locale path, if anonymous user.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#paths-class_method" title="paths (class method)">.<strong>paths</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#search_path-class_method" title="search_path (class method)">.<strong>search_path</strong>(community_id:, logged_in:, locale_param:, default_locale:, opts: {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#search_url-class_method" title="search_url (class method)">.<strong>search_url</strong>(community_id:, opts: {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="change_locale_path-class_method">
+  
+    .<strong>change_locale_path</strong>(is_logged_in:, locale:, redirect_uri:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Path for locale change</p>
+<ul><li>
+<p>If logged in: URL points to I18nController with redirect_url query string</p>
+</li><li>
+<p>If not logged in: Change the locale in the URL. No redirect_url query string</p>
+</li></ul>
+
+<p>For non-logged users, we don&#39;t want to include redirect_url query string, because it will create a number of unique links that the crawlers will request even though the page is the same</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80
+81
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/path_helpers.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_change_locale_path'>change_locale_path</span><span class='lparen'>(</span><span class='label'>is_logged_in:</span><span class='comma'>,</span> <span class='label'>locale:</span><span class='comma'>,</span> <span class='label'>redirect_uri:</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_is_logged_in'>is_logged_in</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_change_locale_path'>change_locale_path</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='label'>redirect_uri:</span> <span class='id identifier rubyid_redirect_uri'>redirect_uri</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_path_after_locale_change'>path_after_locale_change</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='label'>redirect_uri:</span> <span class='id identifier rubyid_redirect_uri'>redirect_uri</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="landing_page_path-class_method">
+  
+    .<strong>landing_page_path</strong>(community_id:, logged_in:, locale_param:, default_locale:, custom: false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/path_helpers.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_landing_page_path'><span class='object_link'><a href="ApplicationHelper.html#landing_page_path-instance_method" title="ApplicationHelper#landing_page_path (method)">landing_page_path</a></span></span><span class='lparen'>(</span><span class='label'>community_id:</span><span class='comma'>,</span> <span class='label'>logged_in:</span><span class='comma'>,</span> <span class='label'>locale_param:</span><span class='comma'>,</span> <span class='label'>default_locale:</span><span class='comma'>,</span> <span class='label'>custom:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_custom'>custom</span>
+    <span class='id identifier rubyid_community'>community</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Community.html" title="Community (class)">Community</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_logo_link'>logo_link</span> <span class='kw'>if</span> <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_logo_link'>logo_link</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_non_default_locale'>non_default_locale</span> <span class='op'>=</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_locale'>locale</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_locale'>locale</span> <span class='op'>!=</span> <span class='id identifier rubyid_default_locale'>default_locale</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span>
+
+  <span class='kw'>case</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="CustomLandingPage.html" title="CustomLandingPage (module)">CustomLandingPage</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CustomLandingPage.html#LandingPageStore-constant" title="CustomLandingPage::LandingPageStore (constant)">LandingPageStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enabled?'>enabled?</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_logged_in'>logged_in</span><span class='comma'>,</span> <span class='id identifier rubyid_locale_param'>locale_param</span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='kw'>true</span><span class='comma'>,</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_non_default_locale'>non_default_locale</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_landing_page_with_locale_path'>landing_page_with_locale_path</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='id identifier rubyid_locale_param'>locale_param</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid___'><span class='object_link'><a href="top-level-namespace.html#__-instance_method" title="#__ (method)">__</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid___'><span class='object_link'><a href="top-level-namespace.html#__-instance_method" title="#__ (method)">__</a></span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_landing_page_without_locale_path'>landing_page_without_locale_path</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='kw'>false</span><span class='comma'>,</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_non_default_locale'>non_default_locale</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_homepage_with_locale_path'>homepage_with_locale_path</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='id identifier rubyid_locale_param'>locale_param</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_homepage_without_locale_path'>homepage_without_locale_path</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="path_after_locale_change-class_method">
+  
+    .<strong>path_after_locale_change</strong>(locale:, redirect_uri:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Path after the current_user locale has been changed OR the new locale path, if anonymous user.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/path_helpers.rb', line 88</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_path_after_locale_change'>path_after_locale_change</span><span class='lparen'>(</span><span class='label'>locale:</span><span class='comma'>,</span> <span class='label'>redirect_uri:</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_locale'>locale</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_redirect_uri'>redirect_uri</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="paths-class_method">
+  
+    .<strong>paths</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/path_helpers.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_paths'>paths</span>
+  <span class='ivar'>@_url_helpers</span> <span class='op'>||=</span> <span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_application'>application</span><span class='period'>.</span><span class='id identifier rubyid_routes'>routes</span><span class='period'>.</span><span class='id identifier rubyid_url_helpers'>url_helpers</span> <span class='comment'># rubocop:disable Naming/MemoizedInstanceVariableName
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="search_path-class_method">
+  
+    .<strong>search_path</strong>(community_id:, logged_in:, locale_param:, default_locale:, opts: {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/path_helpers.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_search_path'><span class='object_link'><a href="ApplicationHelper.html#search_path-instance_method" title="ApplicationHelper#search_path (method)">search_path</a></span></span><span class='lparen'>(</span><span class='label'>community_id:</span><span class='comma'>,</span> <span class='label'>logged_in:</span><span class='comma'>,</span> <span class='label'>locale_param:</span><span class='comma'>,</span> <span class='label'>default_locale:</span><span class='comma'>,</span> <span class='label'>opts:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>ActionController</span><span class='op'>::</span><span class='const'>Parameters</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_to_unsafe_hash'>to_unsafe_hash</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_o'>o</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='period'>.</span><span class='id identifier rubyid_symbolize_keys'>symbolize_keys</span>
+  <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>controller</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>action</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>locale</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_non_default_locale'>non_default_locale</span> <span class='op'>=</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_locale'>locale</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_locale'>locale</span> <span class='op'>!=</span> <span class='id identifier rubyid_default_locale'>default_locale</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_not_present'>not_present</span> <span class='op'>=</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='op'>!</span><span class='id identifier rubyid_x'>x</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='rbrace'>}</span>
+
+  <span class='kw'>case</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="CustomLandingPage.html" title="CustomLandingPage (module)">CustomLandingPage</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CustomLandingPage.html#LandingPageStore-constant" title="CustomLandingPage::LandingPageStore (constant)">LandingPageStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enabled?'>enabled?</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_logged_in'>logged_in</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_locale_param'>locale_param</span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='kw'>true</span><span class='comma'>,</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_non_default_locale'>non_default_locale</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_search_with_locale_path'>search_with_locale_path</span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='id identifier rubyid_locale_param'>locale_param</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid___'><span class='object_link'><a href="top-level-namespace.html#__-instance_method" title="#__ (method)">__</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid___'><span class='object_link'><a href="top-level-namespace.html#__-instance_method" title="#__ (method)">__</a></span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_search_without_locale_path'>search_without_locale_path</span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='kw'>false</span><span class='comma'>,</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_non_default_locale'>non_default_locale</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_homepage_with_locale_path'>homepage_with_locale_path</span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='id identifier rubyid_locale_param'>locale_param</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid___'><span class='object_link'><a href="top-level-namespace.html#__-instance_method" title="#__ (method)">__</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid___'><span class='object_link'><a href="top-level-namespace.html#__-instance_method" title="#__ (method)">__</a></span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_homepage_without_locale_path'>homepage_without_locale_path</span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="search_url-class_method">
+  
+    .<strong>search_url</strong>(community_id:, opts: {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/path_helpers.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_search_url'><span class='object_link'><a href="ApplicationHelper.html#search_url-instance_method" title="ApplicationHelper#search_url (method)">search_url</a></span></span><span class='lparen'>(</span><span class='label'>community_id:</span><span class='comma'>,</span> <span class='label'>opts:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="CustomLandingPage.html" title="CustomLandingPage (module)">CustomLandingPage</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CustomLandingPage.html#LandingPageStore-constant" title="CustomLandingPage::LandingPageStore (constant)">LandingPageStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enabled?'>enabled?</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:locale</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='kw'>true</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_search_with_locale_url'>search_with_locale_url</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='kw'>true</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_search_without_locale_url'>search_without_locale_url</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='kw'>false</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_homepage_with_locale_url'>homepage_with_locale_url</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='kw'>false</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_homepage_without_locale_url'>homepage_without_locale_url</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>locale:</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:35 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

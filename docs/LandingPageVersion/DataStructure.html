@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: LandingPageVersion::DataStructure
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "LandingPageVersion::DataStructure";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span>
+     &raquo; 
+    <span class="title">DataStructure</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: LandingPageVersion::DataStructure
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd>ActiveSupport::Concern</dd>
+  </dl>
+  
+  
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/models/landing_page_version/data_structure.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parsed_content-instance_method" title="#parsed_content (instance method)">#<strong>parsed_content</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#section_positions-instance_method" title="#section_positions (instance method)">#<strong>section_positions</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#section_positions_attributes=-instance_method" title="#section_positions_attributes= (instance method)">#<strong>section_positions_attributes=</strong>(section_positions_params)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sections-instance_method" title="#sections (instance method)">#<strong>sections</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_content-instance_method" title="#update_content (instance method)">#<strong>update_content</strong>(new_content)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="parsed_content-instance_method">
+  
+    #<strong>parsed_content</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/landing_page_version/data_structure.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_parsed_content'>parsed_content</span>
+  <span class='ivar'>@parsed_content</span> <span class='op'>||=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="section_positions-instance_method">
+  
+    #<strong>section_positions</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/landing_page_version/data_structure.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_section_positions'>section_positions</span>
+  <span class='kw'>return</span> <span class='ivar'>@section_positions</span> <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@section_positions</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_existing_sections'>existing_sections</span> <span class='op'>=</span> <span class='id identifier rubyid_parsed_content'>parsed_content</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sections</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='id identifier rubyid_composition'>composition</span> <span class='op'>=</span> <span class='id identifier rubyid_parsed_content'>parsed_content</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>composition</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='id identifier rubyid_section_positions'>section_positions</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_composition'>composition</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
+    <span class='id identifier rubyid_section_id'>section_id</span> <span class='op'>=</span> <span class='id identifier rubyid_item'>item</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>section</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_existing_section'>existing_section</span> <span class='op'>=</span> <span class='id identifier rubyid_existing_sections'>existing_sections</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='rbrace'>}</span>
+    <span class='kw'>next</span> <span class='kw'>unless</span> <span class='id identifier rubyid_existing_section'>existing_section</span>
+
+    <span class='id identifier rubyid_attrs'>attrs</span> <span class='op'>=</span> <span class='id identifier rubyid_existing_section'>existing_section</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>kind</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>variation</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attrs'>attrs</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>position</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_index'>index</span>
+    <span class='id identifier rubyid_section_positions'>section_positions</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SectionPosition.html" title="LandingPageVersion::SectionPosition (class)">SectionPosition</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_attrs'>attrs</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@section_positions</span> <span class='op'>=</span> <span class='id identifier rubyid_section_positions'>section_positions</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="section_positions_attributes=-instance_method">
+  
+    #<strong>section_positions_attributes=</strong>(section_positions_params)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70
+71
+72
+73
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/landing_page_version/data_structure.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_section_positions_attributes='>section_positions_attributes=</span><span class='lparen'>(</span><span class='id identifier rubyid_section_positions_params'>section_positions_params</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_composition'>composition</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_section_positions_params'>section_positions_params</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_sort_by'>sort_by</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>position</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_section_position'>section_position</span><span class='op'>|</span>
+    <span class='id identifier rubyid_composition'>composition</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>section</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>type</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sections</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span>  <span class='id identifier rubyid_section_position'>section_position</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span><span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_new_content'>new_content</span> <span class='op'>=</span> <span class='id identifier rubyid_parsed_content'>parsed_content</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='id identifier rubyid_new_content'>new_content</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>composition</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_composition'>composition</span>
+  <span class='id identifier rubyid_update_content'>update_content</span><span class='lparen'>(</span><span class='id identifier rubyid_new_content'>new_content</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sections-instance_method">
+  
+    #<strong>sections</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/landing_page_version/data_structure.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sections'>sections</span>
+  <span class='kw'>return</span> <span class='ivar'>@sections</span> <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@sections</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_sections'>sections</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_parsed_content'>parsed_content</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sections</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_content_section'>content_section</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_content_section'>content_section</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>kind</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html#HERO-constant" title="LandingPageVersion::Section::HERO (constant)">HERO</a></span></span>
+      <span class='id identifier rubyid_sections'>sections</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section/Hero.html" title="LandingPageVersion::Section::Hero (class)">Hero</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_content'><span class='object_link'><a href="Section/Hero.html#new_from_content-class_method" title="LandingPageVersion::Section::Hero.new_from_content (method)">new_from_content</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_content_section'>content_section</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>landing_page_version</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>previous_id</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_content_section'>content_section</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+        <span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html#FOOTER-constant" title="LandingPageVersion::Section::FOOTER (constant)">FOOTER</a></span></span>
+      <span class='id identifier rubyid_sections'>sections</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section/Footer.html" title="LandingPageVersion::Section::Footer (class)">Footer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_content'><span class='object_link'><a href="Section/Footer.html#new_from_content-class_method" title="LandingPageVersion::Section::Footer.new_from_content (method)">new_from_content</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_content_section'>content_section</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>landing_page_version</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>previous_id</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_content_section'>content_section</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+        <span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html#INFO-constant" title="LandingPageVersion::Section::INFO (constant)">INFO</a></span></span>
+      <span class='id identifier rubyid_sections'>sections</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section/Info.html" title="LandingPageVersion::Section::Info (class)">Info</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_content'><span class='object_link'><a href="Section/Info.html#new_from_content-class_method" title="LandingPageVersion::Section::Info.new_from_content (method)">new_from_content</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_content_section'>content_section</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>landing_page_version</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>previous_id</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_content_section'>content_section</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+        <span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html#LISTINGS-constant" title="LandingPageVersion::Section::LISTINGS (constant)">LISTINGS</a></span></span>
+      <span class='id identifier rubyid_sections'>sections</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section/Listings.html" title="LandingPageVersion::Section::Listings (class)">Listings</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_content'><span class='object_link'><a href="Section/Listings.html#new_from_content-class_method" title="LandingPageVersion::Section::Listings.new_from_content (method)">new_from_content</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_content_section'>content_section</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>landing_page_version</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>previous_id</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_content_section'>content_section</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+        <span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html#CATEGORIES-constant" title="LandingPageVersion::Section::CATEGORIES (constant)">CATEGORIES</a></span></span>
+      <span class='id identifier rubyid_sections'>sections</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section/Categories.html" title="LandingPageVersion::Section::Categories (class)">Categories</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_content'><span class='object_link'><a href="Section/Categories.html#new_from_content-class_method" title="LandingPageVersion::Section::Categories.new_from_content (method)">new_from_content</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_content_section'>content_section</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>landing_page_version</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>previous_id</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_content_section'>content_section</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+        <span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html#LOCATIONS-constant" title="LandingPageVersion::Section::LOCATIONS (constant)">LOCATIONS</a></span></span>
+      <span class='id identifier rubyid_sections'>sections</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section/Locations.html" title="LandingPageVersion::Section::Locations (class)">Locations</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_content'><span class='object_link'><a href="Section/Locations.html#new_from_content-class_method" title="LandingPageVersion::Section::Locations.new_from_content (method)">new_from_content</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_content_section'>content_section</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>landing_page_version</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>previous_id</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_content_section'>content_section</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+        <span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html#VIDEO-constant" title="LandingPageVersion::Section::VIDEO (constant)">VIDEO</a></span></span>
+      <span class='id identifier rubyid_sections'>sections</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Section/Video.html" title="LandingPageVersion::Section::Video (class)">Video</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_content'><span class='object_link'><a href="Section/Video.html#new_from_content-class_method" title="LandingPageVersion::Section::Video.new_from_content (method)">new_from_content</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_content_section'>content_section</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>landing_page_version</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>previous_id</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_content_section'>content_section</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+        <span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@sections</span> <span class='op'>=</span> <span class='id identifier rubyid_sections'>sections</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_content-instance_method">
+  
+    #<strong>update_content</strong>(new_content)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/landing_page_version/data_structure.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_content'>update_content</span><span class='lparen'>(</span><span class='id identifier rubyid_new_content'>new_content</span><span class='rparen'>)</span>
+  <span class='ivar'>@parsed_content</span> <span class='op'>=</span> <span class='kw'>nil</span>
+
+  <span class='comment'># ensure hero is first and footer is last
+</span>  <span class='id identifier rubyid_composition'>composition</span> <span class='op'>=</span> <span class='id identifier rubyid_new_content'>new_content</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>composition</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_hero'>hero</span> <span class='op'>=</span> <span class='id identifier rubyid_composition'>composition</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>section</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hero</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_footer'>footer</span> <span class='op'>=</span> <span class='id identifier rubyid_composition'>composition</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>section</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>footer</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_inner_content'>inner_content</span> <span class='op'>=</span> <span class='id identifier rubyid_composition'>composition</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>!=</span> <span class='id identifier rubyid_hero'>hero</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>!=</span> <span class='id identifier rubyid_footer'>footer</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_new_content'>new_content</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>composition</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_hero'>hero</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='id identifier rubyid_inner_content'>inner_content</span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='id identifier rubyid_footer'>footer</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+
+  <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='label'>content:</span> <span class='id identifier rubyid_new_content'>new_content</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:44 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

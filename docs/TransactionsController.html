@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TransactionsController
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "TransactionsController";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (T)</a> &raquo;
+    
+    
+    <span class="title">TransactionsController</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: TransactionsController
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionController::Base</li>
+          
+            <li class="next"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></li>
+          
+            <li class="next">TransactionsController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/controllers/transactions_controller.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="TransactionForm-constant" class="">TransactionForm =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:listing_id</span><span class='comma'>,</span> <span class='symbol'>:fixnum</span><span class='comma'>,</span> <span class='symbol'>:to_integer</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:message</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:quantity</span><span class='comma'>,</span> <span class='symbol'>:fixnum</span><span class='comma'>,</span> <span class='symbol'>:to_integer</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:start_on</span><span class='comma'>,</span> <span class='label'>transform_with:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_d'>d</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="TransactionViewUtils.html" title="TransactionViewUtils (module)">TransactionViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_parse_booking_date'><span class='object_link'><a href="TransactionViewUtils.html#parse_booking_date-class_method" title="TransactionViewUtils.parse_booking_date (method)">parse_booking_date</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_d'>d</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:end_on</span><span class='comma'>,</span> <span class='label'>transform_with:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_d'>d</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="TransactionViewUtils.html" title="TransactionViewUtils (module)">TransactionViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_parse_booking_date'><span class='object_link'><a href="TransactionViewUtils.html#parse_booking_date-class_method" title="TransactionViewUtils.parse_booking_date (method)">parse_booking_date</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_d'>d</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="RefererHider.html" title="RefererHider (module)">RefererHider</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="RefererHider.html#HIDE_REFERER_ON-constant" title="RefererHider::HIDE_REFERER_ON (constant)">RefererHider::HIDE_REFERER_ON</a></span></p>
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="Analytics.html" title="Analytics (module)">Analytics</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Analytics.html#EVENT_KEY-constant" title="Analytics::EVENT_KEY (constant)">Analytics::EVENT_KEY</a></span>, <span class='object_link'><a href="Analytics.html#LOGOUT_KEY-constant" title="Analytics::LOGOUT_KEY (constant)">Analytics::LOGOUT_KEY</a></span></p>
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="IconHelper.html" title="IconHelper (module)">IconHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="IconHelper.html#ICON_PACK-constant" title="IconHelper::ICON_PACK (constant)">IconHelper::ICON_PACK</a></span></p>
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="ApplicationHelper.html" title="ApplicationHelper (module)">ApplicationHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationHelper.html#SOCIAL_LINKS-constant" title="ApplicationHelper::SOCIAL_LINKS (constant)">ApplicationHelper::SOCIAL_LINKS</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#current_user-instance_method" title="ApplicationController#current_user (method)">#current_user</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-instance_method" title="#create (instance method)">#<strong>create</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#created-instance_method" title="#created (instance method)">#<strong>created</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#finalize_processed-instance_method" title="#finalize_processed (instance method)">#<strong>finalize_processed</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new-instance_method" title="#new (instance method)">#<strong>new</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#person_with_url-instance_method" title="#person_with_url (instance method)">#<strong>person_with_url</strong>(person)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show-instance_method" title="#show (instance method)">#<strong>show</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transaction_op_status-instance_method" title="#transaction_op_status (instance method)">#<strong>transaction_op_status</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#after_sign_in_path_for-instance_method" title="ApplicationController#after_sign_in_path_for (method)">#after_sign_in_path_for</a></span>, <span class='object_link'><a href="ApplicationController.html#cannot_access_if_banned-instance_method" title="ApplicationController#cannot_access_if_banned (method)">#cannot_access_if_banned</a></span>, <span class='object_link'><a href="ApplicationController.html#cannot_access_without_confirmation-instance_method" title="ApplicationController#cannot_access_without_confirmation (method)">#cannot_access_without_confirmation</a></span>, <span class='object_link'><a href="ApplicationController.html#current_user%3F-instance_method" title="ApplicationController#current_user? (method)">#current_user?</a></span>, <span class='object_link'><a href="ApplicationController.html#ensure_consent_given-instance_method" title="ApplicationController#ensure_consent_given (method)">#ensure_consent_given</a></span>, <span class='object_link'><a href="ApplicationController.html#ensure_logged_in-instance_method" title="ApplicationController#ensure_logged_in (method)">#ensure_logged_in</a></span>, <span class='object_link'><a href="ApplicationController.html#ensure_user_belongs_to_community-instance_method" title="ApplicationController#ensure_user_belongs_to_community (method)">#ensure_user_belongs_to_community</a></span>, <span class='object_link'><a href="ApplicationController.html#fetch_community-instance_method" title="ApplicationController#fetch_community (method)">#fetch_community</a></span>, <span class='object_link'><a href="ApplicationController.html#fetch_community_admin_status-instance_method" title="ApplicationController#fetch_community_admin_status (method)">#fetch_community_admin_status</a></span>, <span class='object_link'><a href="ApplicationController.html#fetch_community_membership-instance_method" title="ApplicationController#fetch_community_membership (method)">#fetch_community_membership</a></span>, <span class='object_link'><a href="ApplicationController.html#fetch_community_plan_expiration_status-instance_method" title="ApplicationController#fetch_community_plan_expiration_status (method)">#fetch_community_plan_expiration_status</a></span>, <span class='object_link'><a href="ApplicationController.html#fetch_logged_in_user-instance_method" title="ApplicationController#fetch_logged_in_user (method)">#fetch_logged_in_user</a></span>, <span class='object_link'><a href="ApplicationController.html#initialize_feature_flags-instance_method" title="ApplicationController#initialize_feature_flags (method)">#initialize_feature_flags</a></span>, <span class='object_link'><a href="ApplicationController.html#logged_in%3F-instance_method" title="ApplicationController#logged_in? (method)">#logged_in?</a></span>, <span class='object_link'><a href="ApplicationController.html#maintenance_warning-instance_method" title="ApplicationController#maintenance_warning (method)">#maintenance_warning</a></span>, <span class='object_link'><a href="ApplicationController.html#not_available-instance_method" title="ApplicationController#not_available (method)">#not_available</a></span>, <span class='object_link'><a href="ApplicationController.html#perform_redirect-instance_method" title="ApplicationController#perform_redirect (method)">#perform_redirect</a></span>, <span class='object_link'><a href="ApplicationController.html#redirect_locale_param-instance_method" title="ApplicationController#redirect_locale_param (method)">#redirect_locale_param</a></span>, <span class='object_link'><a href="ApplicationController.html#redirect_removed_locale-instance_method" title="ApplicationController#redirect_removed_locale (method)">#redirect_removed_locale</a></span>, <span class='object_link'><a href="ApplicationController.html#redirect_to_locale-instance_method" title="ApplicationController#redirect_to_locale (method)">#redirect_to_locale</a></span>, <span class='object_link'><a href="ApplicationController.html#resolve_community-instance_method" title="ApplicationController#resolve_community (method)">#resolve_community</a></span>, <span class='object_link'><a href="ApplicationController.html#root-instance_method" title="ApplicationController#root (method)">#root</a></span>, <span class='object_link'><a href="ApplicationController.html#save_current_host_with_port-instance_method" title="ApplicationController#save_current_host_with_port (method)">#save_current_host_with_port</a></span>, <span class='object_link'><a href="ApplicationController.html#save_current_path-instance_method" title="ApplicationController#save_current_path (method)">#save_current_path</a></span>, <span class='object_link'><a href="ApplicationController.html#set_display_expiration_notice-instance_method" title="ApplicationController#set_display_expiration_notice (method)">#set_display_expiration_notice</a></span>, <span class='object_link'><a href="ApplicationController.html#set_homepage_path-instance_method" title="ApplicationController#set_homepage_path (method)">#set_homepage_path</a></span>, <span class='object_link'><a href="ApplicationController.html#set_locale-instance_method" title="ApplicationController#set_locale (method)">#set_locale</a></span>, <span class='object_link'><a href="ApplicationController.html#warn_about_missing_payment_info-instance_method" title="ApplicationController#warn_about_missing_payment_info (method)">#warn_about_missing_payment_info</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="HSTS/Concern.html" title="HSTS::Concern (module)">HSTS::Concern</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="HSTS/Concern.html#set_hsts-instance_method" title="HSTS::Concern#set_hsts (method)">#set_hsts</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="RefererHider.html" title="RefererHider (module)">RefererHider</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="RefererHider.html#force_hide_referer-instance_method" title="RefererHider#force_hide_referer (method)">#force_hide_referer</a></span>, <span class='object_link'><a href="RefererHider.html#set_hide_referer-instance_method" title="RefererHider#set_hide_referer (method)">#set_hide_referer</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Analytics.html" title="Analytics (module)">Analytics</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Analytics.html#mark_logged_out-instance_method" title="Analytics#mark_logged_out (method)">#mark_logged_out</a></span>, <span class='object_link'><a href="Analytics.html#record_event-instance_method" title="Analytics#record_event (method)">#record_event</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="ApplicationController/DefaultURLOptions.html" title="ApplicationController::DefaultURLOptions (module)">ApplicationController::DefaultURLOptions</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController/DefaultURLOptions.html#default_url_options-instance_method" title="ApplicationController::DefaultURLOptions#default_url_options (method)">#default_url_options</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="IconHelper.html" title="IconHelper (module)">IconHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="IconHelper.html#icon_class-instance_method" title="IconHelper#icon_class (method)">#icon_class</a></span>, <span class='object_link'><a href="IconHelper.html#icon_class_tag-instance_method" title="IconHelper#icon_class_tag (method)">#icon_class_tag</a></span>, <span class='object_link'><a href="IconHelper.html#icon_map_tag-instance_method" title="IconHelper#icon_map_tag (method)">#icon_map_tag</a></span>, <span class='object_link'><a href="IconHelper.html#icon_specified%3F-class_method" title="IconHelper.icon_specified? (method)">icon_specified?</a></span>, <span class='object_link'><a href="IconHelper.html#icon_tag-instance_method" title="IconHelper#icon_tag (method)">#icon_tag</a></span>, <span class='object_link'><a href="IconHelper.html#pick_icons-instance_method" title="IconHelper#pick_icons (method)">#pick_icons</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="ApplicationHelper.html" title="ApplicationHelper (module)">ApplicationHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationHelper.html#about_links-instance_method" title="ApplicationHelper#about_links (method)">#about_links</a></span>, <span class='object_link'><a href="ApplicationHelper.html#add_links-instance_method" title="ApplicationHelper#add_links (method)">#add_links</a></span>, <span class='object_link'><a href="ApplicationHelper.html#add_links_and_br_tags-instance_method" title="ApplicationHelper#add_links_and_br_tags (method)">#add_links_and_br_tags</a></span>, <span class='object_link'><a href="ApplicationHelper.html#add_links_and_br_tags_for_email-instance_method" title="ApplicationHelper#add_links_and_br_tags_for_email (method)">#add_links_and_br_tags_for_email</a></span>, <span class='object_link'><a href="ApplicationHelper.html#add_p_tags-instance_method" title="ApplicationHelper#add_p_tags (method)">#add_p_tags</a></span>, <span class='object_link'><a href="ApplicationHelper.html#admin_links_for-instance_method" title="ApplicationHelper#admin_links_for (method)">#admin_links_for</a></span>, <span class='object_link'><a href="ApplicationHelper.html#atom_feed_url-instance_method" title="ApplicationHelper#atom_feed_url (method)">#atom_feed_url</a></span>, <span class='object_link'><a href="ApplicationHelper.html#author_link-instance_method" title="ApplicationHelper#author_link (method)">#author_link</a></span>, <span class='object_link'><a href="ApplicationHelper.html#available_locales-instance_method" title="ApplicationHelper#available_locales (method)">#available_locales</a></span>, <span class='object_link'><a href="ApplicationHelper.html#avatar_thumb-instance_method" title="ApplicationHelper#avatar_thumb (method)">#avatar_thumb</a></span>, <span class='object_link'><a href="ApplicationHelper.html#community_blank_slate-instance_method" title="ApplicationHelper#community_blank_slate (method)">#community_blank_slate</a></span>, <span class='object_link'><a href="ApplicationHelper.html#community_description-instance_method" title="ApplicationHelper#community_description (method)">#community_description</a></span>, <span class='object_link'><a href="ApplicationHelper.html#community_slogan-instance_method" title="ApplicationHelper#community_slogan (method)">#community_slogan</a></span>, <span class='object_link'><a href="ApplicationHelper.html#default_protocol-instance_method" title="ApplicationHelper#default_protocol (method)">#default_protocol</a></span>, <span class='object_link'><a href="ApplicationHelper.html#email_link_style-instance_method" title="ApplicationHelper#email_link_style (method)">#email_link_style</a></span>, <span class='object_link'><a href="ApplicationHelper.html#email_not_accepted_message-instance_method" title="ApplicationHelper#email_not_accepted_message (method)">#email_not_accepted_message</a></span>, <span class='object_link'><a href="ApplicationHelper.html#escape_for_url-class_method" title="ApplicationHelper.escape_for_url (method)">escape_for_url</a></span>, <span class='object_link'><a href="ApplicationHelper.html#facebook_like-instance_method" title="ApplicationHelper#facebook_like (method)">#facebook_like</a></span>, <span class='object_link'><a href="ApplicationHelper.html#fetch_community_service_name_from_thread-class_method" title="ApplicationHelper.fetch_community_service_name_from_thread (method)">fetch_community_service_name_from_thread</a></span>, <span class='object_link'><a href="ApplicationHelper.html#format_local_date-instance_method" title="ApplicationHelper#format_local_date (method)">#format_local_date</a></span>, <span class='object_link'><a href="ApplicationHelper.html#get_badge_class-instance_method" title="ApplicationHelper#get_badge_class (method)">#get_badge_class</a></span>, <span class='object_link'><a href="ApplicationHelper.html#get_profile_extras_tab_class-instance_method" title="ApplicationHelper#get_profile_extras_tab_class (method)">#get_profile_extras_tab_class</a></span>, <span class='object_link'><a href="ApplicationHelper.html#has_aws_keys%3F-class_method" title="ApplicationHelper.has_aws_keys? (method)">has_aws_keys?</a></span>, <span class='object_link'><a href="ApplicationHelper.html#huge_avatar_thumb-instance_method" title="ApplicationHelper#huge_avatar_thumb (method)">#huge_avatar_thumb</a></span>, <span class='object_link'><a href="ApplicationHelper.html#js_t-instance_method" title="ApplicationHelper#js_t (method)">#js_t</a></span>, <span class='object_link'><a href="ApplicationHelper.html#landing_page_path-instance_method" title="ApplicationHelper#landing_page_path (method)">#landing_page_path</a></span>, <span class='object_link'><a href="ApplicationHelper.html#large_avatar_thumb-instance_method" title="ApplicationHelper#large_avatar_thumb (method)">#large_avatar_thumb</a></span>, <span class='object_link'><a href="ApplicationHelper.html#medium_avatar_thumb-instance_method" title="ApplicationHelper#medium_avatar_thumb (method)">#medium_avatar_thumb</a></span>, <span class='object_link'><a href="ApplicationHelper.html#missing_avatar-instance_method" title="ApplicationHelper#missing_avatar (method)">#missing_avatar</a></span>, <span class='object_link'><a href="ApplicationHelper.html#on_admin%3F-instance_method" title="ApplicationHelper#on_admin? (method)">#on_admin?</a></span>, <span class='object_link'><a href="ApplicationHelper.html#one_line_for_html_safe_content-instance_method" title="ApplicationHelper#one_line_for_html_safe_content (method)">#one_line_for_html_safe_content</a></span>, <span class='object_link'><a href="ApplicationHelper.html#pageless-instance_method" title="ApplicationHelper#pageless (method)">#pageless</a></span>, <span class='object_link'><a href="ApplicationHelper.html#pick_referer_domain_part_from_request-class_method" title="ApplicationHelper.pick_referer_domain_part_from_request (method)">pick_referer_domain_part_from_request</a></span>, <span class='object_link'><a href="ApplicationHelper.html#random_sting-class_method" title="ApplicationHelper.random_sting (method)">random_sting</a></span>, <span class='object_link'><a href="ApplicationHelper.html#regex_definition_to_js-instance_method" title="ApplicationHelper#regex_definition_to_js (method)">#regex_definition_to_js</a></span>, <span class='object_link'><a href="ApplicationHelper.html#search_mode-instance_method" title="ApplicationHelper#search_mode (method)">#search_mode</a></span>, <span class='object_link'><a href="ApplicationHelper.html#search_path-instance_method" title="ApplicationHelper#search_path (method)">#search_path</a></span>, <span class='object_link'><a href="ApplicationHelper.html#search_url-instance_method" title="ApplicationHelper#search_url (method)">#search_url</a></span>, <span class='object_link'><a href="ApplicationHelper.html#send_error_notification-class_method" title="ApplicationHelper.send_error_notification (method)">send_error_notification</a></span>, <span class='object_link'><a href="ApplicationHelper.html#service_name-instance_method" title="ApplicationHelper#service_name (method)">#service_name</a></span>, <span class='object_link'><a href="ApplicationHelper.html#settings_links_for-instance_method" title="ApplicationHelper#settings_links_for (method)">#settings_links_for</a></span>, <span class='object_link'><a href="ApplicationHelper.html#small_avatar_thumb-instance_method" title="ApplicationHelper#small_avatar_thumb (method)">#small_avatar_thumb</a></span>, <span class='object_link'><a href="ApplicationHelper.html#social_link_name-instance_method" title="ApplicationHelper#social_link_name (method)">#social_link_name</a></span>, <span class='object_link'><a href="ApplicationHelper.html#social_link_placeholder-instance_method" title="ApplicationHelper#social_link_placeholder (method)">#social_link_placeholder</a></span>, <span class='object_link'><a href="ApplicationHelper.html#sort_link_direction-instance_method" title="ApplicationHelper#sort_link_direction (method)">#sort_link_direction</a></span>, <span class='object_link'><a href="ApplicationHelper.html#store_community_service_name_to_thread-class_method" title="ApplicationHelper.store_community_service_name_to_thread (method)">store_community_service_name_to_thread</a></span>, <span class='object_link'><a href="ApplicationHelper.html#store_community_service_name_to_thread_from_community-class_method" title="ApplicationHelper.store_community_service_name_to_thread_from_community (method)">store_community_service_name_to_thread_from_community</a></span>, <span class='object_link'><a href="ApplicationHelper.html#store_community_service_name_to_thread_from_community_id-class_method" title="ApplicationHelper.store_community_service_name_to_thread_from_community_id (method)">store_community_service_name_to_thread_from_community_id</a></span>, <span class='object_link'><a href="ApplicationHelper.html#text_with_line_breaks-instance_method" title="ApplicationHelper#text_with_line_breaks (method)">#text_with_line_breaks</a></span>, <span class='object_link'><a href="ApplicationHelper.html#text_with_line_breaks_for_email-instance_method" title="ApplicationHelper#text_with_line_breaks_for_email (method)">#text_with_line_breaks_for_email</a></span>, <span class='object_link'><a href="ApplicationHelper.html#text_with_line_breaks_html_safe-instance_method" title="ApplicationHelper#text_with_line_breaks_html_safe (method)">#text_with_line_breaks_html_safe</a></span>, <span class='object_link'><a href="ApplicationHelper.html#text_with_url_links-instance_method" title="ApplicationHelper#text_with_url_links (method)">#text_with_url_links</a></span>, <span class='object_link'><a href="ApplicationHelper.html#time_ago-instance_method" title="ApplicationHelper#time_ago (method)">#time_ago</a></span>, <span class='object_link'><a href="ApplicationHelper.html#translate_time_to-instance_method" title="ApplicationHelper#translate_time_to (method)">#translate_time_to</a></span>, <span class='object_link'><a href="ApplicationHelper.html#tribe_latitude-instance_method" title="ApplicationHelper#tribe_latitude (method)">#tribe_latitude</a></span>, <span class='object_link'><a href="ApplicationHelper.html#tribe_longitude-instance_method" title="ApplicationHelper#tribe_longitude (method)">#tribe_longitude</a></span>, <span class='object_link'><a href="ApplicationHelper.html#us_states-instance_method" title="ApplicationHelper#us_states (method)">#us_states</a></span>, <span class='object_link'><a href="ApplicationHelper.html#use_s3%3F-class_method" title="ApplicationHelper.use_s3? (method)">use_s3?</a></span>, <span class='object_link'><a href="ApplicationHelper.html#use_upload_s3%3F-class_method" title="ApplicationHelper.use_upload_s3? (method)">use_upload_s3?</a></span>, <span class='object_link'><a href="ApplicationHelper.html#username_label-instance_method" title="ApplicationHelper#username_label (method)">#username_label</a></span>, <span class='object_link'><a href="ApplicationHelper.html#username_or_email_label-instance_method" title="ApplicationHelper#username_or_email_label (method)">#username_or_email_label</a></span>, <span class='object_link'><a href="ApplicationHelper.html#with_invite_link-instance_method" title="ApplicationHelper#with_invite_link (method)">#with_invite_link</a></span></p>
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create-instance_method">
+  
+    #<strong>create</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/transactions_controller.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
+  <span class='const'><span class='object_link'><a href="Result.html" title="Result (module)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'><span class='object_link'><a href="Result.html#all-class_method" title="Result.all (method)">all</a></span></span><span class='lparen'>(</span>
+    <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span>
+      <span class='const'><span class='object_link'><a href="#TransactionForm-constant" title="TransactionsController::TransactionForm (constant)">TransactionForm</a></span></span><span class='period'>.</span><span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_to_unsafe_hash'>to_unsafe_hash</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_form'>form</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+      <span class='id identifier rubyid_fetch_data'>fetch_data</span><span class='lparen'>(</span><span class='id identifier rubyid_form'>form</span><span class='lbracket'>[</span><span class='symbol'>:listing_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_form'>form</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_process'>process</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+      <span class='id identifier rubyid_validate_form'>validate_form</span><span class='lparen'>(</span><span class='id identifier rubyid_form'>form</span><span class='comma'>,</span> <span class='id identifier rubyid_process'>process</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='id identifier rubyid_listing_id'>listing_id</span><span class='comma'>,</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+      <span class='id identifier rubyid_ensure_can_start_transactions'>ensure_can_start_transactions</span><span class='lparen'>(</span><span class='label'>listing_model:</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='comma'>,</span> <span class='label'>current_user:</span> <span class='ivar'>@current_user</span><span class='comma'>,</span> <span class='label'>current_community:</span> <span class='ivar'>@current_community</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_form'>form</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='id identifier rubyid_listing_id'>listing_id</span><span class='comma'>,</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='comma'>,</span> <span class='id identifier rubyid_author_model'>author_model</span><span class='comma'>,</span> <span class='id identifier rubyid_process'>process</span><span class='comma'>,</span> <span class='id identifier rubyid_gateway'>gateway</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+      <span class='id identifier rubyid_booking_fields'>booking_fields</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_form'>form</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='symbol'>:start_on</span><span class='comma'>,</span> <span class='symbol'>:end_on</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_booking'>booking</span><span class='op'>|</span> <span class='id identifier rubyid_booking'>booking</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+
+      <span class='id identifier rubyid_is_booking'>is_booking</span> <span class='op'>=</span> <span class='id identifier rubyid_date_selector?'>date_selector?</span><span class='lparen'>(</span><span class='id identifier rubyid_listing_model'>listing_model</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_quantity'>quantity</span> <span class='op'>=</span> <span class='id identifier rubyid_calculate_quantity'>calculate_quantity</span><span class='lparen'>(</span><span class='label'>tx_params:</span> <span class='lbrace'>{</span>
+                                      <span class='label'>quantity:</span> <span class='id identifier rubyid_form'>form</span><span class='lbracket'>[</span><span class='symbol'>:quantity</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                                      <span class='label'>start_on:</span> <span class='id identifier rubyid_booking_fields'>booking_fields</span><span class='period'>.</span><span class='id identifier rubyid_dig'>dig</span><span class='lparen'>(</span><span class='symbol'>:start_on</span><span class='rparen'>)</span><span class='comma'>,</span>
+                                      <span class='label'>end_on:</span> <span class='id identifier rubyid_booking_fields'>booking_fields</span><span class='period'>.</span><span class='id identifier rubyid_dig'>dig</span><span class='lparen'>(</span><span class='symbol'>:end_on</span><span class='rparen'>)</span>
+                                    <span class='rbrace'>}</span><span class='comma'>,</span>
+                                    <span class='label'>is_booking:</span> <span class='id identifier rubyid_is_booking'>is_booking</span><span class='comma'>,</span>
+                                    <span class='label'>unit:</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='period'>.</span><span class='id identifier rubyid_unit_type'>unit_type</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span>
+
+
+      <span class='id identifier rubyid_transaction_service'>transaction_service</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span>
+        <span class='lbrace'>{</span>
+          <span class='label'>transaction:</span> <span class='lbrace'>{</span>
+            <span class='label'>community_id:</span> <span class='ivar'>@current_community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
+            <span class='label'>community_uuid:</span> <span class='ivar'>@current_community</span><span class='period'>.</span><span class='id identifier rubyid_uuid_object'>uuid_object</span><span class='comma'>,</span>
+            <span class='label'>listing_id:</span> <span class='id identifier rubyid_listing_id'>listing_id</span><span class='comma'>,</span>
+            <span class='label'>listing_uuid:</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='period'>.</span><span class='id identifier rubyid_uuid_object'>uuid_object</span><span class='comma'>,</span>
+            <span class='label'>listing_title:</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
+            <span class='label'>starter_id:</span> <span class='ivar'>@current_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
+            <span class='label'>starter_uuid:</span> <span class='ivar'>@current_user</span><span class='period'>.</span><span class='id identifier rubyid_uuid_object'>uuid_object</span><span class='comma'>,</span>
+            <span class='label'>listing_author_id:</span> <span class='id identifier rubyid_author_model'>author_model</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
+            <span class='label'>listing_author_uuid:</span> <span class='id identifier rubyid_author_model'>author_model</span><span class='period'>.</span><span class='id identifier rubyid_uuid_object'>uuid_object</span><span class='comma'>,</span>
+            <span class='label'>unit_type:</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='period'>.</span><span class='id identifier rubyid_unit_type'>unit_type</span><span class='comma'>,</span>
+            <span class='label'>unit_price:</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='period'>.</span><span class='id identifier rubyid_price'>price</span> <span class='op'>||</span> <span class='const'>Money</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='ivar'>@current_community</span><span class='period'>.</span><span class='id identifier rubyid_currency'>currency</span><span class='rparen'>)</span><span class='comma'>,</span>
+            <span class='label'>unit_tr_key:</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='period'>.</span><span class='id identifier rubyid_unit_tr_key'>unit_tr_key</span><span class='comma'>,</span>
+            <span class='label'>availability:</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='period'>.</span><span class='id identifier rubyid_availability'>availability</span><span class='comma'>,</span>
+            <span class='label'>listing_quantity:</span> <span class='id identifier rubyid_quantity'>quantity</span><span class='comma'>,</span>
+            <span class='label'>content:</span> <span class='id identifier rubyid_form'>form</span><span class='lbracket'>[</span><span class='symbol'>:message</span><span class='rbracket'>]</span><span class='comma'>,</span>
+            <span class='label'>starting_page:</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="Conversation.html" title="Conversation (class)">Conversation</a></span></span><span class='op'>::</span><span class='const'>PAYMENT</span><span class='comma'>,</span>
+            <span class='label'>booking_fields:</span> <span class='id identifier rubyid_booking_fields'>booking_fields</span><span class='comma'>,</span>
+            <span class='label'>payment_gateway:</span> <span class='id identifier rubyid_process'>process</span><span class='period'>.</span><span class='id identifier rubyid_process'>process</span> <span class='op'>==</span> <span class='symbol'>:none</span> <span class='op'>?</span> <span class='symbol'>:none</span> <span class='op'>:</span> <span class='id identifier rubyid_gateway'>gateway</span><span class='comma'>,</span> <span class='comment'># TODO This is a bit awkward
+</span>            <span class='label'>payment_process:</span> <span class='id identifier rubyid_process'>process</span><span class='period'>.</span><span class='id identifier rubyid_process'>process</span>
+          <span class='rbrace'>}</span>
+        <span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+  <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_on_success'>on_success</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_process'>process</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_tx'>tx</span><span class='rparen'>)</span><span class='op'>|</span>
+    <span class='id identifier rubyid_after_create_actions!'>after_create_actions!</span><span class='lparen'>(</span><span class='label'>process:</span> <span class='id identifier rubyid_process'>process</span><span class='comma'>,</span> <span class='label'>transaction:</span> <span class='id identifier rubyid_tx'>tx</span><span class='lbracket'>[</span><span class='symbol'>:transaction</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>community_id:</span> <span class='ivar'>@current_community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_after_create_flash'>after_create_flash</span><span class='lparen'>(</span><span class='label'>process:</span> <span class='id identifier rubyid_process'>process</span><span class='rparen'>)</span> <span class='comment'># add more params here when needed
+</span>    <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_after_create_redirect'>after_create_redirect</span><span class='lparen'>(</span><span class='label'>process:</span> <span class='id identifier rubyid_process'>process</span><span class='comma'>,</span> <span class='label'>starter_id:</span> <span class='ivar'>@current_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='label'>transaction:</span> <span class='id identifier rubyid_tx'>tx</span><span class='lbracket'>[</span><span class='symbol'>:transaction</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='comment'># add more params here when needed
+</span>  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_on_error'>on_error</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_error_msg'>error_msg</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>|</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:error_tr_key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_tr_key'>tr_key</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='id identifier rubyid_tr_key'>tr_key</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Could not start a transaction, error message: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_error_msg'>error_msg</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_redirect_to'>redirect_to</span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:return_to_content</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_root'><span class='object_link'><a href="top-level-namespace.html" title="Top Level Namespace (root)">root</a></span></span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="created-instance_method">
+  
+    #<strong>created</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/transactions_controller.rb', line 162</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_created'>created</span>
+  <span class='id identifier rubyid_proc_status'>proc_status</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction_service'>transaction_service</span><span class='period'>.</span><span class='id identifier rubyid_finalize_create'>finalize_create</span><span class='lparen'>(</span>
+    <span class='label'>community_id:</span> <span class='ivar'>@current_community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
+    <span class='label'>transaction_id:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>force_sync:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_proc_status'>proc_status</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>error_messages.booking.booking_failed_payment_voided</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_search_path'><span class='object_link'><a href="ApplicationHelper.html#search_path-instance_method" title="ApplicationHelper#search_path (method)">search_path</a></span></span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_tx_fields'>tx_fields</span> <span class='op'>=</span> <span class='id identifier rubyid_proc_status'>proc_status</span><span class='period'>.</span><span class='id identifier rubyid_dig'>dig</span><span class='lparen'>(</span><span class='symbol'>:data</span><span class='comma'>,</span> <span class='symbol'>:transaction_service_fields</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_process_token'>process_token</span> <span class='op'>=</span> <span class='id identifier rubyid_tx_fields'>tx_fields</span><span class='lbracket'>[</span><span class='symbol'>:process_token</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_process_completed'>process_completed</span> <span class='op'>=</span> <span class='id identifier rubyid_tx_fields'>tx_fields</span><span class='lbracket'>[</span><span class='symbol'>:completed</span><span class='rbracket'>]</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_process_token'>process_token</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+    <span class='id identifier rubyid_redirect_url'>redirect_url</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction_finalize_processed_path'>transaction_finalize_processed_path</span><span class='lparen'>(</span><span class='id identifier rubyid_process_token'>process_token</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_process_completed'>process_completed</span>
+      <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_redirect_url'>redirect_url</span>
+    <span class='kw'>else</span>
+      <span class='comment'># Operation was performed asynchronously
+</span>
+      <span class='comment'># We&#39;re using here the same PayPal spinner, although we could
+</span>      <span class='comment'># create a new one for TransactionService.
+</span>      <span class='id identifier rubyid_render'>render</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>paypal_service/success</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>layout:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>locals:</span> <span class='lbrace'>{</span>
+               <span class='label'>op_status_url:</span> <span class='id identifier rubyid_transaction_op_status_path'>transaction_op_status_path</span><span class='lparen'>(</span><span class='id identifier rubyid_process_token'>process_token</span><span class='rparen'>)</span><span class='comma'>,</span>
+               <span class='label'>redirect_url:</span> <span class='id identifier rubyid_redirect_url'>redirect_url</span>
+             <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_handle_finalize_proc_result'>handle_finalize_proc_result</span><span class='lparen'>(</span><span class='id identifier rubyid_proc_status'>proc_status</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="finalize_processed-instance_method">
+  
+    #<strong>finalize_processed</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/transactions_controller.rb', line 197</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_finalize_processed'>finalize_processed</span>
+  <span class='id identifier rubyid_process_token'>process_token</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:process_token</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_proc_status'>proc_status</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction_process_tokens'>transaction_process_tokens</span><span class='period'>.</span><span class='id identifier rubyid_get_status'>get_status</span><span class='lparen'>(</span><span class='const'>UUIDTools</span><span class='op'>::</span><span class='const'>UUID</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_process_token'>process_token</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='lparen'>(</span><span class='id identifier rubyid_proc_status'>proc_status</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_proc_status'>proc_status</span><span class='lbracket'>[</span><span class='symbol'>:data</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:completed</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_error_not_found_path'>error_not_found_path</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_handle_finalize_proc_result'>handle_finalize_proc_result</span><span class='lparen'>(</span><span class='id identifier rubyid_proc_status'>proc_status</span><span class='lbracket'>[</span><span class='symbol'>:data</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:result</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new-instance_method">
+  
+    #<strong>new</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/transactions_controller.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span>
+  <span class='const'><span class='object_link'><a href="Result.html" title="Result (module)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'><span class='object_link'><a href="Result.html#all-class_method" title="Result.all (method)">all</a></span></span><span class='lparen'>(</span>
+    <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span>
+      <span class='id identifier rubyid_fetch_data'>fetch_data</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:listing_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_listing_id'>listing_id</span><span class='comma'>,</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+      <span class='id identifier rubyid_ensure_can_start_transactions'>ensure_can_start_transactions</span><span class='lparen'>(</span><span class='label'>listing_model:</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='comma'>,</span> <span class='label'>current_user:</span> <span class='ivar'>@current_user</span><span class='comma'>,</span> <span class='label'>current_community:</span> <span class='ivar'>@current_community</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+  <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_on_success'>on_success</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_listing_id'>listing_id</span><span class='comma'>,</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='comma'>,</span> <span class='id identifier rubyid_author_model'>author_model</span><span class='comma'>,</span> <span class='id identifier rubyid_process'>process</span><span class='comma'>,</span> <span class='id identifier rubyid_gateway'>gateway</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='op'>|</span>
+    <span class='id identifier rubyid_transaction_params'>transaction_params</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="HashUtils.html" title="HashUtils (module)">HashUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_symbolize_keys'><span class='object_link'><a href="HashUtils.html#symbolize_keys-class_method" title="HashUtils.symbolize_keys (method)">symbolize_keys</a></span></span><span class='lparen'>(</span>
+      <span class='lbrace'>{</span><span class='label'>listing_id:</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span>
+      <span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='symbol'>:start_on</span><span class='comma'>,</span> <span class='symbol'>:end_on</span><span class='comma'>,</span> <span class='symbol'>:quantity</span><span class='comma'>,</span> <span class='symbol'>:delivery</span><span class='comma'>,</span> <span class='symbol'>:start_time</span><span class='comma'>,</span> <span class='symbol'>:end_time</span><span class='comma'>,</span> <span class='symbol'>:per_hour</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_permit!'>permit!</span><span class='rparen'>)</span>
+    <span class='rparen'>)</span>
+
+    <span class='kw'>case</span> <span class='lbracket'>[</span><span class='id identifier rubyid_process'>process</span><span class='period'>.</span><span class='id identifier rubyid_process'>process</span><span class='comma'>,</span> <span class='id identifier rubyid_gateway'>gateway</span><span class='rbracket'>]</span>
+    <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='symbol'>:none</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_render_free'>render_free</span><span class='lparen'>(</span><span class='label'>listing_model:</span> <span class='id identifier rubyid_listing_model'>listing_model</span><span class='comma'>,</span> <span class='label'>author_model:</span> <span class='id identifier rubyid_author_model'>author_model</span><span class='comma'>,</span> <span class='label'>community:</span> <span class='ivar'>@current_community</span><span class='comma'>,</span> <span class='label'>params:</span> <span class='id identifier rubyid_transaction_params'>transaction_params</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='symbol'>:preauthorize</span><span class='comma'>,</span> <span class='symbol'>:paypal</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='symbol'>:preauthorize</span><span class='comma'>,</span> <span class='symbol'>:stripe</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_matches'><span class='object_link'><a href="top-level-namespace.html#matches-instance_method" title="#matches (method)">matches</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='symbol'>:preauthorize</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:paypal</span><span class='comma'>,</span> <span class='symbol'>:stripe</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_initiate_order_path'>initiate_order_path</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction_params'>transaction_params</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>listing_id: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_listing_id'>listing_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>, payment_gateway: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_gateway'>gateway</span><span class='embexpr_end'>}</span><span class='tstring_content'>, payment_process: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_process'>process</span><span class='embexpr_end'>}</span><span class='tstring_content'>, booking: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_booking'>booking</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Cannot find new transaction path to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opts'>opts</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_on_error'>on_error</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_error_msg'>error_msg</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>|</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:error_tr_key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_tr_key'>tr_key</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='id identifier rubyid_tr_key'>tr_key</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Could not start a transaction, error message: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_error_msg'>error_msg</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_redirect_to'>redirect_to</span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:return_to_content</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_root'><span class='object_link'><a href="top-level-namespace.html" title="Top Level Namespace (root)">root</a></span></span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="person_with_url-instance_method">
+  
+    #<strong>person_with_url</strong>(person)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+227
+228
+229
+230
+231
+232
+233</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/transactions_controller.rb', line 227</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_person_with_url'>person_with_url</span><span class='lparen'>(</span><span class='id identifier rubyid_person'>person</span><span class='rparen'>)</span>
+  <span class='lbrace'>{</span>
+    <span class='label'>person:</span> <span class='id identifier rubyid_person_entity'>person_entity</span><span class='comma'>,</span>
+    <span class='label'>url:</span> <span class='id identifier rubyid_person_path'>person_path</span><span class='lparen'>(</span><span class='label'>username:</span> <span class='id identifier rubyid_person'>person</span><span class='period'>.</span><span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>display_name:</span> <span class='const'><span class='object_link'><a href="PersonViewUtils.html" title="PersonViewUtils (module)">PersonViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_person_display_name'><span class='object_link'><a href="PersonViewUtils.html#person_display_name-class_method" title="PersonViewUtils.person_display_name (method)">person_display_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_person'>person</span><span class='comma'>,</span> <span class='ivar'>@current_community</span><span class='period'>.</span><span class='id identifier rubyid_name_display_type'>name_display_type</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="show-instance_method">
+  
+    #<strong>show</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/transactions_controller.rb', line 123</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span>
+  <span class='ivar'>@transaction</span> <span class='op'>=</span> <span class='ivar'>@current_community</span><span class='period'>.</span><span class='id identifier rubyid_transactions'>transactions</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_m_admin'>m_admin</span> <span class='op'>=</span> <span class='ivar'>@current_user</span><span class='period'>.</span><span class='id identifier rubyid_has_admin_rights?'>has_admin_rights?</span><span class='lparen'>(</span><span class='ivar'>@current_community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_m_participant'>m_participant</span> <span class='op'>=</span> <span class='ivar'>@current_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='ivar'>@transaction</span><span class='period'>.</span><span class='id identifier rubyid_starter_id'>starter_id</span> <span class='op'>||</span> <span class='ivar'>@current_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='ivar'>@transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing_author_id'>listing_author_id</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_m_admin'>m_admin</span> <span class='op'>||</span> <span class='id identifier rubyid_m_participant'>m_participant</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>layouts.notifications.you_are_not_authorized_to_view_this_content</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_search_path'><span class='object_link'><a href="ApplicationHelper.html#search_path-instance_method" title="ApplicationHelper#search_path (method)">search_path</a></span></span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_role'>role</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_m_participant'>m_participant</span>
+      <span class='symbol'>:participant</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_m_admin'>m_admin</span>
+      <span class='symbol'>:admin</span>
+    <span class='kw'>end</span>
+
+  <span class='ivar'>@conversation</span> <span class='op'>=</span> <span class='ivar'>@transaction</span><span class='period'>.</span><span class='id identifier rubyid_conversation'>conversation</span>
+  <span class='ivar'>@listing</span> <span class='op'>=</span> <span class='ivar'>@transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing'>listing</span>
+
+  <span class='id identifier rubyid_messages_and_actions'>messages_and_actions</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TransactionViewUtils.html" title="TransactionViewUtils (module)">TransactionViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_merge_messages_and_transitions'><span class='object_link'><a href="TransactionViewUtils.html#merge_messages_and_transitions-class_method" title="TransactionViewUtils.merge_messages_and_transitions (method)">merge_messages_and_transitions</a></span></span><span class='lparen'>(</span>
+    <span class='const'><span class='object_link'><a href="TransactionViewUtils.html" title="TransactionViewUtils (module)">TransactionViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_conversation_messages'><span class='object_link'><a href="TransactionViewUtils.html#conversation_messages-class_method" title="TransactionViewUtils.conversation_messages (method)">conversation_messages</a></span></span><span class='lparen'>(</span><span class='ivar'>@conversation</span><span class='period'>.</span><span class='id identifier rubyid_messages'>messages</span><span class='comma'>,</span> <span class='ivar'>@current_community</span><span class='period'>.</span><span class='id identifier rubyid_name_display_type'>name_display_type</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="TransactionViewUtils.html" title="TransactionViewUtils (module)">TransactionViewUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_transition_messages'><span class='object_link'><a href="TransactionViewUtils.html#transition_messages-class_method" title="TransactionViewUtils.transition_messages (method)">transition_messages</a></span></span><span class='lparen'>(</span><span class='ivar'>@transaction</span><span class='comma'>,</span> <span class='ivar'>@conversation</span><span class='comma'>,</span> <span class='ivar'>@current_community</span><span class='period'>.</span><span class='id identifier rubyid_name_display_type'>name_display_type</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@transaction</span><span class='period'>.</span><span class='id identifier rubyid_mark_as_seen_by_current'>mark_as_seen_by_current</span><span class='lparen'>(</span><span class='ivar'>@current_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_is_author'>is_author</span> <span class='op'>=</span> <span class='id identifier rubyid_m_admin'>m_admin</span> <span class='op'>||</span> <span class='ivar'>@transaction</span><span class='period'>.</span><span class='id identifier rubyid_listing_author_id'>listing_author_id</span> <span class='op'>==</span> <span class='ivar'>@current_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+
+  <span class='id identifier rubyid_render'>render</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>transactions/show</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>locals:</span> <span class='lbrace'>{</span>
+    <span class='label'>messages:</span> <span class='id identifier rubyid_messages_and_actions'>messages_and_actions</span><span class='period'>.</span><span class='id identifier rubyid_reverse'>reverse</span><span class='comma'>,</span>
+    <span class='label'>conversation_other_party:</span> <span class='ivar'>@conversation</span><span class='period'>.</span><span class='id identifier rubyid_other_party'>other_party</span><span class='lparen'>(</span><span class='ivar'>@current_user</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>is_author:</span> <span class='id identifier rubyid_is_author'>is_author</span><span class='comma'>,</span>
+    <span class='label'>role:</span> <span class='id identifier rubyid_role'>role</span><span class='comma'>,</span>
+    <span class='label'>message_form:</span> <span class='const'><span class='object_link'><a href="Message.html" title="Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='label'>sender_id:</span> <span class='ivar'>@current_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='label'>conversation_id:</span> <span class='ivar'>@conversation</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>message_form_action:</span> <span class='id identifier rubyid_person_message_messages_path'>person_message_messages_path</span><span class='lparen'>(</span><span class='ivar'>@current_user</span><span class='comma'>,</span> <span class='symbol'>:message_id</span> <span class='op'>=&gt;</span> <span class='ivar'>@conversation</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>price_break_down_locals:</span> <span class='id identifier rubyid_price_break_down_locals'>price_break_down_locals</span><span class='lparen'>(</span><span class='ivar'>@transaction</span><span class='comma'>,</span> <span class='ivar'>@conversation</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transaction_op_status-instance_method">
+  
+    #<strong>transaction_op_status</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/transactions_controller.rb', line 208</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_transaction_op_status'>transaction_op_status</span>
+  <span class='id identifier rubyid_process_token'>process_token</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:process_token</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_resp'>resp</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_process_token'>process_token</span><span class='rparen'>)</span>
+           <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_ptok'>ptok</span><span class='op'>|</span>
+             <span class='id identifier rubyid_uuid'>uuid</span> <span class='op'>=</span> <span class='const'>UUIDTools</span><span class='op'>::</span><span class='const'>UUID</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_process_token'>process_token</span><span class='rparen'>)</span>
+             <span class='id identifier rubyid_transaction_process_tokens'>transaction_process_tokens</span><span class='period'>.</span><span class='id identifier rubyid_get_status'>get_status</span><span class='lparen'>(</span><span class='id identifier rubyid_uuid'>uuid</span><span class='rparen'>)</span>
+           <span class='rbrace'>}</span>
+           <span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:success</span><span class='rparen'>)</span>
+           <span class='period'>.</span><span class='id identifier rubyid_data'>data</span>
+           <span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_resp'>resp</span>
+    <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_process_resp_to_json'>process_resp_to_json</span><span class='lparen'>(</span><span class='id identifier rubyid_resp'>resp</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_head'>head</span> <span class='symbol'>:not_found</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:02:18 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

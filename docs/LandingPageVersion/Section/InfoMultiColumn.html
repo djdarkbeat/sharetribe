@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: LandingPageVersion::Section::InfoMultiColumn
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "LandingPageVersion::Section::InfoMultiColumn";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span>
+     &raquo; 
+    <span class="title">InfoMultiColumn</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: LandingPageVersion::Section::InfoMultiColumn
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Info.html" title="LandingPageVersion::Section::Info (class)">Info</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Base.html" title="LandingPageVersion::Section::Base (class)">Base</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="Info.html" title="LandingPageVersion::Section::Info (class)">Info</a></span></li>
+          
+            <li class="next">LandingPageVersion::Section::InfoMultiColumn</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/models/landing_page_version/section/info_multi_column.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="DEFAULTS-constant" class="">DEFAULTS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='label'>variation:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>multi_column</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>title:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>background_image:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>background_image_variation:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>button_color:</span> <span class='lbrace'>{</span>
+    <span class='label'>type:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>marketplace_data</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>primary_color</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='label'>button_color_hover:</span> <span class='lbrace'>{</span>
+    <span class='label'>type:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>marketplace_data</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>primary_color_darken</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='label'>icon_color:</span> <span class='lbrace'>{</span>
+    <span class='label'>type:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>marketplace_data</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>primary_color</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='label'>columns:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='label'>button_title:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>button_path:</span> <span class='kw'>nil</span>
+<span class='rbrace'>}</span></pre></dd>
+      
+        <dt id="COLUMN_DEFAULTS-constant" class="">COLUMN_DEFAULTS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='label'>icon:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>piggy-bank</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>title:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>paragraph:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>button_title:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>button_path:</span> <span class='kw'>nil</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_with_indifferent_access'>with_indifferent_access</span></pre></dd>
+      
+        <dt id="EXTRA_PERMITTED_PARAMS-constant" class="">EXTRA_PERMITTED_PARAMS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span>
+  <span class='symbol'>:cta_enabled</span><span class='comma'>,</span>
+  <span class='symbol'>:button_title</span><span class='comma'>,</span>
+  <span class='symbol'>:button_path_string</span><span class='comma'>,</span>
+  <span class='symbol'>:background_style</span><span class='comma'>,</span>
+  <span class='symbol'>:background_color_string</span><span class='comma'>,</span>
+  <span class='symbol'>:background_image_variation</span><span class='comma'>,</span>
+  <span class='symbol'>:multi_columns</span><span class='comma'>,</span>
+  <span class='symbol'>:columns</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span> <span class='symbol'>:icon</span><span class='comma'>,</span> <span class='symbol'>:title</span><span class='comma'>,</span> <span class='symbol'>:paragraph</span><span class='comma'>,</span> <span class='symbol'>:button_title</span><span class='comma'>,</span> <span class='symbol'>:button_path</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='symbol'>:value</span><span class='rbracket'>]</span> <span class='rbracket'>]</span>
+<span class='rbracket'>]</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="Info.html" title="LandingPageVersion::Section::Info (class)">Info</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Info.html#ATTRIBUTES-constant" title="LandingPageVersion::Section::Info::ATTRIBUTES (constant)">LandingPageVersion::Section::Info::ATTRIBUTES</a></span>, <span class='object_link'><a href="Info.html#PERMITTED_PARAMS-constant" title="LandingPageVersion::Section::Info::PERMITTED_PARAMS (constant)">LandingPageVersion::Section::Info::PERMITTED_PARAMS</a></span></p>
+
+  
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="Base.html" title="LandingPageVersion::Section::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Base.html#HELPER_ATTRIBUTES-constant" title="LandingPageVersion::Section::Base::HELPER_ATTRIBUTES (constant)">Base::HELPER_ATTRIBUTES</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#multi_columns-instance_method" title="#multi_columns (instance method)">#<strong>multi_columns</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute multi_columns.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Info.html" title="LandingPageVersion::Section::Info (class)">Info</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Info.html#background_style=-instance_method" title="LandingPageVersion::Section::Info#background_style= (method)">#background_style</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#permitted_params-class_method" title="permitted_params (class method)">.<strong>permitted_params</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_columns-instance_method" title="#add_columns (instance method)">#<strong>add_columns</strong>(attributes)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#attributes=-instance_method" title="#attributes= (instance method)">#<strong>attributes=</strong>(attributes)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#i18n_key-instance_method" title="#i18n_key (instance method)">#<strong>i18n_key</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(attributes = {})  &#x21d2; InfoMultiColumn </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of InfoMultiColumn.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Info.html" title="LandingPageVersion::Section::Info (class)">Info</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Info.html#asset_added-instance_method" title="LandingPageVersion::Section::Info#asset_added (method)">#asset_added</a></span>, <span class='object_link'><a href="Info.html#attributes-instance_method" title="LandingPageVersion::Section::Info#attributes (method)">#attributes</a></span>, <span class='object_link'><a href="Info.html#new_from_content-class_method" title="LandingPageVersion::Section::Info.new_from_content (method)">new_from_content</a></span>, <span class='object_link'><a href="Info.html#removable%3F-instance_method" title="LandingPageVersion::Section::Info#removable? (method)">#removable?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Base.html" title="LandingPageVersion::Section::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Base.html#add_or_replace_asset-instance_method" title="LandingPageVersion::Section::Base#add_or_replace_asset (method)">#add_or_replace_asset</a></span>, <span class='object_link'><a href="Base.html#asset_added-instance_method" title="LandingPageVersion::Section::Base#asset_added (method)">#asset_added</a></span>, <span class='object_link'><a href="Base.html#background_color_string-instance_method" title="LandingPageVersion::Section::Base#background_color_string (method)">#background_color_string</a></span>, <span class='object_link'><a href="Base.html#background_color_string=-instance_method" title="LandingPageVersion::Section::Base#background_color_string= (method)">#background_color_string=</a></span>, <span class='object_link'><a href="Base.html#background_style-instance_method" title="LandingPageVersion::Section::Base#background_style (method)">#background_style</a></span>, <span class='object_link'><a href="Base.html#button_path_string-instance_method" title="LandingPageVersion::Section::Base#button_path_string (method)">#button_path_string</a></span>, <span class='object_link'><a href="Base.html#button_path_string=-instance_method" title="LandingPageVersion::Section::Base#button_path_string= (method)">#button_path_string=</a></span>, <span class='object_link'><a href="Base.html#check_extra_attributes-instance_method" title="LandingPageVersion::Section::Base#check_extra_attributes (method)">#check_extra_attributes</a></span>, <span class='object_link'><a href="Base.html#cta_enabled-instance_method" title="LandingPageVersion::Section::Base#cta_enabled (method)">#cta_enabled</a></span>, <span class='object_link'><a href="Base.html#cta_enabled=-instance_method" title="LandingPageVersion::Section::Base#cta_enabled= (method)">#cta_enabled=</a></span>, <span class='object_link'><a href="Base.html#destroy!-instance_method" title="LandingPageVersion::Section::Base#destroy! (method)">#destroy!</a></span>, <span class='object_link'><a href="Base.html#model_name-instance_method" title="LandingPageVersion::Section::Base#model_name (method)">#model_name</a></span>, <span class='object_link'><a href="Base.html#persisted%3F-instance_method" title="LandingPageVersion::Section::Base#persisted? (method)">#persisted?</a></span>, <span class='object_link'><a href="Base.html#save-instance_method" title="LandingPageVersion::Section::Base#save (method)">#save</a></span></p>
+
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(attributes = {})  &#x21d2; <tt><span class='object_link'><a href="" title="LandingPageVersion::Section::InfoMultiColumn (class)">InfoMultiColumn</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of InfoMultiColumn</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/landing_page_version/section/info_multi_column.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>:</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_to_unsafe_hash'>to_unsafe_hash</span>
+  <span class='id identifier rubyid_add_columns'>add_columns</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="#DEFAULTS-constant" title="LandingPageVersion::Section::InfoMultiColumn::DEFAULTS (constant)">DEFAULTS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+    <span class='kw'>unless</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='embexpr_end'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="multi_columns=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="multi_columns-instance_method">
+  
+    #<strong>multi_columns</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute multi_columns</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/landing_page_version/section/info_multi_column.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_multi_columns'>multi_columns</span>
+  <span class='ivar'>@multi_columns</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="permitted_params-class_method">
+  
+    .<strong>permitted_params</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+89
+90
+91</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/landing_page_version/section/info_multi_column.rb', line 89</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_permitted_params'>permitted_params</span>
+  <span class='const'><span class='object_link'><a href="../../LandingPageVersion.html" title="LandingPageVersion (class)">LandingPageVersion</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Section.html" title="LandingPageVersion::Section (module)">Section</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Info.html" title="LandingPageVersion::Section::Info (class)">Info</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Info.html#PERMITTED_PARAMS-constant" title="LandingPageVersion::Section::Info::PERMITTED_PARAMS (constant)">PERMITTED_PARAMS</a></span></span> <span class='op'>+</span> <span class='const'><span class='object_link'><a href="#EXTRA_PERMITTED_PARAMS-constant" title="LandingPageVersion::Section::InfoMultiColumn::EXTRA_PERMITTED_PARAMS (constant)">EXTRA_PERMITTED_PARAMS</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_columns-instance_method">
+  
+    #<strong>add_columns</strong>(attributes)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/landing_page_version/section/info_multi_column.rb', line 58</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_columns'>add_columns</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_columns'>columns</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>columns</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_columns'>columns</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_columns'>columns</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>columns</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+      <span class='id identifier rubyid_columns'>columns</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>multi_columns</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+    <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>multi_columns</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='int'>2</span> <span class='kw'>if</span> <span class='id identifier rubyid_n'>n</span> <span class='op'>!=</span> <span class='int'>2</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_n'>n</span> <span class='op'>!=</span> <span class='int'>3</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='int'>2</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_columns'>columns</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='period'>.</span><span class='id identifier rubyid_upto'>upto</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span><span class='lbrace'>{</span> <span class='id identifier rubyid_columns'>columns</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="#COLUMN_DEFAULTS-constant" title="LandingPageVersion::Section::InfoMultiColumn::COLUMN_DEFAULTS (constant)">COLUMN_DEFAULTS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_columns'>columns</span> <span class='op'>=</span> <span class='id identifier rubyid_columns'>columns</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>3</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_columns'>columns</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&gt;</span> <span class='int'>3</span>
+  <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>columns</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_columns'>columns</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="attributes=-instance_method">
+  
+    #<strong>attributes=</strong>(attributes)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/landing_page_version/section/info_multi_column.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_attributes='>attributes=</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_add_columns'>add_columns</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+  <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="i18n_key-instance_method">
+  
+    #<strong>i18n_key</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/landing_page_version/section/info_multi_column.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_i18n_key'>i18n_key</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>info_multi_column_</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_columns'>columns</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:02:52 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

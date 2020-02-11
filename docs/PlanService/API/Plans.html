@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: PlanService::API::Plans
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "PlanService::API::Plans";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'>PlanService</span> &raquo; <span class='title'><span class='object_link'><a href="../API.html" title="PlanService::API (module)">API</a></span></span>
+     &raquo; 
+    <span class="title">Plans</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: PlanService::API::Plans
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">PlanService::API::Plans</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/services/plan_service/api/plans.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="PlanStore-constant" class="">PlanStore =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>PlanService</span><span class='op'>::</span><span class='const'>Store</span><span class='op'>::</span><span class='const'>Plan</span></pre></dd>
+      
+        <dt id="Plan-constant" class="">Plan =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>PlanService</span><span class='op'>::</span><span class='const'>DataTypes</span><span class='op'>::</span><span class='const'>Plan</span></pre></dd>
+      
+        <dt id="ExternalPlan-constant" class="">ExternalPlan =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>PlanService</span><span class='op'>::</span><span class='const'>DataTypes</span><span class='op'>::</span><span class='const'>ExternalPlan</span></pre></dd>
+      
+        <dt id="LoginLinkMarketplaceData-constant" class="">LoginLinkMarketplaceData =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>PlanService</span><span class='op'>::</span><span class='const'>DataTypes</span><span class='op'>::</span><span class='const'>LoginLinkMarketplaceData</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#active%3F-instance_method" title="#active? (instance method)">#<strong>active?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#authorize_provisioning-instance_method" title="#authorize_provisioning (instance method)">#<strong>authorize_provisioning</strong>(token)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#authorize_trial_sync-instance_method" title="#authorize_trial_sync (instance method)">#<strong>authorize_trial_sync</strong>(token)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-instance_method" title="#create (instance method)">#<strong>create</strong>(community_id:, plan:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_initial_trial-instance_method" title="#create_initial_trial (instance method)">#<strong>create_initial_trial</strong>(community_id:, plan: {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create an initial trial plan.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_current-instance_method" title="#get_current (instance method)">#<strong>get_current</strong>(community_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_external_service_link-instance_method" title="#get_external_service_link (instance method)">#<strong>get_external_service_link</strong>(marketplace_data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_trials-instance_method" title="#get_trials (instance method)">#<strong>get_trials</strong>(after:, limit:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(configuration)  &#x21d2; Plans </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Plans.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(configuration)  &#x21d2; <tt><span class='object_link'><a href="" title="PlanService::API::Plans (class)">Plans</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Plans</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/plan_service/api/plans.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_configuration'>configuration</span><span class='rparen'>)</span>
+  <span class='ivar'>@jwt_secret</span> <span class='op'>=</span> <span class='id identifier rubyid_configuration'>configuration</span><span class='lbracket'>[</span><span class='symbol'>:jwt_secret</span><span class='rbracket'>]</span>
+  <span class='ivar'>@external_plan_service_login_url</span> <span class='op'>=</span> <span class='id identifier rubyid_configuration'>configuration</span><span class='lbracket'>[</span><span class='symbol'>:external_plan_service_login_url</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="active?-instance_method">
+  
+    #<strong>active?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/plan_service/api/plans.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_active?'>active?</span>
+  <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="authorize_provisioning-instance_method">
+  
+    #<strong>authorize_provisioning</strong>(token)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/plan_service/api/plans.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_authorize_provisioning'>authorize_provisioning</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../JWTUtils.html" title="JWTUtils (module)">JWTUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_decode'><span class='object_link'><a href="../../JWTUtils.html#decode-class_method" title="JWTUtils.decode (method)">decode</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@jwt_secret</span><span class='comma'>,</span> <span class='label'>sub:</span> <span class='symbol'>:provisioning</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="authorize_trial_sync-instance_method">
+  
+    #<strong>authorize_trial_sync</strong>(token)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/plan_service/api/plans.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_authorize_trial_sync'>authorize_trial_sync</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../JWTUtils.html" title="JWTUtils (module)">JWTUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_decode'><span class='object_link'><a href="../../JWTUtils.html#decode-class_method" title="JWTUtils.decode (method)">decode</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@jwt_secret</span><span class='comma'>,</span> <span class='label'>sub:</span> <span class='symbol'>:trial_sync</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create-instance_method">
+  
+    #<strong>create</strong>(community_id:, plan:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/plan_service/api/plans.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='label'>community_id:</span><span class='comma'>,</span> <span class='label'>plan:</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='id identifier rubyid_with_statuses'>with_statuses</span><span class='lparen'>(</span>
+      <span class='const'><span class='object_link'><a href="#PlanStore-constant" title="PlanService::API::Plans::PlanStore (constant)">PlanStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='label'>plan:</span> <span class='id identifier rubyid_plan'>plan</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_initial_trial-instance_method">
+  
+    #<strong>create_initial_trial</strong>(community_id:, plan: {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create an initial trial plan</p>
+
+<p>deprecated</p>
+
+<p>All plans should come from the external plan service and that&#39;s why this function is deprecated</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/plan_service/api/plans.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_initial_trial'>create_initial_trial</span><span class='lparen'>(</span><span class='label'>community_id:</span><span class='comma'>,</span> <span class='label'>plan:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='id identifier rubyid_with_statuses'>with_statuses</span><span class='lparen'>(</span>
+      <span class='const'><span class='object_link'><a href="#PlanStore-constant" title="PlanService::API::Plans::PlanStore (constant)">PlanStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_trial'>create_trial</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='label'>plan:</span> <span class='id identifier rubyid_plan'>plan</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_current-instance_method">
+  
+    #<strong>get_current</strong>(community_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47
+48
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/plan_service/api/plans.rb', line 45</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_current'>get_current</span><span class='lparen'>(</span><span class='label'>community_id:</span><span class='rparen'>)</span>
+  <span class='const'>Maybe</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#PlanStore-constant" title="PlanService::API::Plans::PlanStore (constant)">PlanStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_current'>get_current</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_plan'>plan</span><span class='op'>|</span>
+    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_with_statuses'>with_statuses</span><span class='lparen'>(</span><span class='id identifier rubyid_plan'>plan</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span> <span class='lbrace'>{</span>
+    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Error.html" title="Result::Error (class)">Error</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Error.html#initialize-instance_method" title="Result::Error#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Cannot find plan for community id: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_community_id'>community_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_external_service_link-instance_method">
+  
+    #<strong>get_external_service_link</strong>(marketplace_data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/plan_service/api/plans.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_external_service_link'>get_external_service_link</span><span class='lparen'>(</span><span class='id identifier rubyid_marketplace_data'>marketplace_data</span><span class='rparen'>)</span>
+  <span class='const'>Maybe</span><span class='lparen'>(</span><span class='ivar'>@external_plan_service_login_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_external_plan_service_login_url'>external_plan_service_login_url</span><span class='op'>|</span>
+    <span class='id identifier rubyid_marketplace'>marketplace</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#LoginLinkMarketplaceData-constant" title="PlanService::API::Plans::LoginLinkMarketplaceData (constant)">LoginLinkMarketplaceData</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_marketplace_data'>marketplace_data</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_trial_hash'>trial_hash</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#PlanStore-constant" title="PlanService::API::Plans::PlanStore (constant)">PlanStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_initial_trial'>get_initial_trial</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_marketplace'>marketplace</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_trial_data'>trial_data</span><span class='op'>|</span>
+      <span class='const'><span class='object_link'><a href="#ExternalPlan-constant" title="PlanService::API::Plans::ExternalPlan (constant)">ExternalPlan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span>
+        <span class='const'><span class='object_link'><a href="../../HashUtils.html" title="HashUtils (module)">HashUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rename_keys'><span class='object_link'><a href="../../HashUtils.html#rename_keys-class_method" title="HashUtils.rename_keys (method)">rename_keys</a></span></span><span class='lparen'>(</span>
+        <span class='lbrace'>{</span>
+          <span class='label'>id:</span> <span class='symbol'>:marketplace_plan_id</span><span class='comma'>,</span>
+          <span class='label'>community_id:</span> <span class='symbol'>:marketplace_id</span>
+        <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_trial_data'>trial_data</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='label'>marketplace:</span> <span class='id identifier rubyid_marketplace'>marketplace</span><span class='comma'>,</span>
+      <span class='label'>initial_trial_plan:</span> <span class='id identifier rubyid_trial_hash'>trial_hash</span>
+    <span class='rbrace'>}</span>
+
+    <span class='id identifier rubyid_token'>token</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../JWTUtils.html" title="JWTUtils (module)">JWTUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_encode'><span class='object_link'><a href="../../JWTUtils.html#encode-class_method" title="JWTUtils.encode (method)">encode</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span> <span class='ivar'>@jwt_secret</span><span class='comma'>,</span> <span class='label'>sub:</span> <span class='symbol'>:login</span><span class='comma'>,</span> <span class='label'>exp:</span> <span class='int'>5</span><span class='period'>.</span><span class='id identifier rubyid_minutes'>minutes</span><span class='period'>.</span><span class='id identifier rubyid_from_now'>from_now</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../URLUtils.html" title="URLUtils (module)">URLUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_append_query_param'><span class='object_link'><a href="../../URLUtils.html#append_query_param-class_method" title="URLUtils.append_query_param (method)">append_query_param</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_external_plan_service_login_url'>external_plan_service_login_url</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>token</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span> <span class='lbrace'>{</span>
+    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Error.html" title="Result::Error (class)">Error</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Error.html#initialize-instance_method" title="Result::Error#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>external_plan_service_login_url is not defined</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_trials-instance_method">
+  
+    #<strong>get_trials</strong>(after:, limit:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/plan_service/api/plans.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_trials'>get_trials</span><span class='lparen'>(</span><span class='label'>after:</span><span class='comma'>,</span> <span class='label'>limit:</span><span class='rparen'>)</span>
+  <span class='comment'># Fetch one extra, so that we can return the next_after
+</span>  <span class='id identifier rubyid_plus_one'>plus_one</span> <span class='op'>=</span> <span class='id identifier rubyid_limit'>limit</span> <span class='op'>+</span> <span class='int'>1</span>
+
+  <span class='id identifier rubyid_trials'>trials</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#PlanStore-constant" title="PlanService::API::Plans::PlanStore (constant)">PlanStore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_trials'>get_trials</span><span class='lparen'>(</span><span class='label'>after:</span> <span class='id identifier rubyid_after'>after</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='id identifier rubyid_plus_one'>plus_one</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_trials'>trials</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_limit'>limit</span>
+    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+      <span class='label'>plans:</span> <span class='id identifier rubyid_trials'>trials</span><span class='period'>.</span><span class='id identifier rubyid_take'>take</span><span class='lparen'>(</span><span class='id identifier rubyid_limit'>limit</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='label'>next_after:</span> <span class='id identifier rubyid_trials'>trials</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='lbracket'>[</span><span class='symbol'>:created_at</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="../../Result.html" title="Result (module)">Result</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Result/Success.html" title="Result::Success (class)">Success</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result/Success.html#initialize-instance_method" title="Result::Success#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+      <span class='label'>plans:</span> <span class='id identifier rubyid_trials'>trials</span>
+    <span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:02:55 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

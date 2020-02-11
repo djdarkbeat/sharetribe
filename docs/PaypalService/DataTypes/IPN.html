@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: PaypalService::DataTypes::IPN
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "PaypalService::DataTypes::IPN";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../PaypalService.html" title="PaypalService (module)">PaypalService</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../DataTypes.html" title="PaypalService::DataTypes (module)">DataTypes</a></span></span>
+     &raquo; 
+    <span class="title">IPN</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: PaypalService::DataTypes::IPN
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/services/paypal_service/data_types/ipn.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="BillingAgreementCreated-constant" class="">BillingAgreementCreated =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:billing_agreement_created</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:billing_agreement_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="OrderCreated-constant" class="">OrderCreated =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:order_created</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:order_date</span><span class='comma'>,</span> <span class='label'>str_to_time:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%H:%M:%S %b %e, %Y %Z</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:order_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_status</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:pending_reason</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receipt_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:order_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="PaymentReview-constant" class="">PaymentReview =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:payment_review</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_date</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='comma'>,</span> <span class='label'>str_to_time:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%H:%M:%S %b %e, %Y %Z</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_expires_date</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='comma'>,</span> <span class='label'>str_to_time:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%H:%M:%S %b %e, %Y %Z</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_status</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:pending_reason</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receipt_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="AuthorizationCreated-constant" class="">AuthorizationCreated =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:authorization_created</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_date</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='comma'>,</span> <span class='label'>str_to_time:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%H:%M:%S %b %e, %Y %Z</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_expires_date</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='comma'>,</span> <span class='label'>str_to_time:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%H:%M:%S %b %e, %Y %Z</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:order_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_status</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:pending_reason</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receipt_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:order_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="AuthorizationExpired-constant" class="">AuthorizationExpired =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:authorization_expired</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:order_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_status</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="PaymentCompleted-constant" class="">PaymentCompleted =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:payment_completed</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_date</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='comma'>,</span> <span class='label'>str_to_time:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%H:%M:%S %b %e, %Y %Z</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_expires_date</span><span class='comma'>,</span> <span class='label'>str_to_time:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%H:%M:%S %b %e, %Y %Z</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_status</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:pending_reason</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:none</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receipt_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:fee_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="PaymentRefunded-constant" class="">PaymentRefunded =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:payment_refunded</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:refunding_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:refunded_date</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='comma'>,</span> <span class='label'>str_to_time:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%H:%M:%S %b %e, %Y %Z</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_status</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:pending_reason</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:none</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receipt_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:fee_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="PaymentPendingExt-constant" class="">PaymentPendingExt =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:payment_pending_ext</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:pending_ext_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_expires_date</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='comma'>,</span> <span class='label'>str_to_time:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%H:%M:%S %b %e, %Y %Z</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_status</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:pending_reason</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receipt_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="PaymentVoided-constant" class="">PaymentVoided =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:payment_voided</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:authorization_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:order_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:receiver_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_status</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="BillingAgreementCancelled-constant" class="">BillingAgreementCancelled =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:billing_agreement_cancelled</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:billing_agreement_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:description</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:reason_code</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="PaymentDenied-constant" class="">PaymentDenied =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+<span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:payment_denied</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:payment_status</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:denied</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:pending_reason</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:none</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:payer_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:payer_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:receiver_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:receiver_email</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:authorization_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:payment_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="CommissionPaid-constant" class="">CommissionPaid =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+<span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:commission_paid</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:commission_status</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:commission_payment_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:commission_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:commission_fee_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:invnum</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="CommissionDenied-constant" class="">CommissionDenied =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+<span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:commission_denied</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:commission_status</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:commission_payment_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:commission_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:commission_fee_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span><span class='symbol'>:invnum</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="CommissionPendingExt-constant" class="">CommissionPendingExt =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:commission_pending_ext</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:commission_status</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:commission_pending_reason</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:commission_payment_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:commission_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:invnum</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="PaymentAdjustment-constant" class="">PaymentAdjustment =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="../../EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span><span class='symbol'>:type</span><span class='comma'>,</span> <span class='label'>const_value:</span> <span class='symbol'>:payment_adjustment</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:payment_id</span><span class='comma'>,</span> <span class='symbol'>:string</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='symbol'>:adjustment_total</span><span class='comma'>,</span> <span class='symbol'>:money</span><span class='comma'>,</span> <span class='symbol'>:mandatory</span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_authorization_created-class_method" title="create_authorization_created (class method)">.<strong>create_authorization_created</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_authorization_expired-class_method" title="create_authorization_expired (class method)">.<strong>create_authorization_expired</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_billing_agreement_cancelled-class_method" title="create_billing_agreement_cancelled (class method)">.<strong>create_billing_agreement_cancelled</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_billing_agreement_created-class_method" title="create_billing_agreement_created (class method)">.<strong>create_billing_agreement_created</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_commission_denied-class_method" title="create_commission_denied (class method)">.<strong>create_commission_denied</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_commission_paid-class_method" title="create_commission_paid (class method)">.<strong>create_commission_paid</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_commission_pending_ext-class_method" title="create_commission_pending_ext (class method)">.<strong>create_commission_pending_ext</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_order_created-class_method" title="create_order_created (class method)">.<strong>create_order_created</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_payment_adjustment-class_method" title="create_payment_adjustment (class method)">.<strong>create_payment_adjustment</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_payment_completed-class_method" title="create_payment_completed (class method)">.<strong>create_payment_completed</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_payment_denied-class_method" title="create_payment_denied (class method)">.<strong>create_payment_denied</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_payment_pending_ext-class_method" title="create_payment_pending_ext (class method)">.<strong>create_payment_pending_ext</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_payment_refunded-class_method" title="create_payment_refunded (class method)">.<strong>create_payment_refunded</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_payment_review-class_method" title="create_payment_review (class method)">.<strong>create_payment_review</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_payment_voided-class_method" title="create_payment_voided (class method)">.<strong>create_payment_voided</strong>(opts)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_params-class_method" title="from_params (class method)">.<strong>from_params</strong>(params)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_payment_review-class_method" title="to_payment_review (class method)">.<strong>to_payment_review</strong>(params)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_authorization_created-class_method">
+  
+    .<strong>create_authorization_created</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+189</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 189</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_authorization_created'>create_authorization_created</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#AuthorizationCreated-constant" title="PaypalService::DataTypes::IPN::AuthorizationCreated (constant)">AuthorizationCreated</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_authorization_expired-class_method">
+  
+    .<strong>create_authorization_expired</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+190</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 190</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_authorization_expired'>create_authorization_expired</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#AuthorizationExpired-constant" title="PaypalService::DataTypes::IPN::AuthorizationExpired (constant)">AuthorizationExpired</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_billing_agreement_cancelled-class_method">
+  
+    .<strong>create_billing_agreement_cancelled</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 193</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_billing_agreement_cancelled'>create_billing_agreement_cancelled</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#BillingAgreementCancelled-constant" title="PaypalService::DataTypes::IPN::BillingAgreementCancelled (constant)">BillingAgreementCancelled</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_billing_agreement_created-class_method">
+  
+    .<strong>create_billing_agreement_created</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+194</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 194</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_billing_agreement_created'>create_billing_agreement_created</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#BillingAgreementCreated-constant" title="PaypalService::DataTypes::IPN::BillingAgreementCreated (constant)">BillingAgreementCreated</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_commission_denied-class_method">
+  
+    .<strong>create_commission_denied</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 199</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_commission_denied'>create_commission_denied</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#CommissionDenied-constant" title="PaypalService::DataTypes::IPN::CommissionDenied (constant)">CommissionDenied</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_commission_paid-class_method">
+  
+    .<strong>create_commission_paid</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 198</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_commission_paid'>create_commission_paid</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#CommissionPaid-constant" title="PaypalService::DataTypes::IPN::CommissionPaid (constant)">CommissionPaid</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_commission_pending_ext-class_method">
+  
+    .<strong>create_commission_pending_ext</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+200</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 200</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_commission_pending_ext'>create_commission_pending_ext</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#CommissionPendingExt-constant" title="PaypalService::DataTypes::IPN::CommissionPendingExt (constant)">CommissionPendingExt</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_order_created-class_method">
+  
+    .<strong>create_order_created</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+187</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 187</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_order_created'>create_order_created</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#OrderCreated-constant" title="PaypalService::DataTypes::IPN::OrderCreated (constant)">OrderCreated</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_payment_adjustment-class_method">
+  
+    .<strong>create_payment_adjustment</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 201</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_payment_adjustment'>create_payment_adjustment</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#PaymentAdjustment-constant" title="PaypalService::DataTypes::IPN::PaymentAdjustment (constant)">PaymentAdjustment</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_payment_completed-class_method">
+  
+    .<strong>create_payment_completed</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+191</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 191</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_payment_completed'>create_payment_completed</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#PaymentCompleted-constant" title="PaypalService::DataTypes::IPN::PaymentCompleted (constant)">PaymentCompleted</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_payment_denied-class_method">
+  
+    .<strong>create_payment_denied</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+197</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 197</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_payment_denied'>create_payment_denied</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#PaymentDenied-constant" title="PaypalService::DataTypes::IPN::PaymentDenied (constant)">PaymentDenied</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_payment_pending_ext-class_method">
+  
+    .<strong>create_payment_pending_ext</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+195</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 195</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_payment_pending_ext'>create_payment_pending_ext</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#PaymentPendingExt-constant" title="PaypalService::DataTypes::IPN::PaymentPendingExt (constant)">PaymentPendingExt</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_payment_refunded-class_method">
+  
+    .<strong>create_payment_refunded</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+192</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 192</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_payment_refunded'>create_payment_refunded</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#PaymentRefunded-constant" title="PaypalService::DataTypes::IPN::PaymentRefunded (constant)">PaymentRefunded</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_payment_review-class_method">
+  
+    .<strong>create_payment_review</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+188</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 188</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_payment_review'>create_payment_review</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#PaymentReview-constant" title="PaypalService::DataTypes::IPN::PaymentReview (constant)">PaymentReview</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_payment_voided-class_method">
+  
+    .<strong>create_payment_voided</strong>(opts)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+196</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 196</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_payment_voided'>create_payment_voided</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='const'><span class='object_link'><a href="#PaymentVoided-constant" title="PaypalService::DataTypes::IPN::PaymentVoided (constant)">PaymentVoided</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_params-class_method">
+  
+    .<strong>from_params</strong>(params)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 203</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_params'>from_params</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../HashUtils.html" title="HashUtils (module)">HashUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_symbolize_keys'><span class='object_link'><a href="../../HashUtils.html#symbolize_keys-class_method" title="HashUtils.symbolize_keys (method)">symbolize_keys</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_msg_type'>msg_type</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='lbracket'>[</span><span class='symbol'>:txn_type</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_p'>p</span><span class='lbracket'>[</span><span class='symbol'>:payment_status</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_p'>p</span><span class='lbracket'>[</span><span class='symbol'>:pending_reason</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_p'>p</span><span class='lbracket'>[</span><span class='symbol'>:invoice</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_type'>type</span>
+  <span class='kw'>when</span> <span class='symbol'>:order_created</span>
+    <span class='id identifier rubyid_to_order_created'>to_order_created</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:payment_review</span>
+    <span class='id identifier rubyid_to_payment_review'>to_payment_review</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:authorization_created</span>
+    <span class='id identifier rubyid_to_authorization_created'>to_authorization_created</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:authorization_expired</span>
+    <span class='id identifier rubyid_to_authorization_expired'>to_authorization_expired</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:commission_pending_ext</span>
+    <span class='id identifier rubyid_to_commission_pending_ext'>to_commission_pending_ext</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:commission_paid</span>
+    <span class='id identifier rubyid_to_commission_paid'>to_commission_paid</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:commission_denied</span>
+    <span class='id identifier rubyid_to_commission_denied'>to_commission_denied</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:payment_completed</span>
+    <span class='id identifier rubyid_to_payment_completed'>to_payment_completed</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:payment_refunded</span>
+    <span class='id identifier rubyid_to_payment_refunded'>to_payment_refunded</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:billing_agreement_cancelled</span>
+    <span class='id identifier rubyid_to_billing_agreement_cancelled'>to_billing_agreement_cancelled</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:billing_agreement_created</span>
+    <span class='id identifier rubyid_to_billing_agreement_created'>to_billing_agreement_created</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:payment_pending_ext</span>
+    <span class='id identifier rubyid_to_payment_pending_ext'>to_payment_pending_ext</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:payment_voided</span>
+    <span class='id identifier rubyid_to_payment_voided'>to_payment_voided</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:payment_denied</span>
+    <span class='id identifier rubyid_to_payment_denied'>to_payment_denied</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:payment_adjustment</span>
+    <span class='id identifier rubyid_to_payment_adjustment'>to_payment_adjustment</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='id identifier rubyid_type'>type</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_payment_review-class_method">
+  
+    .<strong>to_payment_review</strong>(params)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/paypal_service/data_types/ipn.rb', line 302</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_payment_review'>to_payment_review</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../HashUtils.html" title="HashUtils (module)">HashUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rename_keys'><span class='object_link'><a href="../../HashUtils.html#rename_keys-class_method" title="HashUtils.rename_keys (method)">rename_keys</a></span></span><span class='lparen'>(</span>
+    <span class='lbrace'>{</span>
+      <span class='label'>txn_id:</span> <span class='symbol'>:authorization_id</span><span class='comma'>,</span>
+      <span class='label'>payment_date:</span> <span class='symbol'>:authorization_date</span><span class='comma'>,</span>
+      <span class='label'>auth_exp:</span> <span class='symbol'>:authorization_expires_date</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_create_payment_review'>create_payment_review</span><span class='lparen'>(</span>
+    <span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+        <span class='label'>authorization_total:</span> <span class='id identifier rubyid_to_money'>to_money</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='lbracket'>[</span><span class='symbol'>:mc_gross</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_p'>p</span><span class='lbracket'>[</span><span class='symbol'>:mc_currency</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='label'>pending_reason:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payment-review</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='comment'># Normalize the pending reason, it comes as either &quot;paymentreview&quot; or &quot;payment-review&quot;
+</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:42 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

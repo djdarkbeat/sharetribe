@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: TransactionHelper
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "TransactionHelper";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (T)</a> &raquo;
+    
+    
+    <span class="title">TransactionHelper</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: TransactionHelper
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/helpers/transaction_helper.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#conversation_icon_and_status-instance_method" title="#conversation_icon_and_status (instance method)">#<strong>conversation_icon_and_status</strong>(status, is_author, other_party_name, waiting_feedback, status_meta)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Give `status`, `is_author` and `other_party` and get back icon and text for current status rubocop:disable all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_conversation_statuses-instance_method" title="#get_conversation_statuses (instance method)">#<strong>get_conversation_statuses</strong>(conversation, is_author)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns statuses in Hash format statuses = [   {     type: :status_info,     content: {       info_text_part: &#39;msg&#39;,       info_icon_tag: &#39;&#39;               # e.g. icon_tag(“testimonial”, [“icon-with-text”])     }   },   {     type: :status_info,     content: {       info_text_part: &#39;msg&#39;,       info_icon_part_classes: &#39;class1 class2&#39;     }   },   {     type: :status_links,     content: [{         link_href: “/path/to/somewhere” # url         link_classes: &#39;[if-any]&#39;         link_data: {},                  # e.g. =&gt; “put”, :remote =&gt; “true”         link_icon_tag: &#39;[some-tag]&gt;&#39;,   # OR link_icon_with_text_classes: icon_for(“accepted”)         link_text_with_icon: &#39;Something&#39;       },       {}     ]   } } rubocop:disable Metrics/MethodLength.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#icon_for-instance_method" title="#icon_for (instance method)">#<strong>icon_for</strong>(status)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="conversation_icon_and_status-instance_method">
+  
+    #<strong>conversation_icon_and_status</strong>(status, is_author, other_party_name, waiting_feedback, status_meta)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Give `status`, `is_author` and `other_party` and get back icon and text for current status rubocop:disable all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/helpers/transaction_helper.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_conversation_icon_and_status'>conversation_icon_and_status</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_is_author'>is_author</span><span class='comma'>,</span> <span class='id identifier rubyid_other_party_name'>other_party_name</span><span class='comma'>,</span> <span class='id identifier rubyid_waiting_feedback'>waiting_feedback</span><span class='comma'>,</span> <span class='id identifier rubyid_status_meta'>status_meta</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_icon_waiting_you'>icon_waiting_you</span> <span class='op'>=</span> <span class='id identifier rubyid_icon_tag'>icon_tag</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>alert</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>icon-fix-rel</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>waiting-you</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_icon_waiting_other'>icon_waiting_other</span> <span class='op'>=</span> <span class='id identifier rubyid_icon_tag'>icon_tag</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>clock</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>icon-fix-rel</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>waiting-other</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+  <span class='comment'># Split &quot;confirmed&quot; status into &quot;waiting_feedback&quot; and &quot;completed&quot;
+</span>  <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_waiting_feedback'>waiting_feedback</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>waiting_feedback</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>completed</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span> <span class='kw'>if</span> <span class='id identifier rubyid_status'>status</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>confirmed</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_status_hash'>status_hash</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>pending:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+      <span class='const'>ActiveSupport</span><span class='op'>::</span><span class='const'>Deprecation</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Transaction state &#39;pending&#39; is deprecated and will be removed in the future.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='lbrace'>{</span>
+        <span class='label'>author:</span> <span class='lbrace'>{</span>
+          <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_you'>icon_waiting_you</span><span class='comma'>,</span>
+          <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_for_you_to_accept_request</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='label'>starter:</span> <span class='lbrace'>{</span>
+          <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_other'>icon_waiting_other</span><span class='comma'>,</span>
+          <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_for_listing_author_to_accept_request</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>listing_author_name:</span> <span class='id identifier rubyid_other_party_name'>other_party_name</span><span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
+      <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>preauthorized:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+      <span class='label'>author:</span> <span class='lbrace'>{</span>
+        <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_you'>icon_waiting_you</span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_for_you_to_accept_request</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='label'>starter:</span> <span class='lbrace'>{</span>
+        <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_other'>icon_waiting_other</span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_for_listing_author_to_accept_request</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>listing_author_name:</span> <span class='id identifier rubyid_other_party_name'>other_party_name</span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>accepted:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+      <span class='const'>ActiveSupport</span><span class='op'>::</span><span class='const'>Deprecation</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Transaction state &#39;accepted&#39; is deprecated and will be removed in the future.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='lbrace'>{</span>
+        <span class='label'>author:</span> <span class='lbrace'>{</span>
+          <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_other'>icon_waiting_other</span><span class='comma'>,</span>
+          <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_payment_from_requester</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>requester_name:</span> <span class='id identifier rubyid_other_party_name'>other_party_name</span><span class='rparen'>)</span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='label'>starter:</span> <span class='lbrace'>{</span>
+          <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_you'>icon_waiting_you</span><span class='comma'>,</span>
+          <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_payment_from_you</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='rbrace'>}</span>
+      <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>pending_ext:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+      <span class='kw'>case</span> <span class='id identifier rubyid_status_meta'>status_meta</span><span class='lbracket'>[</span><span class='symbol'>:paypal_pending_reason</span><span class='rbracket'>]</span>
+      <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>multicurrency</span><span class='tstring_end'>&quot;</span></span>
+        <span class='lbrace'>{</span>
+          <span class='label'>author:</span> <span class='lbrace'>{</span>
+            <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_you'>icon_waiting_you</span><span class='comma'>,</span>
+            <span class='comment'># Make this aware of the reason
+</span>            <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.pending_external_inbox.paypal.multicurrency</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='rbrace'>}</span><span class='comma'>,</span>
+          <span class='label'>starter:</span> <span class='lbrace'>{</span>
+            <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_other'>icon_waiting_other</span><span class='comma'>,</span>
+            <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_for_listing_author_to_accept_request</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>listing_author_name:</span> <span class='id identifier rubyid_other_party_name'>other_party_name</span><span class='rparen'>)</span>
+          <span class='rbrace'>}</span>
+        <span class='rbrace'>}</span>
+      <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>intl</span><span class='tstring_end'>&quot;</span></span>
+        <span class='lbrace'>{</span>
+          <span class='label'>author:</span> <span class='lbrace'>{</span>
+            <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_you'>icon_waiting_you</span><span class='comma'>,</span>
+            <span class='comment'># Make this aware of the reason
+</span>            <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.pending_external_inbox.paypal.intl</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='rbrace'>}</span><span class='comma'>,</span>
+          <span class='label'>starter:</span> <span class='lbrace'>{</span>
+            <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_other'>icon_waiting_other</span><span class='comma'>,</span>
+            <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_for_listing_author_to_accept_request</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>listing_author_name:</span> <span class='id identifier rubyid_other_party_name'>other_party_name</span><span class='rparen'>)</span>
+          <span class='rbrace'>}</span>
+        <span class='rbrace'>}</span>
+      <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>verify</span><span class='tstring_end'>&quot;</span></span>
+        <span class='lbrace'>{</span>
+          <span class='label'>author:</span> <span class='lbrace'>{</span>
+            <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_you'>icon_waiting_you</span><span class='comma'>,</span>
+            <span class='comment'># Make this aware of the reason
+</span>            <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.pending_external_inbox.paypal.verify</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='rbrace'>}</span><span class='comma'>,</span>
+          <span class='label'>starter:</span> <span class='lbrace'>{</span>
+            <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_other'>icon_waiting_other</span><span class='comma'>,</span>
+            <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_for_listing_author_to_accept_request</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>listing_author_name:</span> <span class='id identifier rubyid_other_party_name'>other_party_name</span><span class='rparen'>)</span>
+          <span class='rbrace'>}</span>
+        <span class='rbrace'>}</span>
+      <span class='kw'>else</span> <span class='comment'># some pending_ext reason we don&#39;t have special message for
+</span>        <span class='lbrace'>{</span>
+          <span class='label'>author:</span> <span class='lbrace'>{</span>
+            <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_you'>icon_waiting_you</span><span class='comma'>,</span>
+            <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.pending_external_inbox.paypal.unknown_reason</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='rbrace'>}</span><span class='comma'>,</span>
+          <span class='label'>starter:</span> <span class='lbrace'>{</span>
+            <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_other'>icon_waiting_other</span><span class='comma'>,</span>
+            <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_for_listing_author_to_accept_request</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>listing_author_name:</span> <span class='id identifier rubyid_other_party_name'>other_party_name</span><span class='rparen'>)</span>
+          <span class='rbrace'>}</span>
+        <span class='rbrace'>}</span>
+      <span class='kw'>end</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+
+    <span class='label'>rejected:</span> <span class='tlambda'>-&gt;</span> <span class='lparen'>(</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+      <span class='label'>both:</span> <span class='lbrace'>{</span>
+        <span class='label'>icon:</span> <span class='id identifier rubyid_icon_tag'>icon_tag</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cross</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>icon-fix-rel</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rejected</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.request_rejected</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+
+    <span class='label'>paid:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+      <span class='label'>author:</span> <span class='lbrace'>{</span>
+        <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_other'>icon_waiting_other</span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_confirmation_from_requester</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>requester_name:</span> <span class='id identifier rubyid_other_party_name'>other_party_name</span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='label'>starter:</span> <span class='lbrace'>{</span>
+        <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_you'>icon_waiting_you</span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_confirmation_from_you</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+
+    <span class='label'>waiting_feedback:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+      <span class='label'>both:</span> <span class='lbrace'>{</span>
+        <span class='label'>icon:</span> <span class='id identifier rubyid_icon_waiting_you'>icon_waiting_you</span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.waiting_feedback_from_you</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+
+    <span class='label'>completed:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+      <span class='label'>both:</span> <span class='lbrace'>{</span>
+        <span class='label'>icon:</span> <span class='id identifier rubyid_icon_tag'>icon_tag</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>check</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>icon-fix-rel</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>confirmed</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.request_confirmed</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+
+    <span class='label'>canceled:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+      <span class='label'>both:</span> <span class='lbrace'>{</span>
+        <span class='label'>icon:</span> <span class='id identifier rubyid_icon_tag'>icon_tag</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cross</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>icon-fix-rel</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>canceled</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.request_canceled</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+
+    <span class='label'>errored:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+      <span class='label'>both:</span> <span class='lbrace'>{</span>
+        <span class='label'>icon:</span> <span class='id identifier rubyid_icon_tag'>icon_tag</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cross</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>icon-fix-rel</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>canceled</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.payment_errored</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+       <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span>
+
+  <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_status_hash'>status_hash</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='id identifier rubyid_status'>status</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span>
+    <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='rbrace'>}</span>
+    <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_is_author'>is_author</span> <span class='op'>?</span> <span class='id identifier rubyid_s'>s</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_s'>s</span><span class='lbracket'>[</span><span class='symbol'>:starter</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_s'>s</span><span class='lbracket'>[</span><span class='symbol'>:both</span><span class='rbracket'>]</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
+    <span class='period'>.</span><span class='id identifier rubyid_values'>values</span>
+    <span class='period'>.</span><span class='id identifier rubyid_get'>get</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_conversation_statuses-instance_method">
+  
+    #<strong>get_conversation_statuses</strong>(conversation, is_author)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns statuses in Hash format statuses = [</p>
+
+<pre class="code ruby"><code class="ruby">{
+  type: :status_info,
+  content: {
+    info_text_part: &#39;msg&#39;,
+    info_icon_tag: &#39;&#39;               # e.g. icon_tag(&quot;testimonial&quot;, [&quot;icon-with-text&quot;])
+  }
+},
+{
+  type: :status_info,
+  content: {
+    info_text_part: &#39;msg&#39;,
+    info_icon_part_classes: &#39;class1 class2&#39;
+  }
+},
+{
+  type: :status_links,
+  content: [{
+      link_href: &quot;/path/to/somewhere&quot; # url
+      link_classes: &#39;[if-any]&#39;
+      link_data: {},                  # e.g. {:method =&gt; &quot;put&quot;, :remote =&gt; &quot;true&quot;}
+      link_icon_tag: &#39;[some-tag]&gt;&#39;,   # OR link_icon_with_text_classes: icon_for(&quot;accepted&quot;)
+      link_text_with_icon: &#39;Something&#39;
+    },
+    {}
+  ]
+}
+</code></pre>
+
+<p>} rubocop:disable Metrics/MethodLength</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/helpers/transaction_helper.rb', line 214</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_conversation_statuses'>get_conversation_statuses</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='comma'>,</span> <span class='id identifier rubyid_is_author'>is_author</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_statuses'>statuses</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_listing'>listing</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span><span class='period'>.</span><span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>free</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_status_hash'>status_hash</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='label'>paid:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+        <span class='label'>both:</span> <span class='lbracket'>[</span>
+          <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.request_paid</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>paid</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span>
+          <span class='id identifier rubyid_delivery_status'>delivery_status</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='rparen'>)</span><span class='comma'>,</span>
+          <span class='id identifier rubyid_paid_status'>paid_status</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='rparen'>)</span>
+        <span class='rbracket'>]</span>
+      <span class='rbrace'>}</span>
+            <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='label'>preauthorized:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+        <span class='label'>both:</span> <span class='lbracket'>[</span>
+          <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.request_preauthorized</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>preauthorized</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span>
+          <span class='id identifier rubyid_preauthorized_status'>preauthorized_status</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='rparen'>)</span>
+        <span class='rbracket'>]</span>
+      <span class='rbrace'>}</span>
+                     <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='label'>pending_ext:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span>
+        <span class='comment'>## This is so wrong place to call services...
+</span>        <span class='comment'>#TODO Deprecated call, update to use PaypalService::API:Api.payments.get_payment
+</span>        <span class='id identifier rubyid_paypal_payment'>paypal_payment</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PaypalService.html" title="PaypalService (module)">PaypalService</a></span></span><span class='op'>::</span><span class='const'>Store</span><span class='op'>::</span><span class='const'>PaypalPayment</span><span class='period'>.</span><span class='id identifier rubyid_for_transaction'>for_transaction</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+
+        <span class='id identifier rubyid_reason'>reason</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_transaction_transitions'>transaction_transitions</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_metadata'>metadata</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>paypal_pending_reason</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+
+        <span class='kw'>case</span> <span class='id identifier rubyid_reason'>reason</span>
+        <span class='kw'>when</span> <span class='const'>Some</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>multicurrency</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='lbrace'>{</span>
+            <span class='label'>author:</span> <span class='lbracket'>[</span>
+              <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.pending_external.paypal.multicurrency</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>currency:</span> <span class='id identifier rubyid_paypal_payment'>paypal_payment</span><span class='lbracket'>[</span><span class='symbol'>:payment_total</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_currency'>currency</span><span class='comma'>,</span> <span class='label'>paypal_url:</span> <span class='id identifier rubyid_link_to'>link_to</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://www.paypal.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://www.paypal.com</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_html_safe'>html_safe</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pending_ext</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+            <span class='rbracket'>]</span><span class='comma'>,</span>
+            <span class='label'>starter:</span> <span class='lbracket'>[</span>
+              <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.request_preauthorized</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>preauthorized</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span>
+              <span class='id identifier rubyid_preauthorized_status'>preauthorized_status</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='rparen'>)</span>
+            <span class='rbracket'>]</span>
+          <span class='rbrace'>}</span>
+        <span class='kw'>when</span> <span class='const'>Some</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>intl</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='lbrace'>{</span>
+            <span class='label'>author:</span> <span class='lbracket'>[</span>
+              <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.pending_external.paypal.intl</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>paypal_url:</span> <span class='id identifier rubyid_link_to'>link_to</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://www.paypal.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://www.paypal.com</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_html_safe'>html_safe</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pending_ext</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+            <span class='rbracket'>]</span><span class='comma'>,</span>
+            <span class='label'>starter:</span> <span class='lbracket'>[</span>
+              <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.request_preauthorized</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>preauthorized</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span>
+              <span class='id identifier rubyid_preauthorized_status'>preauthorized_status</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='rparen'>)</span>
+            <span class='rbracket'>]</span>
+          <span class='rbrace'>}</span>
+        <span class='kw'>when</span> <span class='const'>Some</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>verify</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='lbrace'>{</span>
+            <span class='label'>author:</span> <span class='lbracket'>[</span>
+              <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.pending_external.paypal.verify</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>paypal_url:</span> <span class='id identifier rubyid_link_to'>link_to</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://www.paypal.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://www.paypal.com</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_html_safe'>html_safe</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pending_ext</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+            <span class='rbracket'>]</span><span class='comma'>,</span>
+            <span class='label'>starter:</span> <span class='lbracket'>[</span>
+              <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.request_preauthorized</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>preauthorized</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span>
+              <span class='id identifier rubyid_preauthorized_status'>preauthorized_status</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='rparen'>)</span>
+            <span class='rbracket'>]</span>
+          <span class='rbrace'>}</span>
+        <span class='kw'>end</span>
+      <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='label'>confirmed:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+        <span class='label'>both:</span> <span class='lbracket'>[</span>
+          <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.request_confirmed</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>confirmed</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span>
+          <span class='id identifier rubyid_feedback_status'>feedback_status</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='rparen'>)</span>
+        <span class='rbracket'>]</span>
+      <span class='rbrace'>}</span>
+                 <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='label'>canceled:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+        <span class='label'>both:</span> <span class='lbracket'>[</span>
+          <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.request_canceled</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>canceled</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span>
+          <span class='id identifier rubyid_feedback_status'>feedback_status</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='rparen'>)</span>
+        <span class='rbracket'>]</span>
+      <span class='rbrace'>}</span>
+                <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='label'>rejected:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+        <span class='label'>both:</span> <span class='lbracket'>[</span>
+          <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.request_rejected</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='rbracket'>]</span>
+      <span class='rbrace'>}</span>
+                <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='label'>errored:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='lbrace'>{</span>
+        <span class='label'>author:</span> <span class='lbracket'>[</span>
+          <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.payment_errored_author</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>starter_name:</span> <span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_starter'>starter</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>errored</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='label'>starter:</span> <span class='lbracket'>[</span>
+          <span class='id identifier rubyid_status_info'>status_info</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>conversations.status.payment_errored_starter</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>icon_classes:</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>errored</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='rbracket'>]</span>
+      <span class='rbrace'>}</span>
+               <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span>
+
+    <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_status_hash'>status_hash</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span>
+      <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='rbrace'>}</span>
+      <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_is_author'>is_author</span> <span class='op'>?</span> <span class='id identifier rubyid_s'>s</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_s'>s</span><span class='lbracket'>[</span><span class='symbol'>:starter</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_s'>s</span><span class='lbracket'>[</span><span class='symbol'>:both</span><span class='rbracket'>]</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
+      <span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_statuses'>statuses</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="icon_for-instance_method">
+  
+    #<strong>icon_for</strong>(status)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/helpers/transaction_helper.rb', line 3</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_icon_for'>icon_for</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_status'>status</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>confirmed</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ss-check</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rejected</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ss-delete</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>canceled</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ss-delete</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>accepted</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ss-check</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>paid</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ss-check</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>preauthorized</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ss-check</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pending_ext</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ss-alert</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>accept_preauthorized</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ss-check</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reject_preauthorized</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ss-delete</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>errored</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ss-delete</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:37 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

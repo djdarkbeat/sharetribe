@@ -1,0 +1,2322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: StripeService::API::StripeApiWrapper
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "StripeService::API::StripeApiWrapper";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../StripeService.html" title="StripeService (module)">StripeService</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../API.html" title="StripeService::API (module)">API</a></span></span>
+     &raquo; 
+    <span class="title">StripeApiWrapper</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: StripeService::API::StripeApiWrapper
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">StripeService::API::StripeApiWrapper</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/services/stripe_service/api/stripe_api_wrapper.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="DEFAULT_MCC-constant" class="">DEFAULT_MCC =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Computer Software Stores</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>5734</span></pre></dd>
+      
+        <dt id="DESTINATION_TYPES-constant" class="">DESTINATION_TYPES =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:separate</span><span class='comma'>,</span> <span class='symbol'>:destination</span><span class='rbracket'>]</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cancel_charge-class_method" title="cancel_charge (class method)">.<strong>cancel_charge</strong>(community:, charge_id:, account_id:, reason:, metadata: {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cancel_payment_intent-class_method" title="cancel_payment_intent (class method)">.<strong>cancel_payment_intent</strong>(community:, payment_intent_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#capture_charge-class_method" title="capture_charge (class method)">.<strong>capture_charge</strong>(community:, charge_id:, seller_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#capture_payment_intent-class_method" title="capture_payment_intent (class method)">.<strong>capture_payment_intent</strong>(community:, payment_intent_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#charge-class_method" title="charge (class method)">.<strong>charge</strong>(community:, token:, seller_account_id:, amount:, fee:, currency:, description:, metadata: {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#charges_mode-class_method" title="charges_mode (class method)">.<strong>charges_mode</strong>(community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>System supports different payment modes, see <a href="https://stripe.com/docs/connect/charges">stripe.com/docs/connect/charges</a> for details.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_balance-class_method" title="check_balance (class method)">.<strong>check_balance</strong>(community:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#configure_payment_for-class_method" title="configure_payment_for (class method)">.<strong>configure_payment_for</strong>(settings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#confirm_payment_intent-class_method" title="confirm_payment_intent (class method)">.<strong>confirm_payment_intent</strong>(community:, payment_intent_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_bank_account-class_method" title="create_bank_account (class method)">.<strong>create_bank_account</strong>(community:, account_info:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_payment_intent-class_method" title="create_payment_intent (class method)">.<strong>create_payment_intent</strong>(community:, seller_account_id:, payment_method_id:, amount:, currency:, fee:, description:, metadata:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_token-class_method" title="create_token (class method)">.<strong>create_token</strong>(community:, customer_id:, account_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_account-class_method" title="delete_account (class method)">.<strong>delete_account</strong>(community:, account_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#empty_string_as_nil-class_method" title="empty_string_as_nil (class method)">.<strong>empty_string_as_nil</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_account_balance-class_method" title="get_account_balance (class method)">.<strong>get_account_balance</strong>(community:, account_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_balance_txn-class_method" title="get_balance_txn (class method)">.<strong>get_balance_txn</strong>(community:, balance_txn_id:, account_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_card_info-class_method" title="get_card_info (class method)">.<strong>get_card_info</strong>(customer:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_charge-class_method" title="get_charge (class method)">.<strong>get_charge</strong>(community:, charge_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_customer_account-class_method" title="get_customer_account (class method)">.<strong>get_customer_account</strong>(community:, customer_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_seller_account-class_method" title="get_seller_account (class method)">.<strong>get_seller_account</strong>(community:, account_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_transfer-class_method" title="get_transfer (class method)">.<strong>get_transfer</strong>(community:, transfer_id:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#payment_settings_for-class_method" title="payment_settings_for (class method)">.<strong>payment_settings_for</strong>(community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#perform_payout-class_method" title="perform_payout (class method)">.<strong>perform_payout</strong>(community:, account_id:, amount_cents:, currency:, metadata: {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#perform_transfer-class_method" title="perform_transfer (class method)">.<strong>perform_transfer</strong>(community:, account_id:, amount_cents:, amount_currency:, initial_amount:, charge_id:, metadata: {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#publishable_key-class_method" title="publishable_key (class method)">.<strong>publishable_key</strong>(community)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_customer-class_method" title="register_customer (class method)">.<strong>register_customer</strong>(community:, email:, card_token:, metadata: {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_seller-class_method" title="register_seller (class method)">.<strong>register_seller</strong>(community:, account_info:, metadata: {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset_configurations-class_method" title="reset_configurations (class method)">.<strong>reset_configurations</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_verification-class_method" title="send_verification (class method)">.<strong>send_verification</strong>(community:, account_id:, personal_id_number:, file_path:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_mode%3F-class_method" title="test_mode? (class method)">.<strong>test_mode?</strong>(community)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_account-class_method" title="update_account (class method)">.<strong>update_account</strong>(community:, account_id:, attrs:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_customer-class_method" title="update_customer (class method)">.<strong>update_customer</strong>(community:, customer_id:, token:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#with_stripe_payment_config-class_method" title="with_stripe_payment_config (class method)">.<strong>with_stripe_payment_config</strong>(community, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method should be used for all actions that require setting correct Merchant details for the Stripe gem.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="cancel_charge-class_method">
+  
+    .<strong>cancel_charge</strong>(community:, charge_id:, account_id:, reason:, metadata: {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+244
+245
+246
+247
+248
+249
+250
+251
+252</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 244</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_cancel_charge'>cancel_charge</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>charge_id:</span><span class='comma'>,</span> <span class='label'>account_id:</span><span class='comma'>,</span> <span class='label'>reason:</span><span class='comma'>,</span> <span class='label'>metadata:</span>  <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='id identifier rubyid_reason_data'>reason_data</span> <span class='op'>=</span> <span class='id identifier rubyid_reason'>reason</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>?</span> <span class='lbrace'>{</span><span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rbrace'>}</span> <span class='op'>:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_charges_mode'>charges_mode</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='symbol'>:separate</span><span class='comma'>,</span> <span class='symbol'>:destination</span>
+      <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Refund</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='label'>charge:</span> <span class='id identifier rubyid_charge_id'>charge_id</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_reason_data'>reason_data</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>metadata:</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="cancel_payment_intent-class_method">
+  
+    .<strong>cancel_payment_intent</strong>(community:, payment_intent_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+335
+336
+337
+338
+339</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 335</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_cancel_payment_intent'>cancel_payment_intent</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>payment_intent_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>PaymentIntent</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_payment_intent_id'>payment_intent_id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_cancel'>cancel</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="capture_charge-class_method">
+  
+    .<strong>capture_charge</strong>(community:, charge_id:, seller_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89
+90
+91
+92
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_capture_charge'>capture_charge</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>charge_id:</span><span class='comma'>,</span> <span class='label'>seller_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_charges_mode'>charges_mode</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='symbol'>:separate</span><span class='comma'>,</span> <span class='symbol'>:destination</span>
+      <span class='id identifier rubyid_charge'>charge</span> <span class='op'>=</span> <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Charge</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='id identifier rubyid_charge_id'>charge_id</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_charge'>charge</span><span class='period'>.</span><span class='id identifier rubyid_capture'>capture</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="capture_payment_intent-class_method">
+  
+    .<strong>capture_payment_intent</strong>(community:, payment_intent_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+329
+330
+331
+332
+333</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 329</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_capture_payment_intent'>capture_payment_intent</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>payment_intent_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>PaymentIntent</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_payment_intent_id'>payment_intent_id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_capture'>capture</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="charge-class_method">
+  
+    .<strong>charge</strong>(community:, token:, seller_account_id:, amount:, fee:, currency:, description:, metadata: {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_charge'>charge</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>token:</span><span class='comma'>,</span> <span class='label'>seller_account_id:</span><span class='comma'>,</span> <span class='label'>amount:</span><span class='comma'>,</span> <span class='label'>fee:</span><span class='comma'>,</span> <span class='label'>currency:</span><span class='comma'>,</span> <span class='label'>description:</span><span class='comma'>,</span> <span class='label'>metadata:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_charges_mode'>charges_mode</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='symbol'>:separate</span>
+      <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Charge</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+        <span class='label'>source:</span> <span class='id identifier rubyid_token'>token</span><span class='comma'>,</span>
+        <span class='label'>amount:</span> <span class='id identifier rubyid_amount'>amount</span><span class='comma'>,</span>
+        <span class='label'>description:</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
+        <span class='label'>currency:</span> <span class='id identifier rubyid_currency'>currency</span><span class='comma'>,</span>
+        <span class='label'>capture:</span> <span class='kw'>false</span>
+      <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>metadata:</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='symbol'>:destination</span>
+      <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Charge</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+        <span class='label'>source:</span> <span class='id identifier rubyid_token'>token</span><span class='comma'>,</span>
+        <span class='label'>amount:</span> <span class='id identifier rubyid_amount'>amount</span><span class='comma'>,</span>
+        <span class='label'>description:</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
+        <span class='label'>currency:</span> <span class='id identifier rubyid_currency'>currency</span><span class='comma'>,</span>
+        <span class='label'>capture:</span> <span class='kw'>false</span><span class='comma'>,</span>
+        <span class='label'>destination:</span> <span class='lbrace'>{</span>
+          <span class='label'>account:</span> <span class='id identifier rubyid_seller_account_id'>seller_account_id</span><span class='comma'>,</span>
+          <span class='label'>amount:</span> <span class='id identifier rubyid_amount'>amount</span> <span class='op'>-</span> <span class='id identifier rubyid_fee'>fee</span>
+        <span class='rbrace'>}</span>
+      <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>metadata:</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="charges_mode-class_method">
+  
+    .<strong>charges_mode</strong>(community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>System supports different payment modes, see <a href="https://stripe.com/docs/connect/charges">stripe.com/docs/connect/charges</a> for details</p>
+
+<p>:separate    - Separate charges and transfers, payment goes to admin account, with delayed transfer to seller :destination - Destination charges, payment goes to admin account, with instant partial transfer to seller</p>
+
+<p>By default :destination mode is used</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+214
+215
+216</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 214</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_charges_mode'>charges_mode</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='const'>APP_CONFIG</span><span class='period'>.</span><span class='id identifier rubyid_stripe_charges_mode'>stripe_charges_mode</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_balance-class_method">
+  
+    .<strong>check_balance</strong>(community:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142
+143
+144
+145
+146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 140</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_balance'>check_balance</span><span class='lparen'>(</span><span class='label'>community:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Balance</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span>
+  <span class='kw'>end</span>
+<span class='kw'>rescue</span> <span class='const'>StandardError</span>
+  <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="configure_payment_for-class_method">
+  
+    .<strong>configure_payment_for</strong>(settings)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_configure_payment_for'>configure_payment_for</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
+  <span class='const'>Stripe</span><span class='period'>.</span><span class='id identifier rubyid_api_version'>api_version</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2019-02-19</span><span class='tstring_end'>&#39;</span></span>
+  <span class='const'>Stripe</span><span class='period'>.</span><span class='id identifier rubyid_api_key'>api_key</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../TransactionService.html" title="TransactionService (module)">TransactionService</a></span></span><span class='op'>::</span><span class='const'>Store</span><span class='op'>::</span><span class='const'>PaymentSettings</span><span class='period'>.</span><span class='id identifier rubyid_decrypt_value'>decrypt_value</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_api_private_key'>api_private_key</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_key_encryption_padding'>key_encryption_padding</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="confirm_payment_intent-class_method">
+  
+    .<strong>confirm_payment_intent</strong>(community:, payment_intent_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+323
+324
+325
+326
+327</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 323</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_confirm_payment_intent'>confirm_payment_intent</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>payment_intent_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>PaymentIntent</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_payment_intent_id'>payment_intent_id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_confirm'>confirm</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_bank_account-class_method">
+  
+    .<strong>create_bank_account</strong>(community:, account_info:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 148</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_bank_account'>create_bank_account</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>account_info:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='id identifier rubyid_stripe_account'>stripe_account</span> <span class='op'>=</span> <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Account</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span> <span class='id identifier rubyid_account_info'>account_info</span><span class='lbracket'>[</span><span class='symbol'>:stripe_seller_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_routing'>routing</span> <span class='op'>=</span> <span class='id identifier rubyid_account_info'>account_info</span><span class='lbracket'>[</span><span class='symbol'>:bank_routing_number</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>?</span> <span class='lbrace'>{</span> <span class='label'>routing_number:</span> <span class='id identifier rubyid_account_info'>account_info</span><span class='lbracket'>[</span><span class='symbol'>:bank_routing_number</span><span class='rbracket'>]</span> <span class='rbrace'>}</span> <span class='op'>:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='label'>external_account:</span> <span class='lbrace'>{</span>
+        <span class='label'>object:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>bank_account</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='label'>account_number:</span> <span class='id identifier rubyid_account_info'>account_info</span><span class='lbracket'>[</span><span class='symbol'>:bank_account_number</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='label'>currency:</span> <span class='id identifier rubyid_account_info'>account_info</span><span class='lbracket'>[</span><span class='symbol'>:bank_currency</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='label'>country:</span> <span class='id identifier rubyid_account_info'>account_info</span><span class='lbracket'>[</span><span class='symbol'>:bank_country</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='label'>account_holder_name:</span> <span class='id identifier rubyid_account_info'>account_info</span><span class='lbracket'>[</span><span class='symbol'>:bank_holder_name</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='label'>account_holder_type:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>individual</span><span class='tstring_end'>&#39;</span></span>
+      <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_routing'>routing</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='label'>default_for_currency:</span> <span class='kw'>true</span>
+    <span class='rbrace'>}</span>
+
+    <span class='id identifier rubyid_stripe_account'>stripe_account</span><span class='period'>.</span><span class='id identifier rubyid_external_accounts'>external_accounts</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_payment_intent-class_method">
+  
+    .<strong>create_payment_intent</strong>(community:, seller_account_id:, payment_method_id:, amount:, currency:, fee:, description:, metadata:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 303</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_payment_intent'>create_payment_intent</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>seller_account_id:</span><span class='comma'>,</span> <span class='label'>payment_method_id:</span><span class='comma'>,</span> <span class='label'>amount:</span><span class='comma'>,</span> <span class='label'>currency:</span><span class='comma'>,</span> <span class='label'>fee:</span><span class='comma'>,</span> <span class='label'>description:</span><span class='comma'>,</span> <span class='label'>metadata:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>PaymentIntent</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span>
+      <span class='label'>capture_method:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>manual</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='label'>payment_method:</span> <span class='id identifier rubyid_payment_method_id'>payment_method_id</span><span class='comma'>,</span>
+      <span class='label'>amount:</span> <span class='id identifier rubyid_amount'>amount</span><span class='comma'>,</span>
+      <span class='label'>currency:</span> <span class='id identifier rubyid_currency'>currency</span><span class='comma'>,</span>
+      <span class='label'>confirmation_method:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>manual</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='label'>confirm:</span> <span class='kw'>true</span><span class='comma'>,</span>
+      <span class='label'>on_behalf_of:</span> <span class='id identifier rubyid_seller_account_id'>seller_account_id</span><span class='comma'>,</span>
+      <span class='label'>transfer_data:</span> <span class='lbrace'>{</span>
+        <span class='label'>destination:</span> <span class='id identifier rubyid_seller_account_id'>seller_account_id</span><span class='comma'>,</span>
+        <span class='label'>amount:</span> <span class='id identifier rubyid_amount'>amount</span> <span class='op'>-</span> <span class='id identifier rubyid_fee'>fee</span>
+      <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='label'>description:</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
+      <span class='label'>metadata:</span> <span class='id identifier rubyid_metadata'>metadata</span>
+    <span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_token-class_method">
+  
+    .<strong>create_token</strong>(community:, customer_id:, account_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 97</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_token'>create_token</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>customer_id:</span><span class='comma'>,</span> <span class='label'>account_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Token</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='label'>customer:</span> <span class='id identifier rubyid_customer_id'>customer_id</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='label'>stripe_account:</span> <span class='id identifier rubyid_account_id'>account_id</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_account-class_method">
+  
+    .<strong>delete_account</strong>(community:, account_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+296
+297
+298
+299
+300
+301</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 296</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_account'>delete_account</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>account_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='id identifier rubyid_account'>account</span> <span class='op'>=</span> <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Account</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='id identifier rubyid_account_id'>account_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="empty_string_as_nil-class_method">
+  
+    .<strong>empty_string_as_nil</strong>(value)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+274
+275
+276</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 274</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_empty_string_as_nil'>empty_string_as_nil</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_presence'>presence</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_account_balance-class_method">
+  
+    .<strong>get_account_balance</strong>(community:, account_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+168
+169
+170
+171
+172</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 168</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_account_balance'>get_account_balance</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>account_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Balance</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='label'>stripe_account:</span> <span class='id identifier rubyid_account_id'>account_id</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_balance_txn-class_method">
+  
+    .<strong>get_balance_txn</strong>(community:, balance_txn_id:, account_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+254
+255
+256
+257
+258
+259
+260
+261</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 254</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_balance_txn'>get_balance_txn</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>balance_txn_id:</span><span class='comma'>,</span> <span class='label'>account_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_charges_mode'>charges_mode</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='symbol'>:separate</span><span class='comma'>,</span> <span class='symbol'>:destination</span>
+      <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>BalanceTransaction</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='id identifier rubyid_balance_txn_id'>balance_txn_id</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_card_info-class_method">
+  
+    .<strong>get_card_info</strong>(customer:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 196</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_card_info'>get_card_info</span><span class='lparen'>(</span><span class='label'>customer:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_default_id'>default_id</span> <span class='op'>=</span> <span class='id identifier rubyid_customer'>customer</span><span class='period'>.</span><span class='id identifier rubyid_default_source'>default_source</span>
+  <span class='id identifier rubyid_customer'>customer</span><span class='period'>.</span><span class='id identifier rubyid_sources'>sources</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_source'>source</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_source'>source</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_default_id'>default_id</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_source'>source</span><span class='period'>.</span><span class='id identifier rubyid_object'>object</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>card</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_masked_card'>masked_card</span> <span class='op'>=</span>  <span class='lbracket'>[</span><span class='id identifier rubyid_source'>source</span><span class='period'>.</span><span class='id identifier rubyid_brand'>brand</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>****</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source'>source</span><span class='period'>.</span><span class='id identifier rubyid_last4'>last4</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Exp.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source'>source</span><span class='period'>.</span><span class='id identifier rubyid_exp_month'>exp_month</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source'>source</span><span class='period'>.</span><span class='id identifier rubyid_exp_year'>exp_year</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='lbracket'>[</span><span class='id identifier rubyid_masked_card'>masked_card</span><span class='comma'>,</span> <span class='id identifier rubyid_source'>source</span><span class='period'>.</span><span class='id identifier rubyid_country'>country</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_charge-class_method">
+  
+    .<strong>get_charge</strong>(community:, charge_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+278
+279
+280
+281
+282</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 278</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_charge'>get_charge</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>charge_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Charge</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span> <span class='id identifier rubyid_charge_id'>charge_id</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_customer_account-class_method">
+  
+    .<strong>get_customer_account</strong>(community:, customer_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+238
+239
+240
+241
+242</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 238</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_customer_account'>get_customer_account</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>customer_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Customer</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='id identifier rubyid_customer_id'>customer_id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_seller_account-class_method">
+  
+    .<strong>get_seller_account</strong>(community:, account_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+232
+233
+234
+235
+236</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 232</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_seller_account'>get_seller_account</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>account_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Account</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='id identifier rubyid_account_id'>account_id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_transfer-class_method">
+  
+    .<strong>get_transfer</strong>(community:, transfer_id:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+284
+285
+286
+287
+288</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 284</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_transfer'>get_transfer</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>transfer_id:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Transfer</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span> <span class='id identifier rubyid_transfer_id'>transfer_id</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="payment_settings_for-class_method">
+  
+    .<strong>payment_settings_for</strong>(community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_payment_settings_for'>payment_settings_for</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../PaymentSettings.html" title="PaymentSettings (class)">PaymentSettings</a></span></span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='label'>payment_gateway:</span> <span class='symbol'>:stripe</span><span class='comma'>,</span> <span class='label'>payment_process:</span> <span class='symbol'>:preauthorize</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="perform_payout-class_method">
+  
+    .<strong>perform_payout</strong>(community:, account_id:, amount_cents:, currency:, metadata: {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+174
+175
+176
+177
+178</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 174</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_perform_payout'>perform_payout</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>account_id:</span><span class='comma'>,</span> <span class='label'>amount_cents:</span><span class='comma'>,</span> <span class='label'>currency:</span><span class='comma'>,</span> <span class='label'>metadata:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Payout</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='label'>amount:</span> <span class='id identifier rubyid_amount_cents'>amount_cents</span><span class='comma'>,</span> <span class='label'>currency:</span> <span class='id identifier rubyid_currency'>currency</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>metadata:</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='label'>stripe_account:</span> <span class='id identifier rubyid_account_id'>account_id</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="perform_transfer-class_method">
+  
+    .<strong>perform_transfer</strong>(community:, account_id:, amount_cents:, amount_currency:, initial_amount:, charge_id:, metadata: {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 180</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_perform_transfer'>perform_transfer</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>account_id:</span><span class='comma'>,</span> <span class='label'>amount_cents:</span><span class='comma'>,</span> <span class='label'>amount_currency:</span><span class='comma'>,</span> <span class='label'>initial_amount:</span><span class='comma'>,</span> <span class='label'>charge_id:</span><span class='comma'>,</span> <span class='label'>metadata:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='id identifier rubyid_charge'>charge</span> <span class='op'>=</span> <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Charge</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='id identifier rubyid_charge_id'>charge_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_balance_txn'>balance_txn</span> <span class='op'>=</span> <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>BalanceTransaction</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='id identifier rubyid_charge'>charge</span><span class='period'>.</span><span class='id identifier rubyid_balance_transaction'>balance_transaction</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_balance_currency'>balance_currency</span> <span class='op'>=</span> <span class='id identifier rubyid_balance_txn'>balance_txn</span><span class='period'>.</span><span class='id identifier rubyid_currency'>currency</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
+    <span class='comment'># when platform balance is, say in EUR, but prices are in USD, recalc amount
+</span>    <span class='id identifier rubyid_fixed_amount'>fixed_amount</span> <span class='op'>=</span> <span class='id identifier rubyid_balance_currency'>balance_currency</span> <span class='op'>==</span> <span class='id identifier rubyid_amount_currency'>amount_currency</span> <span class='op'>?</span> <span class='id identifier rubyid_amount_cents'>amount_cents</span> <span class='op'>:</span> <span class='lparen'>(</span><span class='id identifier rubyid_amount_cents'>amount_cents</span> <span class='op'>*</span> <span class='float'>1.0</span> <span class='op'>/</span> <span class='id identifier rubyid_initial_amount'>initial_amount</span> <span class='op'>*</span> <span class='id identifier rubyid_balance_txn'>balance_txn</span><span class='period'>.</span><span class='id identifier rubyid_amount'>amount</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Transfer</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+        <span class='label'>amount:</span> <span class='id identifier rubyid_fixed_amount'>fixed_amount</span><span class='comma'>,</span>
+        <span class='label'>currency:</span> <span class='id identifier rubyid_balance_currency'>balance_currency</span><span class='comma'>,</span>
+        <span class='label'>destination:</span> <span class='id identifier rubyid_account_id'>account_id</span><span class='comma'>,</span>
+        <span class='label'>source_transaction:</span> <span class='id identifier rubyid_charge_id'>charge_id</span>
+      <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>metadata:</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="publishable_key-class_method">
+  
+    .<strong>publishable_key</strong>(community)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_publishable_key'>publishable_key</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='period'>.</span><span class='id identifier rubyid_api_publishable_key'>api_publishable_key</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_customer-class_method">
+  
+    .<strong>register_customer</strong>(community:, email:, card_token:, metadata: {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_customer'>register_customer</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>email:</span><span class='comma'>,</span> <span class='label'>card_token:</span><span class='comma'>,</span> <span class='label'>metadata:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Customer</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+        <span class='label'>email:</span> <span class='id identifier rubyid_email'>email</span><span class='comma'>,</span>
+        <span class='label'>card:</span> <span class='id identifier rubyid_card_token'>card_token</span>
+      <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>metadata:</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_seller-class_method">
+  
+    .<strong>register_seller</strong>(community:, account_info:, metadata: {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 103</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_seller'>register_seller</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>account_info:</span><span class='comma'>,</span> <span class='label'>metadata:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_charges_mode'>charges_mode</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='symbol'>:separate</span>
+      <span class='comment'># platform holds captured funds until completion, up to 90 days, then makes transfer
+</span>      <span class='id identifier rubyid_payout_mode'>payout_mode</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='kw'>when</span> <span class='symbol'>:destination</span>
+      <span class='comment'># managed accounts, make payout after completion om funds availability date
+</span>      <span class='id identifier rubyid_payout_mode'>payout_mode</span> <span class='op'>=</span>
+        <span class='lbrace'>{</span>
+          <span class='label'>settings:</span> <span class='lbrace'>{</span>
+            <span class='label'>payouts:</span> <span class='lbrace'>{</span>
+              <span class='label'>schedule:</span> <span class='lbrace'>{</span>
+                <span class='label'>interval:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>manual</span><span class='tstring_end'>&#39;</span></span>
+              <span class='rbrace'>}</span>
+            <span class='rbrace'>}</span>
+          <span class='rbrace'>}</span>
+        <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='label'>type:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>custom</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='label'>country:</span> <span class='id identifier rubyid_account_info'>account_info</span><span class='lbracket'>[</span><span class='symbol'>:address_country</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>email:</span> <span class='id identifier rubyid_account_info'>account_info</span><span class='lbracket'>[</span><span class='symbol'>:email</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>account_token:</span> <span class='id identifier rubyid_account_info'>account_info</span><span class='lbracket'>[</span><span class='symbol'>:token</span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+    <span class='kw'>if</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>US</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>EE</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>GR</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LV</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LT</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PL</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SK</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SI</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_account_info'>account_info</span><span class='lbracket'>[</span><span class='symbol'>:address_country</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:requested_capabilities</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>card_payments</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:business_profile</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+        <span class='label'>mcc:</span> <span class='const'><span class='object_link'><a href="#DEFAULT_MCC-constant" title="StripeService::API::StripeApiWrapper::DEFAULT_MCC (constant)">DEFAULT_MCC</a></span></span><span class='comma'>,</span>
+        <span class='label'>url:</span> <span class='id identifier rubyid_account_info'>account_info</span><span class='lbracket'>[</span><span class='symbol'>:url</span><span class='rbracket'>]</span>
+      <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_deep_merge!'>deep_merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_payout_mode'>payout_mode</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_deep_merge!'>deep_merge!</span><span class='lparen'>(</span><span class='label'>metadata:</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span>
+    <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Account</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reset_configurations-class_method">
+  
+    .<strong>reset_configurations</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reset_configurations'>reset_configurations</span>
+  <span class='const'>Stripe</span><span class='period'>.</span><span class='id identifier rubyid_api_key'>api_key</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_verification-class_method">
+  
+    .<strong>send_verification</strong>(community:, account_id:, personal_id_number:, file_path:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 218</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_verification'>send_verification</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>account_id:</span><span class='comma'>,</span> <span class='label'>personal_id_number:</span><span class='comma'>,</span> <span class='label'>file_path:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='id identifier rubyid_document'>document</span> <span class='op'>=</span> <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>FileUpload</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+        <span class='label'>purpose:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>identity_document</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+        <span class='label'>file:</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_file_path'>file_path</span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='lbrace'>{</span> <span class='label'>stripe_account:</span> <span class='id identifier rubyid_account_id'>account_id</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_account'>account</span> <span class='op'>=</span> <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Account</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='id identifier rubyid_account_id'>account_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_legal_entity'>legal_entity</span><span class='period'>.</span><span class='id identifier rubyid_verification'>verification</span><span class='period'>.</span><span class='id identifier rubyid_document'>document</span> <span class='op'>=</span> <span class='id identifier rubyid_document'>document</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+    <span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_legal_entity'>legal_entity</span><span class='period'>.</span><span class='id identifier rubyid_personal_id_number'>personal_id_number</span> <span class='op'>=</span> <span class='id identifier rubyid_personal_id_number'>personal_id_number</span>
+    <span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_mode?-class_method">
+  
+    .<strong>test_mode?</strong>(community)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+290
+291
+292
+293
+294</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 290</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_mode?'>test_mode?</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='const'>Stripe</span><span class='period'>.</span><span class='id identifier rubyid_api_key'>api_key</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^sk_test</span><span class='regexp_end'>/</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_account-class_method">
+  
+    .<strong>update_account</strong>(community:, account_id:, attrs:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 263</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_account'>update_account</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>account_id:</span><span class='comma'>,</span> <span class='label'>attrs:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='id identifier rubyid_account'>account</span> <span class='op'>=</span> <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Account</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='id identifier rubyid_account_id'>account_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_account_token'>account_token</span> <span class='op'>=</span> <span class='id identifier rubyid_attrs'>attrs</span><span class='lbracket'>[</span><span class='symbol'>:token</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_attrs'>attrs</span><span class='lbracket'>[</span><span class='symbol'>:address_country</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>US</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_business_profile'>business_profile</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_attrs'>attrs</span><span class='lbracket'>[</span><span class='symbol'>:url</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_customer-class_method">
+  
+    .<strong>update_customer</strong>(community:, customer_id:, token:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 45</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_customer'>update_customer</span><span class='lparen'>(</span><span class='label'>community:</span><span class='comma'>,</span> <span class='label'>customer_id:</span><span class='comma'>,</span> <span class='label'>token:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='op'>|</span>
+    <span class='id identifier rubyid_customer'>customer</span> <span class='op'>=</span> <span class='const'>Stripe</span><span class='op'>::</span><span class='const'>Customer</span><span class='period'>.</span><span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='id identifier rubyid_customer_id'>customer_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_customer'>customer</span><span class='period'>.</span><span class='id identifier rubyid_source'>source</span> <span class='op'>=</span> <span class='id identifier rubyid_token'>token</span>
+    <span class='id identifier rubyid_customer'>customer</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+    <span class='id identifier rubyid_customer'>customer</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="with_stripe_payment_config-class_method">
+  
+    .<strong>with_stripe_payment_config</strong>(community, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method should be used for all actions that require setting correct Merchant details for the Stripe gem</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/stripe_service/api/stripe_api_wrapper.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_with_stripe_payment_config'>with_stripe_payment_config</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='id identifier rubyid_payment_settings'>payment_settings</span> <span class='op'>=</span> <span class='id identifier rubyid_payment_settings_for'>payment_settings_for</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_configure_payment_for'>configure_payment_for</span><span class='lparen'>(</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_return_value'>return_value</span> <span class='op'>=</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_reset_configurations'>reset_configurations</span>
+
+    <span class='kw'>return</span> <span class='id identifier rubyid_return_value'>return_value</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:02:44 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: InboxService
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "InboxService";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (I)</a> &raquo;
+    
+    
+    <span class="title">InboxService</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: InboxService
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/services/inbox_service.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="InboxConversation-constant" class="">InboxConversation =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_inbox_row_common_spec'>inbox_row_common_spec</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_conversation_spec'>conversation_spec</span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="InboxTransaction-constant" class="">InboxTransaction =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define_builder'><span class='object_link'><a href="EntityUtils.html#define_builder-class_method" title="EntityUtils.define_builder (method)">define_builder</a></span></span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_inbox_row_common_spec'>inbox_row_common_spec</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_conversation_spec'>conversation_spec</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_transaction_spec'>transaction_spec</span><span class='rparen'>)</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#extend_common-class_method" title="extend_common (class method)">.<strong>extend_common</strong>(common, people, message_store)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#extend_conversation-class_method" title="extend_conversation (class method)">.<strong>extend_conversation</strong>(conversation)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#extend_transaction-class_method" title="extend_transaction (class method)">.<strong>extend_transaction</strong>(transaction)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inbox_data-class_method" title="inbox_data (class method)">.<strong>inbox_data</strong>(person_id, community_id, limit, offset)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inbox_data_count-class_method" title="inbox_data_count (class method)">.<strong>inbox_data_count</strong>(person_id, community_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#last_activity_type-class_method" title="last_activity_type (class method)">.<strong>last_activity_type</strong>(inbox_item)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#latest_messages_for_conversations-class_method" title="latest_messages_for_conversations (class method)">.<strong>latest_messages_for_conversations</strong>(conversation_ids)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#notification_count-class_method" title="notification_count (class method)">.<strong>notification_count</strong>(person_id, community_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query_inbox_data-class_method" title="query_inbox_data (class method)">.<strong>query_inbox_data</strong>(person_id, community_id, limit, offset)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query_inbox_data_count-class_method" title="query_inbox_data_count (class method)">.<strong>query_inbox_data_count</strong>(person_id, community_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query_notification_count-class_method" title="query_notification_count (class method)">.<strong>query_notification_count</strong>(person_id, community_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reduce_transaction_and_conv_ids-class_method" title="reduce_transaction_and_conv_ids (class method)">.<strong>reduce_transaction_and_conv_ids</strong>(result_set)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="extend_common-class_method">
+  
+    .<strong>extend_common</strong>(common, people, message_store)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/inbox_service.rb', line 171</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_extend_common'>extend_common</span><span class='lparen'>(</span><span class='id identifier rubyid_common'>common</span><span class='comma'>,</span> <span class='id identifier rubyid_people'>people</span><span class='comma'>,</span> <span class='id identifier rubyid_message_store'>message_store</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_current_id'>current_id</span> <span class='op'>=</span> <span class='id identifier rubyid_common'>common</span><span class='lbracket'>[</span><span class='symbol'>:current_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_other_id'>other_id</span>   <span class='op'>=</span> <span class='id identifier rubyid_common'>common</span><span class='lbracket'>[</span><span class='symbol'>:other_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_starter_id'>starter_id</span> <span class='op'>=</span> <span class='id identifier rubyid_common'>common</span><span class='lbracket'>[</span><span class='symbol'>:current_is_starter</span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='id identifier rubyid_common'>common</span><span class='lbracket'>[</span><span class='symbol'>:current_id</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_common'>common</span><span class='lbracket'>[</span><span class='symbol'>:other_id</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_message_at'>message_at</span> <span class='op'>=</span> <span class='id identifier rubyid_message_store'>message_store</span><span class='lbracket'>[</span><span class='id identifier rubyid_common'>common</span><span class='lbracket'>[</span><span class='symbol'>:conversation_id</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_common'>common</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+    <span class='label'>starter:</span> <span class='id identifier rubyid_people'>people</span><span class='lbracket'>[</span><span class='id identifier rubyid_starter_id'>starter_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>other:</span> <span class='id identifier rubyid_people'>people</span><span class='lbracket'>[</span><span class='id identifier rubyid_other_id'>other_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>current:</span> <span class='id identifier rubyid_people'>people</span><span class='lbracket'>[</span><span class='id identifier rubyid_current_id'>current_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>last_message_content:</span> <span class='id identifier rubyid_content'>content</span><span class='comma'>,</span>
+    <span class='label'>last_message_at:</span> <span class='id identifier rubyid_message_at'>message_at</span>
+  <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="extend_conversation-class_method">
+  
+    .<strong>extend_conversation</strong>(conversation)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+187
+188
+189
+190
+191</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/inbox_service.rb', line 187</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_extend_conversation'>extend_conversation</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_conversation'>conversation</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+    <span class='label'>should_notify:</span> <span class='op'>!</span><span class='ivar'>@tiny_int_to_bool</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation'>conversation</span><span class='lbracket'>[</span><span class='symbol'>:current_is_read</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="extend_transaction-class_method">
+  
+    .<strong>extend_transaction</strong>(transaction)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/inbox_service.rb', line 193</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_extend_transaction'>extend_transaction</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_transitions'>transitions</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TransactionTransition.html" title="TransactionTransition (class)">TransactionTransition</a></span></span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>transaction_id:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_transition_model'>transition_model</span><span class='op'>|</span>
+    <span class='const'><span class='object_link'><a href="EntityUtils.html" title="EntityUtils (module)">EntityUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_model_to_hash'><span class='object_link'><a href="EntityUtils.html#model_to_hash-class_method" title="EntityUtils.model_to_hash (method)">model_to_hash</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_transition_model'>transition_model</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_payment_gateway'>payment_gateway</span> <span class='op'>=</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='lbracket'>[</span><span class='symbol'>:payment_gateway</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_buyer_commission'>buyer_commission</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_payment_total'>payment_total</span> <span class='op'>=</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_payment_gateway'>payment_gateway</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+    <span class='kw'>when</span> <span class='symbol'>:paypal</span>
+      <span class='id identifier rubyid_paypal_payments'>paypal_payments</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PaypalService.html" title="PaypalService (module)">PaypalService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="PaypalService/API.html" title="PaypalService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="PaypalService/API.html#Api-constant" title="PaypalService::API::Api (constant)">Api</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payments'>payments</span>
+      <span class='const'>Maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_paypal_payments'>paypal_payments</span><span class='period'>.</span><span class='id identifier rubyid_get_payment'>get_payment</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='lbracket'>[</span><span class='symbol'>:community_id</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:data</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:authorization_total</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='symbol'>:stripe</span>
+      <span class='id identifier rubyid_stripe_payments'>stripe_payments</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="StripeService.html" title="StripeService (module)">StripeService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="StripeService/API.html" title="StripeService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="StripeService/API/Api.html" title="StripeService::API::Api (class)">Api</a></span></span><span class='period'>.</span><span class='id identifier rubyid_payments'><span class='object_link'><a href="StripeService/API/Api.html#payments-class_method" title="StripeService::API::Api.payments (method)">payments</a></span></span>
+      <span class='id identifier rubyid_tx_model'>tx_model</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Transaction.html" title="Transaction (class)">Transaction</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_buyer_commission'>buyer_commission</span> <span class='op'>=</span> <span class='id identifier rubyid_tx_model'>tx_model</span><span class='period'>.</span><span class='id identifier rubyid_buyer_commission'>buyer_commission</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+      <span class='id identifier rubyid_stripe_payments'>stripe_payments</span><span class='period'>.</span><span class='id identifier rubyid_payment_details'>payment_details</span><span class='lparen'>(</span><span class='id identifier rubyid_tx_model'>tx_model</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:payment_total</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_should_notify'>should_notify</span> <span class='op'>=</span>
+    <span class='op'>!</span><span class='ivar'>@tiny_int_to_bool</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='lbracket'>[</span><span class='symbol'>:current_is_read</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>||</span>
+    <span class='ivar'>@tiny_int_to_bool</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='lbracket'>[</span><span class='symbol'>:current_action_required</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>||</span>
+    <span class='ivar'>@tiny_int_to_bool</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_transaction'>transaction</span><span class='lbracket'>[</span><span class='symbol'>:waiting_feedback</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
+    <span class='label'>author:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='lbracket'>[</span><span class='symbol'>:other</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>transitions:</span> <span class='id identifier rubyid_transitions'>transitions</span><span class='comma'>,</span>
+    <span class='label'>should_notify:</span> <span class='id identifier rubyid_should_notify'>should_notify</span><span class='comma'>,</span>
+    <span class='label'>last_transition_at:</span> <span class='id identifier rubyid_transaction'>transaction</span><span class='lbracket'>[</span><span class='symbol'>:last_transition_at</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>payment_total:</span> <span class='id identifier rubyid_payment_total'>payment_total</span><span class='comma'>,</span>
+    <span class='label'>buyer_commission:</span> <span class='id identifier rubyid_buyer_commission'>buyer_commission</span>
+  <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inbox_data-class_method">
+  
+    .<strong>inbox_data</strong>(person_id, community_id, limit, offset)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/inbox_service.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_inbox_data'>inbox_data</span><span class='lparen'>(</span><span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_query_inbox_data'>query_inbox_data</span><span class='lparen'>(</span><span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inbox_data_count-class_method">
+  
+    .<strong>inbox_data_count</strong>(person_id, community_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/inbox_service.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_inbox_data_count'>inbox_data_count</span><span class='lparen'>(</span><span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_query_inbox_data_count'>query_inbox_data_count</span><span class='lparen'>(</span><span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="last_activity_type-class_method">
+  
+    .<strong>last_activity_type</strong>(inbox_item)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/inbox_service.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_last_activity_type'>last_activity_type</span><span class='lparen'>(</span><span class='id identifier rubyid_inbox_item'>inbox_item</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_inbox_item'>inbox_item</span><span class='lbracket'>[</span><span class='symbol'>:last_transition_at</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>return</span> <span class='symbol'>:message</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_inbox_item'>inbox_item</span><span class='lbracket'>[</span><span class='symbol'>:last_message_at</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>return</span> <span class='symbol'>:transition</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_ignored_transitions'>ignored_transitions</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>free</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pending</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>initiated</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pending_ext</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'># Transitions that should not be visible in inbox row title
+</span>
+  <span class='id identifier rubyid_last_visible_transition'>last_visible_transition</span> <span class='op'>=</span> <span class='id identifier rubyid_inbox_item'>inbox_item</span><span class='lbracket'>[</span><span class='symbol'>:transitions</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_transition'>transition</span><span class='op'>|</span>
+    <span class='id identifier rubyid_ignored_transitions'>ignored_transitions</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_transition'>transition</span><span class='lbracket'>[</span><span class='symbol'>:to_state</span><span class='rbracket'>]</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_last_visible_transition'>last_visible_transition</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>return</span> <span class='symbol'>:message</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_inbox_item'>inbox_item</span><span class='lbracket'>[</span><span class='symbol'>:last_message_at</span><span class='rbracket'>]</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_last_visible_transition'>last_visible_transition</span><span class='lbracket'>[</span><span class='symbol'>:created_at</span><span class='rbracket'>]</span>
+    <span class='symbol'>:message</span>
+  <span class='kw'>else</span>
+    <span class='symbol'>:transition</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="latest_messages_for_conversations-class_method">
+  
+    .<strong>latest_messages_for_conversations</strong>(conversation_ids)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/inbox_service.rb', line 367</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_latest_messages_for_conversations'>latest_messages_for_conversations</span><span class='lparen'>(</span><span class='id identifier rubyid_conversation_ids'>conversation_ids</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_conversation_ids'>conversation_ids</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+  <span class='id identifier rubyid_connection'>connection</span> <span class='op'>=</span> <span class='const'>ActiveRecord</span><span class='op'>::</span><span class='const'>Base</span><span class='period'>.</span><span class='id identifier rubyid_connection'>connection</span>
+
+  <span class='id identifier rubyid_message_sql'>message_sql</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SQLUtils.html" title="SQLUtils (module)">SQLUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_ar_quote'><span class='object_link'><a href="SQLUtils.html#ar_quote-class_method" title="SQLUtils.ar_quote (method)">ar_quote</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_connection'>connection</span><span class='comma'>,</span> <span class='ivar'>@construct_last_message_content_sql</span><span class='comma'>,</span> <span class='label'>conversation_ids:</span> <span class='id identifier rubyid_conversation_ids'>conversation_ids</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_latest_messages'>latest_messages</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_connection'>connection</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='id identifier rubyid_message_sql'>message_sql</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_conversation_id'>conversation_id</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_created_at'>created_at</span><span class='op'>|</span>
+    <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_memo_id'>memo_id</span><span class='comma'>,</span> <span class='id identifier rubyid_memo_at'>memo_at</span> <span class='op'>=</span> <span class='id identifier rubyid_latest_messages'>latest_messages</span><span class='lbracket'>[</span><span class='id identifier rubyid_conversation_id'>conversation_id</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_memo_at'>memo_at</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='id identifier rubyid_memo_at'>memo_at</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_created_at'>created_at</span> <span class='op'>||</span> <span class='id identifier rubyid_memo_id'>memo_id</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_id'>id</span>
+      <span class='id identifier rubyid_latest_messages'>latest_messages</span><span class='lbracket'>[</span><span class='id identifier rubyid_conversation_id'>conversation_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_created_at'>created_at</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='const'><span class='object_link'><a href="HashUtils.html" title="HashUtils (module)">HashUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_map_values'><span class='object_link'><a href="HashUtils.html#map_values-class_method" title="HashUtils.map_values (method)">map_values</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_latest_messages'>latest_messages</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_at'>at</span><span class='rparen'>)</span><span class='op'>|</span> <span class='lbracket'>[</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_at'>at</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="notification_count-class_method">
+  
+    .<strong>notification_count</strong>(person_id, community_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/inbox_service.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_notification_count'>notification_count</span><span class='lparen'>(</span><span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_query_notification_count'>query_notification_count</span><span class='lparen'>(</span><span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query_inbox_data-class_method">
+  
+    .<strong>query_inbox_data</strong>(person_id, community_id, limit, offset)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/inbox_service.rb', line 103</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query_inbox_data'>query_inbox_data</span><span class='lparen'>(</span><span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_conversation_ids'>conversation_ids</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Participation.html" title="Participation (class)">Participation</a></span></span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>person_id:</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pluck'>pluck</span><span class='lparen'>(</span><span class='symbol'>:conversation_id</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_conversation_ids'>conversation_ids</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+  <span class='id identifier rubyid_connection'>connection</span> <span class='op'>=</span> <span class='const'>ActiveRecord</span><span class='op'>::</span><span class='const'>Base</span><span class='period'>.</span><span class='id identifier rubyid_connection'>connection</span>
+  <span class='id identifier rubyid_sql'>sql</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SQLUtils.html" title="SQLUtils (module)">SQLUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_ar_quote'><span class='object_link'><a href="SQLUtils.html#ar_quote-class_method" title="SQLUtils.ar_quote (method)">ar_quote</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_connection'>connection</span><span class='comma'>,</span> <span class='ivar'>@construct_sql</span><span class='comma'>,</span>
+    <span class='label'>person_id:</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span>
+    <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+    <span class='label'>limit:</span> <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span>
+    <span class='label'>offset:</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span>
+    <span class='label'>conversation_ids:</span> <span class='id identifier rubyid_conversation_ids'>conversation_ids</span>
+  <span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_result_set'>result_set</span> <span class='op'>=</span> <span class='id identifier rubyid_connection'>connection</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='id identifier rubyid_sql'>sql</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='label'>as:</span> <span class='symbol'>:hash</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_row'>row</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="HashUtils.html" title="HashUtils (module)">HashUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_symbolize_keys'><span class='object_link'><a href="HashUtils.html#symbolize_keys-class_method" title="HashUtils.symbolize_keys (method)">symbolize_keys</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_row'>row</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_people_ids'>people_ids</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="HashUtils.html" title="HashUtils (module)">HashUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_pluck'><span class='object_link'><a href="HashUtils.html#pluck-class_method" title="HashUtils.pluck (method)">pluck</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_result_set'>result_set</span><span class='comma'>,</span> <span class='symbol'>:current_id</span><span class='comma'>,</span> <span class='symbol'>:other_id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span> <span class='comment'># rubocop:disable Rails/UniqBeforePluck
+</span>  <span class='id identifier rubyid_community'>community</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Community.html" title="Community (class)">Community</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_people_store'>people_store</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Person.html" title="Person (class)">Person</a></span></span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>id:</span> <span class='id identifier rubyid_people_ids'>people_ids</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_index_by'>index_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_last_message_conv_ids'>last_message_conv_ids</span><span class='comma'>,</span> <span class='id identifier rubyid_last_transition_transaction_ids'>last_transition_transaction_ids</span> <span class='op'>=</span> <span class='id identifier rubyid_reduce_transaction_and_conv_ids'>reduce_transaction_and_conv_ids</span><span class='lparen'>(</span><span class='id identifier rubyid_result_set'>result_set</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_message_store'>message_store</span> <span class='op'>=</span> <span class='id identifier rubyid_latest_messages_for_conversations'>latest_messages_for_conversations</span><span class='lparen'>(</span><span class='id identifier rubyid_last_message_conv_ids'>last_message_conv_ids</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_result_set'>result_set</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_result'>result</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+      <span class='const'><span class='object_link'><a href="#InboxTransaction-constant" title="InboxService::InboxTransaction (constant)">InboxTransaction</a></span></span><span class='lbracket'>[</span>
+        <span class='id identifier rubyid_extend_transaction'>extend_transaction</span><span class='lparen'>(</span>
+          <span class='id identifier rubyid_extend_common'>extend_common</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_people_store'>people_store</span><span class='comma'>,</span> <span class='id identifier rubyid_message_store'>message_store</span><span class='rparen'>)</span>
+        <span class='rparen'>)</span>
+      <span class='rbracket'>]</span>
+    <span class='kw'>else</span>
+      <span class='const'><span class='object_link'><a href="#InboxConversation-constant" title="InboxService::InboxConversation (constant)">InboxConversation</a></span></span><span class='lbracket'>[</span>
+        <span class='id identifier rubyid_extend_conversation'>extend_conversation</span><span class='lparen'>(</span>
+          <span class='id identifier rubyid_extend_common'>extend_common</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_people_store'>people_store</span><span class='comma'>,</span> <span class='id identifier rubyid_message_store'>message_store</span><span class='rparen'>)</span>
+        <span class='rparen'>)</span>
+      <span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query_inbox_data_count-class_method">
+  
+    .<strong>query_inbox_data_count</strong>(person_id, community_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/inbox_service.rb', line 157</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query_inbox_data_count'>query_inbox_data_count</span><span class='lparen'>(</span><span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_conversation_ids'>conversation_ids</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Participation.html" title="Participation (class)">Participation</a></span></span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>person_id:</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pluck'>pluck</span><span class='lparen'>(</span><span class='symbol'>:conversation_id</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id identifier rubyid_conversation_ids'>conversation_ids</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+  <span class='id identifier rubyid_connection'>connection</span> <span class='op'>=</span> <span class='const'>ActiveRecord</span><span class='op'>::</span><span class='const'>Base</span><span class='period'>.</span><span class='id identifier rubyid_connection'>connection</span>
+  <span class='id identifier rubyid_sql'>sql</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SQLUtils.html" title="SQLUtils (module)">SQLUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_ar_quote'><span class='object_link'><a href="SQLUtils.html#ar_quote-class_method" title="SQLUtils.ar_quote (method)">ar_quote</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_connection'>connection</span><span class='comma'>,</span> <span class='ivar'>@construct_inbox_row_count_sql</span><span class='comma'>,</span>
+    <span class='label'>person_id:</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span>
+    <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+    <span class='label'>conversation_ids:</span> <span class='id identifier rubyid_conversation_ids'>conversation_ids</span>
+  <span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_connection'>connection</span><span class='period'>.</span><span class='id identifier rubyid_select_value'>select_value</span><span class='lparen'>(</span><span class='id identifier rubyid_sql'>sql</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query_notification_count-class_method">
+  
+    .<strong>query_notification_count</strong>(person_id, community_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/inbox_service.rb', line 89</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query_notification_count'>query_notification_count</span><span class='lparen'>(</span><span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_conversation_ids'>conversation_ids</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Participation.html" title="Participation (class)">Participation</a></span></span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>person_id:</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pluck'>pluck</span><span class='lparen'>(</span><span class='symbol'>:conversation_id</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id identifier rubyid_conversation_ids'>conversation_ids</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+  <span class='id identifier rubyid_connection'>connection</span> <span class='op'>=</span> <span class='const'>ActiveRecord</span><span class='op'>::</span><span class='const'>Base</span><span class='period'>.</span><span class='id identifier rubyid_connection'>connection</span>
+  <span class='id identifier rubyid_sql'>sql</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SQLUtils.html" title="SQLUtils (module)">SQLUtils</a></span></span><span class='period'>.</span><span class='id identifier rubyid_ar_quote'><span class='object_link'><a href="SQLUtils.html#ar_quote-class_method" title="SQLUtils.ar_quote (method)">ar_quote</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_connection'>connection</span><span class='comma'>,</span> <span class='ivar'>@construct_notification_count_sql</span><span class='comma'>,</span>
+    <span class='label'>person_id:</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span>
+    <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+    <span class='label'>conversation_ids:</span> <span class='id identifier rubyid_conversation_ids'>conversation_ids</span>
+  <span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_connection'>connection</span><span class='period'>.</span><span class='id identifier rubyid_select_value'>select_value</span><span class='lparen'>(</span><span class='id identifier rubyid_sql'>sql</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reduce_transaction_and_conv_ids-class_method">
+  
+    .<strong>reduce_transaction_and_conv_ids</strong>(result_set)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/inbox_service.rb', line 142</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reduce_transaction_and_conv_ids'>reduce_transaction_and_conv_ids</span><span class='lparen'>(</span><span class='id identifier rubyid_result_set'>result_set</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_result_set'>result_set</span><span class='period'>.</span><span class='id identifier rubyid_reduce'>reduce</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_last_message_memo'>last_message_memo</span><span class='comma'>,</span> <span class='id identifier rubyid_last_transition_memo'>last_transition_memo</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_row'>row</span><span class='op'>|</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_row'>row</span><span class='lbracket'>[</span><span class='symbol'>:last_message_at</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+      <span class='id identifier rubyid_last_message_memo'>last_message_memo</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_row'>row</span><span class='lbracket'>[</span><span class='symbol'>:conversation_id</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_row'>row</span><span class='lbracket'>[</span><span class='symbol'>:last_transition_at</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+      <span class='id identifier rubyid_last_transition_memo'>last_transition_memo</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_row'>row</span><span class='lbracket'>[</span><span class='symbol'>:transaction_id</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+
+    <span class='lbracket'>[</span><span class='id identifier rubyid_last_message_memo'>last_message_memo</span><span class='comma'>,</span> <span class='id identifier rubyid_last_transition_memo'>last_transition_memo</span><span class='rbracket'>]</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:35 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

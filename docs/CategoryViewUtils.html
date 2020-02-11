@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: CategoryViewUtils
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "CategoryViewUtils";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (C)</a> &raquo;
+    
+    
+    <span class="title">CategoryViewUtils</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: CategoryViewUtils
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/view_utils/category_view_utils.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#category_tree-class_method" title="category_tree (class method)">.<strong>category_tree</strong>(categories:, shapes:, locale:, all_locales:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns an array that contains the hierarchy of categories and listing shapes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#embed_shape-class_method" title="embed_shape (class method)">.<strong>embed_shape</strong>(ids, shapes)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>private.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pick_category_translation-class_method" title="pick_category_translation (class method)">.<strong>pick_category_translation</strong>(category_translations, locale, all_locales)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sort_num_or_nil-class_method" title="sort_num_or_nil (class method)">.<strong>sort_num_or_nil</strong>(a, b)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#translation_preferences-class_method" title="translation_preferences (class method)">.<strong>translation_preferences</strong>(preferred, all)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="category_tree-class_method">
+  
+    .<strong>category_tree</strong>(categories:, shapes:, locale:, all_locales:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns an array that contains the hierarchy of categories and listing shapes</p>
+
+<p>An xample of a returned tree:</p>
+
+<p>[</p>
+
+<pre class="code ruby"><code class="ruby">{
+  &quot;label&quot; =&gt; &quot;item&quot;,
+  &quot;id&quot; =&gt; id,
+  &quot;subcategories&quot; =&gt; [
+    {
+      &quot;label&quot; =&gt; &quot;tools&quot;,
+      &quot;id&quot; =&gt; id,
+      &quot;listing_shapes&quot; =&gt; [
+        {
+          &quot;label&quot; =&gt; &quot;sell&quot;,
+          &quot;id&quot; =&gt; id
+        }
+      ]
+    }
+  ]
+},
+{
+  &quot;label&quot; =&gt; &quot;services&quot;,
+  &quot;id&quot; =&gt; &quot;id&quot;
+}
+</code></pre>
+
+<p>]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/category_view_utils.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_category_tree'>category_tree</span><span class='lparen'>(</span><span class='label'>categories:</span><span class='comma'>,</span> <span class='label'>shapes:</span><span class='comma'>,</span> <span class='label'>locale:</span><span class='comma'>,</span> <span class='label'>all_locales:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_categories'>categories</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span>
+    <span class='lbrace'>{</span>
+      <span class='label'>id:</span> <span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>label:</span> <span class='id identifier rubyid_pick_category_translation'>pick_category_translation</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_translations'>translations</span><span class='comma'>,</span> <span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_all_locales'>all_locales</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='label'>listing_shapes:</span> <span class='id identifier rubyid_embed_shape'>embed_shape</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_listing_shape_ids'>listing_shape_ids</span><span class='comma'>,</span> <span class='id identifier rubyid_shapes'>shapes</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='label'>subcategories:</span> <span class='id identifier rubyid_category_tree'>category_tree</span><span class='lparen'>(</span>
+        <span class='label'>categories:</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_children'>children</span><span class='comma'>,</span>
+        <span class='label'>shapes:</span> <span class='id identifier rubyid_shapes'>shapes</span><span class='comma'>,</span>
+        <span class='label'>locale:</span> <span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span>
+        <span class='label'>all_locales:</span> <span class='id identifier rubyid_all_locales'>all_locales</span>
+      <span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="embed_shape-class_method">
+  
+    .<strong>embed_shape</strong>(ids, shapes)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>private</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/category_view_utils.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_embed_shape'>embed_shape</span><span class='lparen'>(</span><span class='id identifier rubyid_ids'>ids</span><span class='comma'>,</span> <span class='id identifier rubyid_shapes'>shapes</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_shapes'>shapes</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span>
+    <span class='id identifier rubyid_ids'>ids</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_s'>s</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span>
+    <span class='lbrace'>{</span>
+      <span class='label'>id:</span> <span class='id identifier rubyid_s'>s</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>label:</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_translate'>translate</span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='lbracket'>[</span><span class='symbol'>:name_tr_key</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pick_category_translation-class_method">
+  
+    .<strong>pick_category_translation</strong>(category_translations, locale, all_locales)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63
+64
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/category_view_utils.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pick_category_translation'>pick_category_translation</span><span class='lparen'>(</span><span class='id identifier rubyid_category_translations'>category_translations</span><span class='comma'>,</span> <span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_all_locales'>all_locales</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_prio'>prio</span> <span class='op'>=</span> <span class='id identifier rubyid_translation_preferences'>translation_preferences</span><span class='lparen'>(</span><span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='id identifier rubyid_all_locales'>all_locales</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_category_translations'>category_translations</span><span class='period'>.</span><span class='id identifier rubyid_min'>min</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_b'>b</span><span class='op'>|</span>
+    <span class='id identifier rubyid_a_prio'>a_prio</span> <span class='op'>=</span> <span class='id identifier rubyid_prio'>prio</span><span class='lbracket'>[</span><span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='symbol'>:locale</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_b_prio'>b_prio</span> <span class='op'>=</span> <span class='id identifier rubyid_prio'>prio</span><span class='lbracket'>[</span><span class='id identifier rubyid_b'>b</span><span class='lbracket'>[</span><span class='symbol'>:locale</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_sort_num_or_nil'>sort_num_or_nil</span><span class='lparen'>(</span><span class='id identifier rubyid_a_prio'>a_prio</span><span class='comma'>,</span> <span class='id identifier rubyid_b_prio'>b_prio</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sort_num_or_nil-class_method">
+  
+    .<strong>sort_num_or_nil</strong>(a, b)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80
+81
+82
+83
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/category_view_utils.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sort_num_or_nil'>sort_num_or_nil</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='int'>1</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_b'>b</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='op'>-</span><span class='int'>1</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_a'>a</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_b'>b</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="translation_preferences-class_method">
+  
+    .<strong>translation_preferences</strong>(preferred, all)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72
+73
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/category_view_utils.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_translation_preferences'>translation_preferences</span><span class='lparen'>(</span><span class='id identifier rubyid_preferred'>preferred</span><span class='comma'>,</span> <span class='id identifier rubyid_all'>all</span><span class='rparen'>)</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_preferred'>preferred</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='id identifier rubyid_all'>all</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
+    <span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span>
+    <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='op'>|</span> <span class='lbracket'>[</span><span class='id identifier rubyid_l'>l</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+    <span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:39 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: StripeHelper
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "StripeHelper";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (S)</a> &raquo;
+    
+    
+    <span class="title">StripeHelper</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: StripeHelper
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/view_utils/stripe_helper.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="TxApi-constant" class="">TxApi =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="TransactionService.html" title="TransactionService (module)">TransactionService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TransactionService/API.html" title="TransactionService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TransactionService/API/Api.html" title="TransactionService::API::Api (class)">Api</a></span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#community_ready_for_payments%3F-class_method" title="community_ready_for_payments? (class method)">.<strong>community_ready_for_payments?</strong>(community_id)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open_listings_with_missing_payment_info%3F-class_method" title="open_listings_with_missing_payment_info? (class method)">.<strong>open_listings_with_missing_payment_info?</strong>(user_id, community_id)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Check if the user has open listings in the community but has not finished connecting his paypal account.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#publishable_key-class_method" title="publishable_key (class method)">.<strong>publishable_key</strong>(community_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stripe_active%3F-class_method" title="stripe_active? (class method)">.<strong>stripe_active?</strong>(community_id)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stripe_available%3F-class_method" title="stripe_available? (class method)">.<strong>stripe_available?</strong>(community)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stripe_provisioned%3F-class_method" title="stripe_provisioned? (class method)">.<strong>stripe_provisioned?</strong>(community_id)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_and_community_ready_for_payments%3F-class_method" title="user_and_community_ready_for_payments? (class method)">.<strong>user_and_community_ready_for_payments?</strong>(person_id, community_id)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_stripe_active%3F-class_method" title="user_stripe_active? (class method)">.<strong>user_stripe_active?</strong>(community_id, person_id)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="community_ready_for_payments?-class_method">
+  
+    .<strong>community_ready_for_payments?</strong>(community_id)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9
+10
+11
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/stripe_helper.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_community_ready_for_payments?'>community_ready_for_payments?</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_stripe_active?'>stripe_active?</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+    <span class='const'>Maybe</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#TxApi-constant" title="StripeHelper::TxApi (constant)">TxApi</a></span></span><span class='period'>.</span><span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='label'>payment_gateway:</span> <span class='symbol'>:stripe</span><span class='comma'>,</span> <span class='label'>payment_process:</span> <span class='symbol'>:preauthorize</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='op'>|</span> <span class='id identifier rubyid_res'>res</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='id identifier rubyid_res'>res</span><span class='lbracket'>[</span><span class='symbol'>:data</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='kw'>nil</span><span class='rbrace'>}</span>
+    <span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_set'>set</span><span class='op'>|</span> <span class='id identifier rubyid_set'>set</span><span class='lbracket'>[</span><span class='symbol'>:commission_from_seller</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_set'>set</span><span class='lbracket'>[</span><span class='symbol'>:minimum_price_cents</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+    <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='op'>|</span> <span class='kw'>true</span><span class='rbrace'>}</span>
+    <span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>false</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="open_listings_with_missing_payment_info?-class_method">
+  
+    .<strong>open_listings_with_missing_payment_info?</strong>(user_id, community_id)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Check if the user has open listings in the community but has not finished connecting his paypal account.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/stripe_helper.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_open_listings_with_missing_payment_info?'>open_listings_with_missing_payment_info?</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_stripe_active?'>stripe_active?</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+    <span class='op'>!</span><span class='id identifier rubyid_user_and_community_ready_for_payments?'>user_and_community_ready_for_payments?</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+    <span class='const'><span class='object_link'><a href="PaymentHelper.html" title="PaymentHelper (module)">PaymentHelper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_open_listings_with_payment_process?'><span class='object_link'><a href="PaymentHelper.html#open_listings_with_payment_process%3F-class_method" title="PaymentHelper.open_listings_with_payment_process? (method)">open_listings_with_payment_process?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_user_id'>user_id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="publishable_key-class_method">
+  
+    .<strong>publishable_key</strong>(community_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/stripe_helper.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_publishable_key'>publishable_key</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="" title="StripeHelper (module)">StripeHelper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stripe_active?'><span class='object_link'><a href="#stripe_active%3F-class_method" title="StripeHelper.stripe_active? (method)">stripe_active?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_payment_settings'>payment_settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TransactionService.html" title="TransactionService (module)">TransactionService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TransactionService/API.html" title="TransactionService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TransactionService/API/Api.html" title="TransactionService::API::Api (class)">Api</a></span></span><span class='period'>.</span><span class='id identifier rubyid_settings'><span class='object_link'><a href="TransactionService/API/Api.html#settings-class_method" title="TransactionService::API::Api.settings (method)">settings</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_active_by_gateway'>get_active_by_gateway</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='label'>payment_gateway:</span> <span class='symbol'>:stripe</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_maybe'>maybe</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span>
+  <span class='id identifier rubyid_payment_settings'>payment_settings</span><span class='lbracket'>[</span><span class='symbol'>:api_publishable_key</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stripe_active?-class_method">
+  
+    .<strong>stripe_active?</strong>(community_id)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18
+19
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/stripe_helper.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stripe_active?'>stripe_active?</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_settings'>settings</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#TxApi-constant" title="StripeHelper::TxApi (constant)">TxApi</a></span></span><span class='period'>.</span><span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='label'>payment_gateway:</span> <span class='symbol'>:stripe</span><span class='comma'>,</span> <span class='label'>payment_process:</span> <span class='symbol'>:preauthorize</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_result'>result</span><span class='op'>|</span> <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+    <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_result'>result</span><span class='op'>|</span> <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='symbol'>:data</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+    <span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>false</span><span class='rparen'>)</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_settings'>settings</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_settings'>settings</span><span class='lbracket'>[</span><span class='symbol'>:active</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_settings'>settings</span><span class='lbracket'>[</span><span class='symbol'>:api_verified</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stripe_available?-class_method">
+  
+    .<strong>stripe_available?</strong>(community)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/stripe_helper.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stripe_available?'>stripe_available?</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_stripe_mode'>stripe_mode</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="StripeService.html" title="StripeService (module)">StripeService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="StripeService/API.html" title="StripeService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="StripeService/API/Api.html" title="StripeService::API::Api (class)">Api</a></span></span><span class='period'>.</span><span class='id identifier rubyid_wrapper'><span class='object_link'><a href="StripeService/API/Api.html#wrapper-class_method" title="StripeService::API::Api.wrapper (method)">wrapper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_charges_mode'>charges_mode</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="TransactionService.html" title="TransactionService (module)">TransactionService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TransactionService/AvailableCurrencies.html" title="TransactionService::AvailableCurrencies (module)">AvailableCurrencies</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stripe_allows_country_and_currency?'><span class='object_link'><a href="TransactionService/AvailableCurrencies.html#stripe_allows_country_and_currency%3F-class_method" title="TransactionService::AvailableCurrencies.stripe_allows_country_and_currency? (method)">stripe_allows_country_and_currency?</a></span></span><span class='lparen'>(</span>
+    <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_country'>country</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_community'>community</span><span class='period'>.</span><span class='id identifier rubyid_currency'>currency</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_stripe_mode'>stripe_mode</span>
+  <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stripe_provisioned?-class_method">
+  
+    .<strong>stripe_provisioned?</strong>(community_id)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/stripe_helper.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stripe_provisioned?'>stripe_provisioned?</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_settings'>settings</span> <span class='op'>=</span> <span class='const'>Maybe</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#TxApi-constant" title="StripeHelper::TxApi (constant)">TxApi</a></span></span><span class='period'>.</span><span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span>
+                    <span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span>
+                    <span class='label'>payment_gateway:</span> <span class='symbol'>:stripe</span><span class='comma'>,</span>
+                    <span class='label'>payment_process:</span> <span class='symbol'>:preauthorize</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_result'>result</span><span class='op'>|</span> <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+    <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_result'>result</span><span class='op'>|</span> <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='symbol'>:data</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+    <span class='period'>.</span><span class='id identifier rubyid_or_else'>or_else</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>
+
+  <span class='kw'>return</span> <span class='op'>!</span><span class='op'>!</span><span class='id identifier rubyid_settings'>settings</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_and_community_ready_for_payments?-class_method">
+  
+    .<strong>user_and_community_ready_for_payments?</strong>(person_id, community_id)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/stripe_helper.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_and_community_ready_for_payments?'>user_and_community_ready_for_payments?</span><span class='lparen'>(</span><span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_stripe_active?'>stripe_active?</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_user_stripe_active?'>user_stripe_active?</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_stripe_active?-class_method">
+  
+    .<strong>user_stripe_active?</strong>(community_id, person_id)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/view_utils/stripe_helper.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_stripe_active?'>user_stripe_active?</span><span class='lparen'>(</span><span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_account'>account</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="StripeService.html" title="StripeService (module)">StripeService</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="StripeService/API.html" title="StripeService::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="StripeService/API/Api.html" title="StripeService::API::Api (class)">Api</a></span></span><span class='period'>.</span><span class='id identifier rubyid_accounts'><span class='object_link'><a href="StripeService/API/Api.html#accounts-class_method" title="StripeService::API::Api.accounts (method)">accounts</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='label'>community_id:</span> <span class='id identifier rubyid_community_id'>community_id</span><span class='comma'>,</span> <span class='label'>person_id:</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span>
+  <span class='id identifier rubyid_account'>account</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_account'>account</span><span class='lbracket'>[</span><span class='symbol'>:stripe_seller_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_account'>account</span><span class='lbracket'>[</span><span class='symbol'>:stripe_bank_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:36 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

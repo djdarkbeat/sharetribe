@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: UUIDUtils
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "UUIDUtils";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (U)</a> &raquo;
+    
+    
+    <span class="title">UUIDUtils</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: UUIDUtils
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/utils/uuid_utils.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="PARSE_RAW-constant" class="">PARSE_RAW =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>This lambda can be used as a Entity transformer.</p>
+
+<p>Usage:</p>
+<dl class="rdoc-list label-list"><dt>:listing_uuid, :uuid, transform_with: UUIDUtils::PARSE_RAW
+<dd></dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_v'>v</span>
+  <span class='kw'>when</span> <span class='kw'>nil</span>
+    <span class='kw'>nil</span>
+  <span class='kw'>when</span> <span class='const'>UUIDTools</span><span class='op'>::</span><span class='const'>UUID</span>
+    <span class='id identifier rubyid_v'>v</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_parse_raw'>parse_raw</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='rbrace'>}</span></pre></dd>
+      
+        <dt id="RAW-constant" class="">RAW =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>This lambda can be used as a Entity transformer.</p>
+
+<p>Usage:</p>
+<dl class="rdoc-list label-list"><dt>:listing_uuid, :uuid, transform_with: UUIDUtils::RAW
+<dd></dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_v'>v</span>
+  <span class='kw'>when</span> <span class='kw'>nil</span>
+    <span class='kw'>nil</span>
+  <span class='kw'>when</span> <span class='const'>String</span>
+    <span class='id identifier rubyid_v'>v</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raw'>raw</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='rbrace'>}</span></pre></dd>
+      
+        <dt id="V0_UUID-constant" class="">V0_UUID =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>UUIDTools</span><span class='op'>::</span><span class='const'>UUID</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>00000000-0000-0000-0000-000000000000</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-class_method" title="create (class method)">.<strong>create</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_raw-class_method" title="create_raw (class method)">.<strong>create_raw</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_rearranged-class_method" title="from_rearranged (class method)">.<strong>from_rearranged</strong>(b)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parse_raw-class_method" title="parse_raw (class method)">.<strong>parse_raw</strong>(raw_uuid)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#raw-class_method" title="raw (class method)">.<strong>raw</strong>(uuid)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_rearranged-class_method" title="to_rearranged (class method)">.<strong>to_rearranged</strong>(b)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>private.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#v0_uuid-class_method" title="v0_uuid (class method)">.<strong>v0_uuid</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create-class_method">
+  
+    .<strong>create</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/uuid_utils.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
+  <span class='const'>UUIDTools</span><span class='op'>::</span><span class='const'>UUID</span><span class='period'>.</span><span class='id identifier rubyid_timestamp_create'>timestamp_create</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_raw-class_method">
+  
+    .<strong>create_raw</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/uuid_utils.rb', line 45</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_raw'>create_raw</span>
+  <span class='id identifier rubyid_raw'>raw</span><span class='lparen'>(</span><span class='id identifier rubyid_create'>create</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_rearranged-class_method">
+  
+    .<strong>from_rearranged</strong>(b)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74
+75
+76
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/uuid_utils.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_rearranged'>from_rearranged</span><span class='lparen'>(</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_low'>low</span> <span class='op'>=</span> <span class='id identifier rubyid_b'>b</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>1</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_mid'>mid</span> <span class='op'>=</span> <span class='id identifier rubyid_b'>b</span><span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_high'>high</span> <span class='op'>=</span> <span class='id identifier rubyid_b'>b</span><span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>7</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_rest'>rest</span> <span class='op'>=</span> <span class='id identifier rubyid_b'>b</span><span class='lbracket'>[</span><span class='int'>8</span><span class='op'>..</span><span class='int'>15</span><span class='rbracket'>]</span>
+
+  <span class='lbracket'>[</span><span class='op'>*</span><span class='id identifier rubyid_high'>high</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_mid'>mid</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_low'>low</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_rest'>rest</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="parse_raw-class_method">
+  
+    .<strong>parse_raw</strong>(raw_uuid)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/uuid_utils.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_parse_raw'>parse_raw</span><span class='lparen'>(</span><span class='id identifier rubyid_raw_uuid'>raw_uuid</span><span class='rparen'>)</span>
+  <span class='const'>UUIDTools</span><span class='op'>::</span><span class='const'>UUID</span><span class='period'>.</span><span class='id identifier rubyid_parse_raw'>parse_raw</span><span class='lparen'>(</span><span class='id identifier rubyid_from_rearranged'>from_rearranged</span><span class='lparen'>(</span><span class='id identifier rubyid_raw_uuid'>raw_uuid</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="raw-class_method">
+  
+    .<strong>raw</strong>(uuid)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/uuid_utils.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_raw'>raw</span><span class='lparen'>(</span><span class='id identifier rubyid_uuid'>uuid</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_to_rearranged'>to_rearranged</span><span class='lparen'>(</span><span class='id identifier rubyid_uuid'>uuid</span><span class='period'>.</span><span class='id identifier rubyid_raw'>raw</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_rearranged-class_method">
+  
+    .<strong>to_rearranged</strong>(b)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>private</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65
+66
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/uuid_utils.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_rearranged'>to_rearranged</span><span class='lparen'>(</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_high'>high</span> <span class='op'>=</span> <span class='id identifier rubyid_b'>b</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>3</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_mid'>mid</span> <span class='op'>=</span> <span class='id identifier rubyid_b'>b</span><span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_low'>low</span> <span class='op'>=</span> <span class='id identifier rubyid_b'>b</span><span class='lbracket'>[</span><span class='int'>6</span><span class='op'>..</span><span class='int'>7</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_rest'>rest</span> <span class='op'>=</span> <span class='id identifier rubyid_b'>b</span><span class='lbracket'>[</span><span class='int'>8</span><span class='op'>..</span><span class='int'>15</span><span class='rbracket'>]</span>
+
+  <span class='lbracket'>[</span><span class='op'>*</span><span class='id identifier rubyid_low'>low</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_mid'>mid</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_high'>high</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_rest'>rest</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="v0_uuid-class_method">
+  
+    .<strong>v0_uuid</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/uuid_utils.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_v0_uuid'>v0_uuid</span>
+  <span class='const'><span class='object_link'><a href="#V0_UUID-constant" title="UUIDUtils::V0_UUID (constant)">V0_UUID</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:33 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>

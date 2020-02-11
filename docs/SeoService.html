@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: SeoService
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "SeoService";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (S)</a> &raquo;
+    
+    
+    <span class="title">SeoService</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: SeoService
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">SeoService</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/services/seo_service.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#category-instance_method" title="#category (instance method)">#<strong>category</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>user, category and listing are set in appropriate controllers.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#listing-instance_method" title="#listing (instance method)">#<strong>listing</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>user, category and listing are set in appropriate controllers.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#locale-instance_method" title="#locale (instance method)">#<strong>locale</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute locale.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user-instance_method" title="#user (instance method)">#<strong>user</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>user, category and listing are set in appropriate controllers.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#description-instance_method" title="#description (instance method)">#<strong>description</strong>(default_value, extra_mode = nil, locale = I18n.locale)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#i18n_variables-instance_method" title="#i18n_variables (instance method)">#<strong>i18n_variables</strong>(section)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(community, params = {})  &#x21d2; SeoService </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of SeoService.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#interpolate-instance_method" title="#interpolate (instance method)">#<strong>interpolate</strong>(text, locale = I18n.locale)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#placeholder-instance_method" title="#placeholder (instance method)">#<strong>placeholder</strong>(section, locale = I18n.locale)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#title-instance_method" title="#title (instance method)">#<strong>title</strong>(default_value, extra_mode = nil, locale = I18n.locale)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(community, params = {})  &#x21d2; <tt><span class='object_link'><a href="" title="SeoService (class)">SeoService</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of SeoService</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/seo_service.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_community'>community</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@community</span> <span class='op'>=</span> <span class='id identifier rubyid_community'>community</span>
+  <span class='ivar'>@params</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span>
+  <span class='ivar'>@locale</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="category=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="category-instance_method">
+  
+    #<strong>category</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>user, category and listing are set in appropriate controllers</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/seo_service.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_category'>category</span>
+  <span class='ivar'>@category</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="listing=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="listing-instance_method">
+  
+    #<strong>listing</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>user, category and listing are set in appropriate controllers</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/seo_service.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_listing'>listing</span>
+  <span class='ivar'>@listing</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="locale-instance_method">
+  
+    #<strong>locale</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute locale</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/seo_service.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_locale'>locale</span>
+  <span class='ivar'>@locale</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="user=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="user-instance_method">
+  
+    #<strong>user</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>user, category and listing are set in appropriate controllers</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/seo_service.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user'>user</span>
+  <span class='ivar'>@user</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="description-instance_method">
+  
+    #<strong>description</strong>(default_value, extra_mode = nil, locale = I18n.locale)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/seo_service.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span><span class='lparen'>(</span><span class='id identifier rubyid_default_value'>default_value</span><span class='comma'>,</span> <span class='id identifier rubyid_extra_mode'>extra_mode</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_locale'>locale</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='ivar'>@description</span> <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@description</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@locale</span> <span class='op'>=</span> <span class='id identifier rubyid_locale'>locale</span>
+  <span class='id identifier rubyid_custom_value'>custom_value</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_mode'>mode</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>default</span><span class='tstring_end'>&#39;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_extra_mode'>extra_mode</span> <span class='op'>==</span> <span class='symbol'>:social</span>
+      <span class='comment'># social media description is passed here from layout
+</span>      <span class='id identifier rubyid_default_value'>default_value</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_customization'>customization</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+      <span class='id identifier rubyid_customization_description'>customization_description</span><span class='lparen'>(</span><span class='id identifier rubyid_mode'>mode</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_default_value'>default_value</span>
+    <span class='kw'>end</span>
+  <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_custom_value'>custom_value</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>?</span> <span class='id identifier rubyid_interpolate'>interpolate</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_value'>custom_value</span><span class='comma'>,</span> <span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_default_value'>default_value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="i18n_variables-instance_method">
+  
+    #<strong>i18n_variables</strong>(section)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/seo_service.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_i18n_variables'>i18n_variables</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_vars'>vars</span> <span class='op'>=</span> <span class='id identifier rubyid_variables'>variables</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_varname'>varname</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{</span><span class='tstring_end'>&#39;</span></span><span class='op'>+</span><span class='id identifier rubyid_varname'>varname</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>}}</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>seo_sections.you_can_use_variables</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>vars:</span> <span class='id identifier rubyid_vars'>vars</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="interpolate-instance_method">
+  
+    #<strong>interpolate</strong>(text, locale = I18n.locale)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/seo_service.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_interpolate'>interpolate</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='id identifier rubyid_locale'>locale</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\{\{(\w+?)\}\}</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span>
+    <span class='id identifier rubyid_eval_single'>eval_single</span><span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="placeholder-instance_method">
+  
+    #<strong>placeholder</strong>(section, locale = I18n.locale)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/seo_service.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_placeholder'>placeholder</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='comma'>,</span> <span class='id identifier rubyid_locale'>locale</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_section'>section</span>
+  <span class='kw'>when</span> <span class='symbol'>:homepage_title</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{marketplace_name}} - {{marketplace_slogan}}</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>when</span> <span class='symbol'>:homepage_description</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{marketplace_description}} - {{marketplace_slogan}}</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>when</span> <span class='symbol'>:search_meta_title</span>
+    <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>seo_sections.placeholder.search_results</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>variable:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{marketplace_name}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>locale:</span> <span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:search_meta_description</span>
+    <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>seo_sections.placeholder.search_results_for</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>placeholder1:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{keywords_searched}} {{location_searched}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>placeholder2:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{marketplace_name}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>locale:</span> <span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:listing_meta_title</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{listing_title}} - {{marketplace_name}}</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>when</span> <span class='symbol'>:listing_meta_description</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_mode'>mode</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>default</span><span class='tstring_end'>&#39;</span></span> <span class='op'>||</span> <span class='ivar'>@listing</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:price_cents</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+      <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>seo_sections.placeholder.listing_description</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>title:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{listing_title}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>price:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{listing_price}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>author:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{listing_author}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>marketplace:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{marketplace_name}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>locale:</span> <span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>seo_sections.placeholder.listing_description_without_price</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>title:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{listing_title}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>author:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{listing_author}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>marketplace:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{marketplace_name}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>locale:</span> <span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>when</span> <span class='symbol'>:category_meta_title</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{category_name}} - {{marketplace_name}}</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>when</span> <span class='symbol'>:category_meta_description</span>
+    <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>seo_sections.placeholder.category_description</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>category:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{category_name}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>marketplace:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{marketplace_name}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>locale:</span> <span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:profile_meta_title</span>
+    <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>seo_sections.placeholder.profile_title</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>user:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{user_display_name}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>marketplace:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{marketplace_name}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>locale:</span> <span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='symbol'>:profile_meta_description</span>
+    <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>seo_sections.placeholder.profile_description</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>user:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{user_display_name}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>marketplace:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{{marketplace_name}}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>locale:</span> <span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="title-instance_method">
+  
+    #<strong>title</strong>(default_value, extra_mode = nil, locale = I18n.locale)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/seo_service.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_title'>title</span><span class='lparen'>(</span><span class='id identifier rubyid_default_value'>default_value</span><span class='comma'>,</span> <span class='id identifier rubyid_extra_mode'>extra_mode</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_locale'>locale</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='ivar'>@title</span> <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@title</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@locale</span> <span class='op'>=</span> <span class='id identifier rubyid_locale'>locale</span>
+  <span class='id identifier rubyid_custom_value'>custom_value</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_mode'>mode</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>default</span><span class='tstring_end'>&#39;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_extra_mode'>extra_mode</span> <span class='op'>==</span> <span class='symbol'>:social</span>
+      <span class='comment'># social media title is passed here from layout
+</span>      <span class='id identifier rubyid_default_value'>default_value</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_customization'>customization</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+      <span class='id identifier rubyid_customization_title'>customization_title</span><span class='lparen'>(</span><span class='id identifier rubyid_mode'>mode</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_default_value'>default_value</span>
+    <span class='kw'>end</span>
+  <span class='ivar'>@title</span> <span class='op'>=</span> <span class='id identifier rubyid_custom_value'>custom_value</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>?</span> <span class='id identifier rubyid_interpolate'>interpolate</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_value'>custom_value</span><span class='comma'>,</span> <span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_default_value'>default_value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Feb 11 14:01:56 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.2).
+</div>
+
+    </div>
+  </body>
+</html>
